@@ -72,6 +72,12 @@ export default function Footer() {
                                     <span>Become a Ambassador</span>
                                 </div>
                             </Link>
+                            <Link href="/list-your-token" aria-label='list-your-token'>
+                                <div className={styles.dotText}>
+                                    <div className={styles.dot}></div>
+                                    <span>List Your Token</span>
+                                </div>
+                            </Link>
                         </div>
                         <div className={styles.griditems}>
                              <div className={styles.line}></div>
