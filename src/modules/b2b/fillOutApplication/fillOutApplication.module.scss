@@ -1,0 +1,176 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+
+.fillOutApplication {
+    padding: 0 0 40px 0;
+    position: relative;
+    @media (max-width:576px) {
+        padding: 0;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 394px;
+        background: #00FF7F;
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        content: '';
+        z-index: -1;
+        filter: blur(400px);
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 394px;
+        background: #7B19D8;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        content: '';
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .box {
+        border-radius: 15px;
+        background: var(--bg-light-white400);
+        padding: 50px 28px;
+        @media (max-width:576px) {
+            padding: 40px 16px;
+        }
+
+        .text {
+            padding: 0 0 48px 0;
+
+            span {
+                display: block;
+                padding: 0 0 10px 0;
+                @include font16medium;
+                font-size: 15px;
+                color: var(--primary);
+            }
+
+            h2 {
+                @include font28bold;
+                margin: 0 0 0 0;
+                color: var(--text-light);
+            }
+
+            p {
+                @include font18;
+                color: var(--black600);
+            }
+        }
+
+        .twoCol {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 0 48px 0;
+            gap: 48px;
+            @media (max-width:576px) {
+                padding: 0 0 24px 0;
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        .threeCol {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 0 48px 0;
+            gap: 48px;
+            @media (max-width:1024px) {
+                grid-template-columns: repeat(2 , 1fr);
+            }
+            @media (max-width:576px) {
+                padding: 0 0 24px 0;
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        .buttonAlignment {
+            display: flex;
+            align-items: center;
+            padding: 24px 0 0 0;
+            justify-content: space-between;
+
+            div:first-child {
+                button {
+                    background: rgba(255, 255, 255, 0.10);
+                    color: var(--black600);
+                    border: 1px solid transparent;
+                }
+            }
+        }
+
+        .input {
+            label {
+                display: block;
+                @include font16medium;
+                padding: 0 0 6px 0;
+                color: var(--text-light);
+            }
+
+            input,
+            select {
+                border-radius: 8px;
+                border: 1px solid var(--border300);
+                background: var(--bg-light-white400);
+                width: 100%;
+                @include font16medium;
+                color: var(--text-white);
+                height: 48px;
+                transition: .3s ease-in-out;
+                padding: 0 16px;
+                @media (max-width:576px) {
+                    height: 42px;
+                }
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid var(--primary);
+                }
+            }
+
+            textarea {
+                border-radius: 8px;
+                border: 1px solid var(--border300);
+                background: var(--bg-light-white400);
+                width: 100%;
+                @include font16medium;
+                color: var(--text-white);
+                height: 172px;
+                transition: .3s ease-in-out;
+                padding: 16px;
+                resize: none;
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid var(--primary);
+                }
+            }
+
+
+
+            ::placeholder {
+                @include font16medium;
+                color: var(--black600);
+            }
+        }
+    }
+}

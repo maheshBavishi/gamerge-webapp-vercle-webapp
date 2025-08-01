@@ -1,0 +1,225 @@
+@use '../../scss/main.scss' as *;
+@use '../../scss/typography/typography.scss' as *;
+
+.downlodApp {
+  padding: 0 0 76px 0;
+
+  @media (max-width:576px) {
+    padding: 0 0 70px 0;
+  }
+
+  .box {
+    border-radius: 15px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 546px;
+    align-items: flex-end;
+    gap: 60px;
+    padding: 58px 0 0 50px;
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width:1024px) {
+      grid-template-columns: 1fr 346px;
+      gap: 40px;
+      padding: 24px 0 0 24px;
+    }
+
+    @media (max-width:576px) {
+      grid-template-columns: 1fr;
+      padding: 42px 20px;
+    }
+
+    &::before {
+      border-radius: 606px;
+      background: #00FF7F;
+      height: 100%;
+      width: 40%;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      animation: floatAndRotateBefore 6s ease-in-out infinite;
+      filter: blur(125px);
+      border-radius: 640px;
+      top: 0;
+      left: 5%;
+    }
+
+    &::after {
+      border-radius: 640px;
+      background: #6A00FF;
+      height: 100%;
+      width: 60%;
+      animation: floatAndRotateAfter 6s ease-in-out infinite;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      filter: blur(125px);
+      border-radius: 640px;
+      top: 0;
+      right: 0%;
+      transform: rotate(30deg);
+
+
+    }
+
+    .appImage {
+      img {
+        display: block;
+      }
+
+      img:first-child {
+        @media (max-width:576px) {
+          display: none;
+        }
+      }
+
+      img:last-child {
+        display: none;
+
+        @media (max-width:576px) {
+          display: block;
+        }
+      }
+    }
+
+    .contentAlignment {
+      padding: 0 0 58px 0;
+
+      @media (max-width:1024px) {
+        padding: 0 0 24px 0;
+      }
+
+      @media (max-width:576px) {
+        order: 2;
+      }
+
+      h2 {
+        @include heading2;
+        color: var(--text-white);
+        max-width: 542px;
+        margin: 0 0 24px 0;
+
+        @media (max-width:1024px) {
+          font-size: 28px;
+          margin: 0 0 10px 0;
+        }
+
+        @media (max-width:576px) {
+          font-size: 32px;
+        }
+      }
+
+      .twoImagealignment {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width:576px) {
+          gap: 10px;
+          justify-content: center;
+        }
+
+        img {
+          display: block;
+          cursor: pointer;
+          transition: .3s ease-in-out;
+
+          @media (max-width:1024px) {
+            max-width: 120px;
+          }
+
+          @media (max-width:576px) {
+            max-width: 140px;
+          }
+
+          &:hover {
+            transform: scale(1.1)
+          }
+        }
+      }
+
+      p {
+        @include font16medium;
+        color: var(--text-white);
+        max-width: 569px;
+        margin: 0 0 24px 0;
+
+        @media (max-width:1024px) {
+          @include font14medium;
+        }
+
+        @media (max-width:576px) {
+          @include font16medium;
+        }
+      }
+    }
+
+     button {
+        padding: 10px 20px;
+        @include font16bold;
+        color: var(--black100);
+        background-color: var(--text-white);
+        border: 1px solid var(--text-white);
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+
+        svg {
+          path {
+            fill: #000;
+          }
+        }
+
+        &:hover {
+          background-color: var(--primary);
+          border: 1px solid var(--primary);
+          color: var(--black100);
+
+          svg {
+            path {
+              fill: var(--black100);
+            }
+          }
+        }
+
+        @media (max-width:576px) {
+          font-size: 13px;
+          padding: 9px 20px;
+        }
+
+      }
+
+  }
+}
+
+@keyframes floatAndRotateBefore {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(80%) rotate(360deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes floatAndRotateAfter {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-70%) rotate(-360deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}

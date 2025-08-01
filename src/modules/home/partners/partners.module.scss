@@ -1,0 +1,134 @@
+@use "../../../scss/main.scss" as *;
+@use "../../../scss/typography/typography.scss" as *;
+
+.partners {
+  padding: 60px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-white-600);
+  position: relative;
+
+  @media (max-width:576px) {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 64px 0;
+  }
+
+  .bitcoinIcon {
+    position: absolute;
+    top: -90px;
+    left: 0;
+
+    @media (max-width:576px) {
+      top: -60px;
+    }
+
+    img {
+      animation: floatRotate 3s ease-in-out infinite;
+      transform-origin: center;
+      transition: transform 0.3s ease;
+
+      @media (max-width:576px) {
+        max-width: 120px;
+        display: block;
+      }
+    }
+  }
+
+  @keyframes floatRotate {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+      transform: translateY(-10px) rotate(5deg);
+    }
+
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+
+  .layerbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 394px;
+    background: var(--primary);
+    z-index: -1;
+    filter: blur(400px);
+
+    @media (max-width:576px) {
+      display: none;
+    }
+  }
+
+  h2 {
+    color: var(--text-white);
+    font-family: var(--font-unbounded);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+
+    @media (max-width:576px) {
+      font-size: 32px;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  .card {
+    padding: 13px;
+    border-radius: 12px;
+    border: 1px solid var(--light-border);
+    padding: 13px;
+    background: var(--bg-light-white);
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    margin-right: 20px;
+    gap: 16px;
+    transition: .3s ease-in-out;
+
+    @media (max-width:576px) {
+      padding: 10px;
+      border-radius: 9px;
+      margin-top: 15px;
+      gap: 12px;
+    }
+
+    &:hover {
+      border: 1px solid var(--primary);
+    }
+
+    span {
+      display: block;
+      @include font16medium;
+      color: var(--text-light-300);
+
+      @media (max-width:576px) {
+        font-size: 12px;
+      }
+    }
+
+    img {
+      @media (max-width:576px) {
+        width: 46px;
+        height: 46px;
+      }
+    }
+  }
+
+  .topContentAlignment {
+    padding: 20px 0 0 0;
+
+    @media (max-width:576px) {
+      padding: 15px 0 0 0;
+    }
+  }
+}

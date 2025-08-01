@@ -1,0 +1,181 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+
+.whyBecomAlignment {
+    position: relative;
+    padding: 56px 0 68px 0;
+    @media (max-width:576px) {
+        padding: 80px 0;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 394px;
+        background: #00FF7F;
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        content: '';
+        z-index: -1;
+        filter: blur(400px);
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 394px;
+        background: #7B19D8;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        content: '';
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .iconCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width:576px) {
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    .title {
+        padding: 10px 0 40px 0;
+        
+
+        h2 {
+            @include heading2;
+            color: var(--text-white);
+            text-align: center;
+            max-width: 632px;
+            margin: 0 auto;
+            text-align: center;
+            @media (max-width:576px) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        @media (max-width:1024px) {
+            grid-template-columns: repeat(2 , 1fr);
+        }
+        @media (max-width:576px) {
+            grid-template-columns: 1fr;
+        }
+        .griditems {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            position: relative;
+            border-radius: 15px;
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                padding: 1px;
+                border-radius: 0 0 15px 15px;
+                background: linear-gradient(290.5deg,
+                        #ffffff 0%,
+                        rgba(255, 255, 255, 0) 20%);
+                -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                pointer-events: none;
+                transition: 0.3s ease-in-out;
+                z-index: 1;
+                opacity: 1;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                padding: 1px;
+                border-radius: 0 0 15px 15px;
+                background: linear-gradient(390.5deg,
+                        #ffffff 0%,
+                        rgba(255, 255, 255, 0) 20%);
+                -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                pointer-events: none;
+                transition: 0.3s ease-in-out;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            .image {
+                width: 100%;
+                height: 200px;
+                border-radius: 15px 15px 0px 0px;
+
+                img {
+                    display: block;
+                    border-radius: 15px 15px 0px 0px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .details {
+                padding: 30px 20px;
+                border-top: none;
+                position: relative;
+
+
+
+
+                h3 {
+                    @include font24bold;
+                    color: var(--text-light700);
+                    margin: 0 0 16px 0;
+                }
+
+                p {
+                    @include font20;
+                    color: var(--gray);
+                    font-size: 19px;
+                    @media (max-width:576px) {
+                        @include font18;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

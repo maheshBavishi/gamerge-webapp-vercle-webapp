@@ -1,0 +1,286 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.stakingBanner {
+    position: relative;
+    padding: 270px 0 125px 0;
+    background-image: url('/assets/images/staking-banners.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width:1024px) {
+        padding: 270px 0 180px 0;
+    }
+
+    @media (max-width:576px) {
+        background-image: url('/assets/images/staking-banners-mobile.png');
+        padding: 200px 0 300px 0;
+        overflow-x: hidden;
+    }
+
+    .lineview {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+
+        @media (max-width:576px) {
+            transform: none;
+            top: 33%;
+        }
+
+        img {
+            @media (max-width:576px) {
+                max-width: 50px;
+            }
+        }
+    }
+
+    .pinkCoin {
+        position: absolute;
+        right: 0;
+        top: 30%;
+
+        @media (max-width:1024px) {
+            top: 100px;
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    .blueCoin {
+        position: absolute;
+        right: 25%;
+        top: 16%;
+
+        @media (max-width:1500px) {
+            right: 17%;
+        }
+
+        @media (max-width:1024px) {
+            right: 10%;
+        }
+
+        @media (max-width:576px) {
+            top: initial;
+            bottom: 25%;
+            left: -20px;
+            right: inherit;
+
+        }
+
+        img {
+            display: block;
+
+            @media (max-width:1024px) {
+                max-width: 80px;
+            }
+        }
+    }
+
+    .foxImage {
+        position: absolute;
+        top: 190px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (max-width:1024px) {
+            top: 115px;
+        }
+
+        img {
+            @media (max-width:1024px) {
+                max-width: 80px;
+            }
+
+            @media (max-width:576px) {
+                max-width: 70px;
+            }
+        }
+
+    }
+
+    .leftIcon {
+        position: absolute;
+        left: 25%;
+        top: 190px;
+
+        @media (max-width:1024px) {
+            left: 10%;
+        }
+
+        @media (max-width:576px) {
+            top: 90px;
+            left: 0;
+        }
+
+
+        img {
+            @media (max-width:1024px) {
+                max-width: 80px;
+            }
+
+        }
+    }
+
+    .posterLeft {
+        position: absolute;
+        bottom: 0;
+        left: 22px;
+
+        @media (max-width:576px) {
+            left: -40px;
+        }
+
+        img {
+            display: block;
+            max-width: 210px;
+
+            @media (max-width:1024px) {
+                max-width: 120px;
+            }
+
+            @media (max-width:576px) {
+                max-width: 190px;
+            }
+        }
+    }
+
+    .posterRight {
+        position: absolute;
+        bottom: 0;
+        right: 22px;
+
+        @media (max-width:576px) {
+            right: -40px;
+        }
+
+        img {
+            display: block;
+            max-width: 230px;
+
+            @media (max-width:1024px) {
+                max-width: 120px;
+            }
+
+            @media (max-width:576px) {
+                max-width: 190px;
+            }
+        }
+    }
+
+    .blueCoinGroup {
+        position: absolute;
+        bottom: -10px;
+        left: 30%;
+
+        @media (max-width:576px) {
+            bottom: 25%;
+            right: -20px;
+            display: block;
+            left: auto;
+        }
+
+        img {
+            display: block;
+
+            @media (max-width:1024px) {
+                max-width: 80px;
+            }
+        }
+    }
+
+    .pinkCoinGroup {
+        position: absolute;
+        bottom: -20px;
+        right: 30%;
+
+        @media (max-width:576px) {
+            bottom: 25%;
+            right: 32%;
+            transform: translateX(-50%);
+        }
+
+        img {
+            display: block;
+
+            @media (max-width:1024px) {
+                max-width: 70px;
+            }
+        }
+    }
+
+    .text {
+        position: relative;
+
+
+
+
+        p {
+            @include font16medium;
+            color: var(--light-text-65);
+            max-width: 834px;
+            margin: 0 auto;
+            text-align: center;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--text-white);
+            font-family: var(--font-unbounded);
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 600;
+            max-width: 1192px;
+            margin: 0 auto 28px auto;
+            line-height: normal;
+            text-align: center;
+            text-transform: uppercase;
+
+            @media (max-width:1024px) {
+                font-size: 42px;
+            }
+
+            @media (max-width:576px) {
+                font-size: 32px;
+            }
+
+            span {
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+.readSection {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 20px 0;
+    @media (max-width:576px) {
+        padding: 12px 0;
+    }
+
+    .iconText {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        span {
+            display: block;
+            @include font16medium;
+            color: var(--black600);
+            @media (max-width:576px) {
+                font-size: 10px;
+                line-height: 16px;
+            }
+        }
+    }
+
+}

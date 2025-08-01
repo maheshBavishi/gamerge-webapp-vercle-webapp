@@ -1,0 +1,23 @@
+@use '../../scss/main.scss' as *;
+@use '../../scss/typography/typography.scss' as *;
+
+.topbar {
+    background: var(--linear-gradient-background);
+    padding: 10px 0;
+
+    @media (max-width:1024px) {
+        padding: 6px 0;
+    }
+
+    a {
+        @include font14bold;
+        color: var(--text-white);
+        margin: 0;
+        display: block;
+        text-align: center;
+
+        @media (max-width:1024px) {
+            @include font12bold;
+        }
+    }
+}

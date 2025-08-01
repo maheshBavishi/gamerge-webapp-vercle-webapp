@@ -1,0 +1,86 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.blogDetailsbanner {
+    background-image: url('/assets/images/blog-banner.png');
+    height: 810px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+@media (max-width:574px) {
+    background-image: url('/assets/images/blog-mobile-banner.png');
+    height: 700px;
+}
+    .contentBox {
+        max-width: 935px;
+        border-radius: 0px 48px 0px 0px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(4, 4, 4, 0.60);
+        padding: 48px;
+        backdrop-filter: blur(17px);
+        @media (max-width:574px){
+            padding: 16px;
+            max-width: 95%;
+        }
+
+        h2 {
+            @include heading2;
+            color: var(--text-white);
+            margin: 0 0 16px 0;
+            @media (max-width:574px) {
+                font-size: 24px;
+                margin: 0 0 10px 0;
+            }
+            span {
+                color: var(--primary);
+            }
+        }
+
+        .contentAlignment {
+            display: flex;
+            align-items: center;
+
+            span {
+                display: block;
+                @include font20bold;
+                color: var(--text-white);
+                @media (max-width:574px) {
+                    font-size: 14px;
+                }
+            }
+
+            svg {
+                @media (max-width:574px) {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .line {
+                width: 3px;
+                height: 25px;
+                margin-left: 17px;
+                margin-right: 24px;
+                background-color: var(--text-white);
+                @media (max-width:574px) {
+                    margin: 0 8px;
+                    height: 12px;
+                }
+            }
+
+            .iconText {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                @media (max-width:574px) {
+                    gap: 8px;
+                }
+
+            }
+        }
+    }
+}

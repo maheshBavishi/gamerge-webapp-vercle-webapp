@@ -1,0 +1,104 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.joinGamerges {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 394px;
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        content: '';
+        z-index: -1;
+        background: #00FF7F;
+        filter: blur(400px);
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .box {
+        border-radius: 15px;
+        background: var(--bg-light-white400);
+        padding: 85px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            &::after {
+                    animation: shimmer 1.5s ease-in-out infinite forwards;
+                    left: 0;
+                }
+        }
+
+        @keyframes shimmer {
+                0% {
+                    transform: translateX(-100%);
+                }
+
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+
+         &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg,
+                        transparent,
+                        rgba(7, 192, 47, 0.1),
+                        transparent);
+                pointer-events: none;
+            }
+
+        @media (max-width:576px) {
+            padding: 32px 24px;
+        }
+
+        h2 {
+            @include heading2;
+            color: var(--text-white);
+            text-align: center;
+            max-width: 765px;
+            margin: 0 auto 32px auto;
+
+            @media (max-width:576px) {
+                font-size: 32px;
+            }
+        }
+
+        .btnCenter {
+            display: flex;
+            justify-content: center;
+            padding: 32px 0 0 0;
+
+            button {
+                padding: 11px 24px;
+                min-width: 212px;
+                @include font18bold;
+
+                &:hover {
+                    color: var(--text-white);
+                }
+
+            }
+        }
+
+        p {
+            @include font16medium;
+            color: var(--text-white);
+            max-width: 765px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}

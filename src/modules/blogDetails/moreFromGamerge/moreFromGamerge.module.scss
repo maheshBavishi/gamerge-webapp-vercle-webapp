@@ -1,0 +1,351 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.moreFromGamerge {
+    position: relative;
+
+    .line {
+        width: calc(100% - 222px);
+        margin: 0 auto 0 auto;
+        height: 1px;
+        position: relative;
+        top: -1px;
+        background-color: var(--border-color);
+
+        @media (max-width:576px) {
+            width: calc(100% - 142px);
+        }
+
+
+        &::before {
+            max-width: 900px;
+            width: 100%;
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid transparent;
+            /* Needs a border */
+            border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 51.44%, rgba(255, 255, 255, 0) 100%);
+            border-image-slice: 1;
+
+            @media (max-width:576px) {
+                max-width: 200px;
+            }
+        }
+    }
+
+    .linebottom {
+        width: calc(100% - 222px);
+        margin: 0 auto 0 auto;
+        height: 1px;
+        position: relative;
+        top: -1px;
+        background-color: var(--border-color);
+
+        @media (max-width:576px) {
+            width: calc(100% - 142px);
+        }
+
+        &::before {
+            max-width: 900px;
+            width: 100%;
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid transparent;
+            border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 51.44%, rgba(255, 255, 255, 0) 100%);
+            border-image-slice: 1;
+
+            @media (max-width:576px) {
+                max-width: 200px;
+            }
+        }
+    }
+
+
+    .leftSide {
+        width: 80px;
+        height: 1px;
+        background-color: var(--border-color);
+        position: relative;
+        top: -40px;
+
+        @media (max-width:576px) {
+            width: 40px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 1px;
+            background-color: var(--border-color);
+            left: 71px;
+            top: 19px;
+            transform: rotate(50deg);
+
+            @media (max-width:576px) {
+                left: 31px;
+            }
+
+        }
+    }
+
+    .leftSidebottom {
+        width: 80px;
+        height: 1px;
+        background-color: var(--border-color);
+        position: relative;
+        top: 37px;
+
+        @media (max-width:576px) {
+            width: 40px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 51px;
+            height: 1px;
+            background-color: var(--border-color);
+            left: 69px;
+            top: -19px;
+            transform: rotate(-50deg);
+
+            @media (max-width:576px) {
+                left: 31px;
+            }
+        }
+    }
+
+    .rightSidebottom {
+        width: 80px;
+        height: 1px;
+        background-color: var(--border-color);
+        position: relative;
+        top: 37px;
+        margin-left: auto;
+
+        @media (max-width:576px) {
+            width: 40px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 51px;
+            height: 1px;
+            background-color: var(--border-color);
+            right: 70px;
+            top: -20px;
+            transform: rotate(50deg);
+
+            @media (max-width:576px) {
+                right: 31px;
+            }
+        }
+    }
+
+    .rightSide {
+        width: 80px;
+        height: 1px;
+        background-color: var(--border-color);
+        position: relative;
+        top: -40px;
+        margin-left: auto;
+
+        @media (max-width:576px) {
+            width: 40px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 1px;
+            background-color: var(--border-color);
+            right: 70px;
+            top: 19px;
+            transform: rotate(-50deg);
+
+            @media (max-width:576px) {
+                right: 31px;
+            }
+
+        }
+    }
+
+    .title {
+        padding: 79px 0 48px 0;
+        display: flex;
+        justify-content: center;
+          @media (max-width:576px) {
+                padding: 40px 0 32px 0;
+            }
+
+        h2 {
+            @include heading2;
+            color: var(--text-white);
+            text-align: center;
+              @media (max-width:576px) {
+                font-size: 28px;
+                gap: 0 6px !important;
+                margin: 0 auto;
+                text-align: center;
+                justify-content: center;
+            } 
+
+            span {
+                color: var(--primary);
+            }
+        }
+    }
+
+    :global(.slick-slide) {
+        padding: 0 14px;
+    }
+
+    :global(.slick-list) {
+        margin: 0 -14px;
+    }
+
+    .sliderBottomAlignment {
+        padding: 0 0 85px 0;
+         @media (max-width:576px) {
+            padding: 0 0 40px 0;
+         }
+    }
+
+    .blogCard {
+        border: 1px solid var(--border-color);
+        border-radius: 15px;
+        background: var(--bg-white-600);
+        position: relative;
+
+        &:hover {
+            &::after {
+                opacity: 0;
+            }
+
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            border-radius: 0 0 15px 15px;
+            background: linear-gradient(290.5deg,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0) 20%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            transition: 0.3s ease-in-out;
+            z-index: 1;
+            opacity: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            border-radius: 0 0 15px 15px;
+            background: linear-gradient(390.5deg,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0) 20%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            transition: 0.3s ease-in-out;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .details {
+            padding: 16px;
+
+            h3 {
+                font-size: 20px;
+                font-style: normal;
+                font-family: var(--font-poppins);
+                font-weight: 500;
+                line-height: normal;
+                color: var(--text-light);
+                text-align: center;
+            }
+        }
+
+        .image {
+            img {
+                width: 100%;
+                height: 200px;
+                border-radius: 15px 15px 0 0;
+                display: block;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    .sliderArrow {
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 9;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background-color: var(--text-white);
+        transition: .3s ease-in-out;
+
+
+        &.leftIcon {
+            left: -52px;
+
+            @media (max-width:1024px) {
+                left: 0;
+            }
+             @media (max-width:576px) {
+                left: -10px;
+             }
+        }
+
+        &.rightIcon {
+            right: -52px;
+
+            @media (max-width:1024px) {
+                right: 0;
+            }
+             @media (max-width:576px) {
+                right: -10px;
+             }
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.topSpacing {
+    padding: 90px 0 0 0;
+     @media (max-width:576px) {
+        padding: 80px 0 0 0;
+     }
+}

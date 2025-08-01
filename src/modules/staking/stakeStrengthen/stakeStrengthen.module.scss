@@ -1,0 +1,102 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.stakeStrengthen {
+    padding: 0 0 76px 0;
+    position: relative;
+     @media (max-width:576px) {
+        padding: 0 0 80px 0;
+     }
+
+    &::before {
+        border-radius: 394px;
+        background: #00FF7F;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        z-index: -1;
+        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        border-radius: 394px;
+        background: #7B19D8;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        z-index: -1;
+        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 418px;
+        gap: 10px;
+        align-items: center;
+         @media (max-width:1024px) {
+            grid-template-columns: 1fr;
+            gap: 0;
+         }
+          @media (max-width:576px) {
+            gap: 50px;
+          }
+
+        .image {
+             @media (max-width:1024px) {
+                display: flex;
+                justify-content: center;
+             }
+            img {
+                display: block;
+                width: 100%;
+                 @media (max-width:1024px) {
+                    max-width: 450px;
+                 }
+            }
+        }
+
+        h2 {
+            @include heading2;
+            color: var(--text-white);
+            margin: 20px 0 32px 0;
+             @media (max-width:576px) {
+                font-size: 32px;
+                text-align: center;
+             }
+        }
+
+        svg {
+             @media (max-width:576px) {
+                width: 18px;
+                height: 18px;
+                display: flex;
+                margin: 0 auto;
+             }
+        }
+
+        p {
+            @include font16medium;
+            color: var(--gray800);
+            max-width: 764px;
+             @media (max-width:576px) {
+                text-align: center;
+             }
+        }
+    }
+}

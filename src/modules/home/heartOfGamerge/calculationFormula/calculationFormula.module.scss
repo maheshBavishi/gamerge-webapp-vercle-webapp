@@ -1,0 +1,89 @@
+@use '../../../../scss/main.scss' as *;
+@use '../../../../scss/typography/typography.scss' as *;
+
+.calculationFormula {
+    border-radius: 10.814px;
+    background: var(--bg-black-opacity-700);
+    box-shadow: 0px 1.802px 3.605px 0.901px rgba(0, 0, 0, 0.05) inset;
+    height: 100%;
+    padding: 18px;
+        @media (max-width:576px) {
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0px;
+            padding: 0;
+        }
+
+
+    h3 {
+        @include font14medium;
+        color: var(--gray400);
+        margin: 0 0 14px 0;
+            @media (max-width:576px) {
+                margin: 0 0 17px 0;
+            }
+    }
+
+    .btnDesign {
+        button {
+            padding: 7px 15px;
+            background-color: var(--primary);
+            color: var(--text-black);
+            border: 1px solid var(--primary);
+            border-radius: 10.814px;
+            @include font12medium;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            @media (max-width:576px) {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+              
+
+            &:hover {
+                background-color: transparent;
+                color: var(--primary);
+            }
+        }
+    }
+
+    .buttonIconAlignment {
+        display: flex;
+        align-items: center;
+        padding: 0 0 20px 0;
+        gap: 10px;
+        @media (max-width:576px) {
+            gap: 7px;
+            padding: 0 0 10px 0;
+        }
+
+        svg {
+            cursor: pointer;
+
+            &:hover {
+                path {
+                    stroke: var(--primary);
+                }
+            }
+        }
+
+        button {
+            padding: 7px 10px;
+            @include font12;
+            border-radius: 10.814px;
+            color: var(--gray400);
+            background-color: var(--bg-black200);
+            cursor: pointer;
+            border: none;
+            transition: .3s ease-in-out;
+              @media (max-width:576px) {
+                    padding: 6px 9px;
+                    font-size: 11px;
+                }
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}

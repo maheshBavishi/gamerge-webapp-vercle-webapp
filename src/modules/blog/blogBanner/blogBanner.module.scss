@@ -1,0 +1,210 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.blogbanner {
+    background-image: url('/assets/images/banner-blog.png');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    padding: 180px 0 80px 0;
+
+    @media (max-width:1024px) {
+        padding: 130px 0 80px 0;
+    }
+
+    @media (max-width:576px) {
+        padding: 140px 0 80px 0;
+    }
+
+    .iconCenter {
+        display: flex;
+        justify-content: center;
+
+        svg {
+            @media (max-width:576px) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    h1 {
+        @include heading1;
+        color: var(--text-white);
+        margin: 10px 0 50px 0;
+        text-align: center;
+
+        @media (max-width:1024px) {
+            @include heading2;
+            margin: 10px 0 40px 0;
+        }
+
+        @media (max-width:576px) {
+            font-size: 32px;
+        }
+
+
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 570px;
+        gap: 24px;
+
+        @media (max-width:1024px) {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            .cardimage {
+                height: 390px;
+                background-color: var(--text-white);
+                border-radius: 15px;
+                width: 100%;
+
+                @media (max-width:576px) {
+                    height: 226px;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+            }
+
+            .details {
+                padding: 20px 0 0 0;
+
+                @media (max-width:576px) {
+                    padding: 16px 0 0 0;
+                }
+
+                h3 {
+                    @include heading7-medium;
+                    color: var(--text-white);
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    margin: 0 0 14px 0;
+
+                    @media (max-width:576px) {
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin: 0 0 10px 0;
+                    }
+                }
+
+                p {
+                    @include font16bold;
+                    color: #717171;
+
+                    @media (max-width:576px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .twoColGrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+
+            @media (max-width:576px) {
+                gap: 20px 12px;
+            }
+        }
+    }
+}
+
+.rightSide {
+    width: 80px;
+    height: 1px;
+    background-color: var(--border-color);
+    position: relative;
+    top: -40px;
+    margin-left: auto;
+
+    @media (max-width:576px) {
+        width: 40px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 1px;
+        background-color: var(--border-color);
+        right: 70px;
+        top: 19px;
+        transform: rotate(-50deg);
+
+        @media (max-width:576px) {
+            right: 31px;
+        }
+
+    }
+}
+
+
+.leftSide {
+    width: 80px;
+    height: 1px;
+    background-color: var(--border-color);
+    position: relative;
+    top: -40px;
+
+    @media (max-width:576px) {
+        width: 40px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 1px;
+        background-color: var(--border-color);
+        left: 71px;
+        top: 19px;
+        transform: rotate(50deg);
+
+        @media (max-width:576px) {
+            left: 31px;
+        }
+
+    }
+}
+
+.line {
+    width: calc(100% - 222px);
+    margin: 0 auto 0 auto;
+    height: 1px;
+    position: relative;
+    top: -1px;
+    background-color: var(--border-color);
+
+    @media (max-width:576px) {
+        width: calc(100% - 142px);
+    }
+
+    &::before {
+        max-width: 900px;
+        width: 100%;
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid transparent;
+        /* Needs a border */
+        border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 51.44%, rgba(255, 255, 255, 0) 100%);
+        border-image-slice: 1;
+
+        @media (max-width:576px) {
+            max-width: 200px;
+        }
+    }
+}

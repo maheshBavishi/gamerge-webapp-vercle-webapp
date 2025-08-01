@@ -1,0 +1,69 @@
+@use '../../scss/main.scss' as *;
+@use '../../scss/typography/typography.scss' as *;
+
+.button {
+    button {
+        padding: 8px 20px;
+        @include font16bold;
+        color: var(--black100);
+        background-color: var(--primary);
+        border: none;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        border-radius: 4px;
+
+        @media (max-width:576px) {
+            font-size: 13px;
+            padding: 9px 20px;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+    }
+
+    &.fillwhite {
+        button {
+            background: var(--text-white);
+            color: var(--black100);
+
+            &:hover {
+                color: var(--text-white);
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.animatedButton {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9999px;
+    font-weight: 500;
+    padding: 10px 24px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.backgroundLayer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.fillLayer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.buttonText {
+    position: relative;
+    z-index: 3;
+    font-weight: 500;
+}
+

@@ -1,0 +1,110 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.earnUsdt {
+    position: relative;
+
+    .box {
+        border-radius: 15px;
+        border: 1px solid var(--border-color);
+        padding: 0 45px 0 35px;
+        background: rgba(255, 255, 255, 0.04);
+        display: grid;
+        grid-template-columns: 1fr 429px;
+        align-items: center;
+        gap: 50px;
+
+        @media (max-width:1024px) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        @media (max-width:576px) {
+            padding: 20px;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .relativeDiv {
+            position: relative;
+
+            .starOne {
+                position: absolute;
+                top: 14%;
+                left: 0;
+            }
+
+            .starTwo {
+                position: absolute;
+                top: 20%;
+                right: 5%;
+            }
+
+            .starThree {
+                position: absolute;
+                top: 50%;
+                right: 0%;
+            }
+        }
+
+
+
+        .content {
+            padding: 73px 0;
+
+            @media (max-width:1024px) {
+                padding: 50px 0 0 0;
+            }
+
+            @media (max-width:576px) {
+                order: 2;
+                padding: 0;
+            }
+
+            p {
+                @include font20medium;
+                color: var(--gray);
+                margin: 0 0 20px 0;
+
+                @media (max-width:576px) {
+                    @include font18medium;
+                }
+            }
+
+            button {
+                padding: 13px 32px;
+                font-weight: 700;
+
+                @media (max-width:576px) {
+                    font-size: 16px;
+                }
+            }
+
+            h2 {
+                @include heading2;
+                color: var(--text-white);
+                text-shadow: 0px 6px 2.25px rgba(0, 0, 0, 0.25);
+                max-width: 369px;
+                margin: 0 0 20px 0;
+                text-transform: none;
+
+                @media (max-width:576px) {
+                    font-size: 32px;
+                }
+
+                span {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}

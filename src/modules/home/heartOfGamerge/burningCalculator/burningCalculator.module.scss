@@ -1,0 +1,156 @@
+@use '../../../../scss/main.scss' as *;
+@use '../../../../scss/typography/typography.scss' as *;
+
+.burningCalculator {
+    border-top: 1px solid var(--border300);
+    border-bottom: 1px solid var(--border300);
+    padding: 40px 0;
+    @media (max-width:576px) {
+        padding: 0;
+        border: none;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 133px;
+        gap: 20px;
+
+        @media (max-width:1024px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width:576px) {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .griditems {
+            height: 100%;
+        }
+
+        .griditems:first-child {
+            @media (max-width:1024px) {
+                order: 2;
+            }
+            @media (max-width:576px) {
+                order: inherit;
+            }
+        }
+
+        .griditems:nth-child(2) {
+            @media (max-width:1024px) {
+                   grid-column: span 2;
+            }
+            @media (max-width:576px) {
+                grid-column: auto;
+             
+            }
+        }
+
+        .griditems:last-child {
+            border-radius: 10.814px;
+            background: #010201;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width:576px) {
+                border-radius: 10.814px;
+background: rgba(255, 255, 255, 0.06);
+padding: 40px;
+            }
+
+            span {
+                @include font14;
+                font-weight: 400;
+                color: var(--gray400);
+            }
+
+            h4 {
+                color: var(--text-white);
+                text-align: center;
+                font-family: var(--font-poppins);
+                margin: 0 0 4px 0;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px;
+            }
+        }
+
+        .numberofText {
+            max-width: 474px;
+
+            p {
+                @include font14medium;
+                color: var(--gray400);
+                margin: 0 0 20px 0;
+            }
+
+            .slidecontainer {
+                width: 100%;
+
+                .slider {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 7px;
+                    border-radius: 9010.727px;
+                    background: var(--black300);
+                    outline: none;
+                    -webkit-transition: .2s;
+                    transition: opacity .2s;
+                }
+
+                .slider:hover {
+                    opacity: 1;
+                }
+
+                .slider::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 25px;
+                    height: 25px;
+                    background: var(--primary);
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                .slider::-moz-range-thumb {
+                    width: 25px;
+                    border-radius: 50%;
+                    height: 25px;
+                    background: var(--primary);
+                    cursor: pointer;
+                }
+            }
+
+            .twoContentAlignment {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 16px 0 0 0;
+
+                span {
+                    display: block;
+                    @include font12;
+                    color: var(--gray100);
+                }
+            }
+
+        }
+
+        .iconText {
+            display: flex;
+            align-items: center;
+            padding: 0 0 30px 0;
+            gap: 11px;
+                @media (max-width:576px){
+                    padding: 0 0 12px 0;
+                }
+
+            h3 {
+                @include font20bold;
+                color: var(--text-white);
+            }
+        }
+    }
+
+}

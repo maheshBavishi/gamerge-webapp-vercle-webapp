@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background: var(--page-background);
+  padding: 0;
+  user-select: none;
+  font-family: var(--font-poppins);
+  overflow-x: hidden;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+img {
+  max-width: 100%;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-md {
+  max-width: calc(1241px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-sm {
+  max-width: calc(1192px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-lg {
+  max-width: calc(1153px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-xs {
+  max-width: calc(841px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-xs2 {
+  max-width: calc(966px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-xs3 {
+  max-width: calc(1008px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-xl {
+  max-width: calc(1344px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-sm2 {
+  max-width: calc(1108px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.recharts-sector:focus,
+.recharts-pie-sector:focus,
+.recharts-layer:focus,
+.recharts-surface:focus,
+.recharts-wrapper:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width:576px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    background-image: url('/assets/images/mobile-bg.png');
+    width: 100%;
+  }
+}

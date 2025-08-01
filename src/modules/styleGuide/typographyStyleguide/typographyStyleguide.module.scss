@@ -1,0 +1,280 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.typographyStyleguide {
+    position: relative;
+    padding: 144px 0 0 0;
+
+    @media (max-width:576px) {
+        padding: 80px 0 0 0;
+    }
+
+    .seclayer {
+        &::before {
+            border-radius: 394px;
+            background: #00FF7F;
+            width: 394px;
+            height: 394px;
+            flex-shrink: 0;
+            filter: blur(400px);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: '';
+            z-index: -1;
+
+            @media (max-width:576px) {
+                display: none;
+            }
+        }
+
+        &::after {
+            border-radius: 394px;
+            background: #7B19D8;
+            filter: blur(400px);
+            width: 394px;
+            height: 394px;
+            flex-shrink: 0;
+            position: absolute;
+            bottom: 30%;
+            left: 0;
+            content: '';
+            z-index: -1;
+
+            @media (max-width:576px) {
+                display: none;
+            }
+        }
+    }
+
+    &::before {
+        border-radius: 394px;
+        background: #00FF7F;
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        filter: blur(400px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        z-index: -1;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        border-radius: 394px;
+        background: #7B19D8;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: -1;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .title {
+        padding: 0 0 100px 0;
+
+        @media (max-width:576px) {
+            padding: 0 0 40px 0;
+        }
+
+        h2 {
+            @include heading2;
+            color: var(--text-white);
+            text-align: center;
+
+            @media (max-width:576px) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .textgrid {
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: 80px;
+        padding: 30px 0 80px 0;
+
+        @media (max-width:1024px) {
+            grid-template-columns: 250px 1fr;
+        }
+
+        @media (max-width:576px) {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 0 0 20px 0;
+        }
+
+        &.regularFont {
+            .listText {
+                p {
+                    font-family: var(--font-poppins);
+                    font-weight: 400;
+                }
+            }
+
+            h4,
+            h5,
+            h6 {
+                font-family: var(--font-poppins);
+                font-weight: 300;
+            }
+        }
+
+        &.mediumFont {
+            .listText {
+                p {
+                    font-family: var(--font-poppins);
+                    font-weight: 500;
+                }
+            }
+
+            h4,
+            h5,
+            h6 {
+                font-family: var(--font-poppins);
+                font-weight: 500;
+            }
+        }
+
+        &.boldFont {
+            .listText {
+                p {
+                    font-family: var(--font-poppins);
+                    font-weight: 600;
+                }
+            }
+
+            h4,
+            h5,
+            h6 {
+                font-family: var(--font-poppins);
+                font-weight: 600;
+            }
+        }
+
+        .listText {
+            p {
+                @include heading32-bold;
+                font-weight: 600;
+                color: #B3B3B3;
+                max-width: 505px;
+                margin: 0 0 32px auto;
+                word-break: break-all;
+                letter-spacing: 12.8px;
+
+                @media (max-width:1024px) {
+                    font-size: 22px;
+                }
+
+                @media (max-width:576px) {
+                    letter-spacing: 9px;
+                    margin: 0 auto 20px auto;
+                }
+            }
+        }
+
+        .textRelative {
+            position: relative;
+        }
+
+        h4 {
+            color: rgba(255, 255, 255, 0.03);
+            text-align: center;
+            font-size: 200px;
+            font-style: normal;
+            font-weight: 600;
+            font-family: var(--font-unbounded);
+            line-height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @media (max-width:1024px) {
+                font-size: 140px;
+            }
+
+            @media (max-width:576px) {
+                font-size: 120px;
+                line-height: 120px;
+            }
+        }
+
+        h5 {
+            color: var(--Gray-Gray-500, #B3B3B3);
+            font-size: 70px;
+            font-style: normal;
+            font-weight: 600;
+            position: relative;
+            font-family: var(--font-unbounded);
+            line-height: 70px;
+
+            @media (max-width:1024px) {
+                font-size: 49px;
+                line-height: 50px;
+            }
+        }
+
+        .topAlignment {
+            padding: 30px 0 0 0;
+
+            @media (max-width:576px) {}
+        }
+
+        h6 {
+            color: var(--Gray-Gray-500, #B3B3B3);
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 300;
+            font-family: var(--font-poppins);
+            line-height: normal;
+
+            @media (max-width:1024px) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .primaryFont {
+        padding: 0 0 40px 0;
+        border-bottom: 1px solid var(--border-color);
+
+        &.fontfamilyChange {
+            h3 {
+                font-family: var(--font-poppins);
+            }
+        }
+
+        h3 {
+            text-align: center;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: var(--primary);
+            font-size: 110px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            font-family: var(--font-unbounded);
+
+            @media (max-width:1024px) {
+                font-size: 48px;
+            }
+
+            @media (max-width:576px) {
+                font-size: 40px;
+            }
+
+        }
+    }
+}

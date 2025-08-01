@@ -1,0 +1,49 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.commonBlogCard {
+    .cardimage {
+        height: 154px;
+        background-color: var(--text-white);
+        border-radius: 15px;
+        width: 100%;
+        @media (max-width:576px) {
+            height: 106px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+
+    .details {
+        padding: 10px 0 0 0;
+
+        h3 {
+            font-size: 16px;
+            font-weight: 500;
+            font-family: var(--font-unbounded);
+            color: var(--text-white);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin: 0 0 14px 0;
+            @media (max-width:576px) {
+                margin: 0 0 10px 0;
+            }
+        }
+
+        p {
+            @include font16bold;
+            color: #717171;
+            @media (max-width:576px) {
+                font-size: 12px;
+            }
+        }
+    }
+}

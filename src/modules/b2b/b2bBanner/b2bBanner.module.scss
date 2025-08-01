@@ -1,0 +1,59 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.b2bBanner {
+    padding: 227px 0 76px 0;
+    background-image: url('/assets/images/b2b-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    @media (max-width:576px) {
+        background-image: url('/assets/images/b2b-mobile-banner.png');
+        background-position: center center;
+        padding: 250px 0 100px 0;
+    }
+
+    .text {
+        h1 {
+            color: var(--text-light);
+            font-family: var(--font-unbounded);
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 600;
+            max-width: 1028px;
+            text-align: center;
+            margin: 0 auto 28px auto;
+            line-height: normal;
+            text-transform: uppercase;
+
+            @media (max-width:576px) {
+                font-size: 32px;
+            }
+
+
+            span {
+                color: var(--primary);
+            }
+        }
+
+        .twoButtonAlignment {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 48px 0 0 0;
+            justify-content: center;
+            @media (max-width:576px) {
+                padding: 28px 0 0 0;
+            }
+        }
+
+        p {
+            @include font16medium;
+            color: var(--light-text-65);
+            max-width: 644px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}

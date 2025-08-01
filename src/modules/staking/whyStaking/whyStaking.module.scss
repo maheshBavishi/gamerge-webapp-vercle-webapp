@@ -1,0 +1,362 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.whyStaking {
+    position: relative;
+    padding: 72px 0;
+
+    @media (max-width:576px) {
+        padding: 80px 0;
+    }
+
+    &::before {
+        border-radius: 394px;
+        background: #00FF7F;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        z-index: -1;
+        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        border-radius: 394px;
+        background: #7B19D8;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        z-index: -1;
+        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .title {
+        padding: 0 0 60px 0;
+
+        @media (max-width:576px) {
+            padding: 0 0 32px 0;
+        }
+
+        .iconCenter {
+            display: flex;
+            justify-content: center;
+            padding: 0 0 24px 0;
+
+            @media (max-width:576px) {
+                padding: 0 0 10px 0;
+            }
+
+            svg {
+                @media (max-width:576px) {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        h2 {
+            @include heading2;
+            color: var(--text-white);
+            text-align: center;
+            margin: 0 0 24px 0;
+
+            @media (max-width:576px) {
+                font-size: 32px;
+                margin: 0 0 20px 0;
+            }
+        }
+
+        p {
+            @include font16medium;
+            color: var(--gray800);
+            max-width: 1128px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        border: 1px solid var(--border-color);
+        border-radius: 15px;
+        position: relative;
+
+        @media (max-width:576px) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .bottomCenter {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -40px;
+             @media (max-width:576px) {
+                transform: none;
+                left: 0;
+             }
+
+            img {
+                display: block;
+                max-width: 100px;
+                transform: rotate(280deg);
+                 @media (max-width:576px) {
+                    max-width: 60px;
+                transform: rotate(280deg) !important;
+                 }
+            }
+        }
+
+        .topIconalignment {
+            position: absolute;
+            top: -40px;
+            right: 20px;
+
+            @media (max-width:576px) {
+                display: none;
+            }
+
+            img {
+                display: block;
+                max-width: 120px;
+            }
+        }
+
+
+        .border {
+            border-right: 1px solid var(--border-color);
+
+            @media (max-width:576px) {
+                border-bottom: 1px solid var(--border-color);
+                border-right: none;
+            }
+
+        }
+
+        .griditems {
+            padding: 48px;
+            background: var(--bg-light-white400);
+
+            @media (max-width:1024px) {
+                padding: 24px;
+            }
+
+            @media (max-width:576px) {
+                padding: 32px 24px;
+            }
+
+            .leftContent {
+                svg {
+                    @media (max-width:576px) {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+
+                .noteText {
+                    p {
+                        @include font18;
+                        color: var(--light-600);
+
+                        @media (max-width:576px) {
+                            @include font14medium;
+                        }
+                    }
+                }
+
+                .stakingPeriod {
+                    padding: 0 0 48px 0;
+                     @media (max-width:576px) {
+                        padding: 0 0 28px 0;
+                     }
+
+                    label {
+                        display: block;
+                        @include font16medium;
+                        margin: 0 0 16px 0;
+                        color: var(--text-white);
+                    }
+
+                    .buttonAlignment {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        flex-wrap: wrap;
+
+                        button {
+                            @include font14medium;
+                            padding: 9px 16px;
+                            border-radius: 8px;
+                            border: 1px solid var(--border300);
+                            background: var(--bg-light-white400);
+                            color: var(--black600);
+                            transition: .3s ease-in-out;
+                            cursor: pointer;
+
+                            @media (max-width:576px) {
+                                font-size: 12px;
+                            }
+
+                            &.active {
+                                background-color: var(--text-white);
+                                color: var(--black100);
+                            }
+
+                            &:hover {
+                                background-color: var(--text-white);
+                                color: var(--black100);
+                            }
+                        }
+                    }
+                }
+
+                h2 {
+                    @include heading28;
+                    text-transform: uppercase;
+                    color: var(--text-white);
+                    margin: 18px 0 24px 0;
+
+                    @media (max-width:576px) {
+                        font-size: 24px;
+                        margin: 10px 0 16px 0;
+                    }
+                }
+
+                h3 {
+                    @include font18;
+                    margin: 0 0 48px 0;
+                    color: var(--light-600);
+                      @media (max-width:576px) {
+                        margin: 0 0 28px 0;
+                     }
+                }
+            }
+
+            .rightContent {
+                .allinputalignment {
+                    .inputDesign:last-child {
+                        padding: 0;
+                    }
+
+                    .inputDesign {
+                        padding: 0 0 28px 0;
+
+                        label {
+                            display: block;
+                            padding: 0 0 10px 0;
+                            @include font16medium;
+                            color: var(--text-light);
+                        }
+
+                        .relative {
+                            position: relative;
+
+                            .rightDetails {
+                                display: flex;
+                                align-items: center;
+                                gap: 4px;
+                                position: absolute;
+                                top: 50%;
+                                right: 8px;
+                                transform: translateY(-50%);
+
+                                button {
+                                    padding: 10px 16px;
+                                    border: none;
+                                    cursor: pointer;
+                                    @include font14medium;
+                                    font-weight: 600;
+                                    color: var(--gray);
+                                    border-radius: 8px;
+                                    background-color: transparent;
+                                     @media (max-width:576px) {
+                                        font-size: 12px;
+                                     }
+                                    &.fillwhite {
+                                        background-color: var(--text-white);
+                                        color: var(--black100);
+                                    }
+                                }
+                            }
+
+                            input {
+                                border-radius: 8px;
+                                border: 1px solid var(--border300);
+                                background: var(--bg-light-white400);
+                                height: 58px;
+                                width: 100%;
+                                @include font16medium;
+                                padding-left: 8px;
+                                padding-right: 160px;
+                                color: var(--text-white);
+                                transition: .3s ease-in-out;
+
+                                &:focus {
+                                    outline: none;
+                                    border: 1px solid var(--primary);
+                                }
+                            }
+
+                            ::placeholder {
+                                @include font16medium;
+                                color: var(--black600);
+                            }
+                        }
+                    }
+                }
+
+                .content {
+                    padding: 0 0 20px 0;
+
+                    p:last-child {
+                        padding: 0;
+                    }
+
+                    h3 {
+                        color: var(--primary);
+                        font-size: 56px;
+                        font-family: var(--font-poppins);
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+
+                         @media (max-width:576px) {
+                            font-size: 48px;
+                         }
+                    }
+
+                    p {
+                        @include font16medium;
+                        color: var(--text-light);
+                        margin: 0 0 5px 0;
+                    }
+
+                    span {
+                        display: block;
+                        @include font16medium;
+                        padding: 0 0 20px 0;
+                        color: var(--text-white);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@use '../../scss/main.scss' as *;
+@use '../../scss/typography/typography.scss' as *;
+
+.riskDisclosure {
+    padding: 180px 0 100px 0;
+
+    @media (max-width:576px) {
+        padding: 140px 0 60px 0;
+    }
+
+    .headingText {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 0 60px 0;
+        justify-content: center;
+
+        @media (max-width:576px) {
+            display: block;
+            padding: 0 0 40px 0;
+        }
+
+        svg {
+            @media (max-width:576px) {
+                width: 18px;
+                display: flex;
+                margin: 0 auto;
+                height: 18px;
+            }
+        }
+
+        h1 {
+            @include heading1;
+            color: var(--text-white);
+
+            @media (max-width:576px) {
+                @include heading2;
+                text-align: center;
+                margin: 10px 0 0 0;
+            }
+        }
+    }
+
+    .content:last-child {
+        padding: 0;
+    }
+
+    .content {
+        padding: 0 0 40px 0;
+
+        p:last-child {
+            margin: 0;
+        }
+
+        h2 {
+            @include heading32-bold;
+            color: var(--text-white);
+            margin: 0 0 20px 0;
+
+            @media (max-width:576px) {
+                font-size: 24px;
+            }
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            color: var(--gray400);
+            @include font16medium;
+
+            a {
+                color: var(--primary);
+            }
+        }
+    }
+}

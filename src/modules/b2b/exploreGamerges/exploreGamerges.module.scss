@@ -1,0 +1,345 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.exploreGamerges {
+    padding: 48px 0 75px 0;
+    position: relative;
+
+    @media (max-width:576px) {
+        padding: 0 0 60px 0;
+    }
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 394px;
+        background: #00FF7F;
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        content: '';
+        z-index: -1;
+        filter: blur(400px);
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 394px;
+        background: #6419F0;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        content: '';
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .iconAlignment {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 20px 0;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .title {
+        padding: 0 0 48px 0;
+
+        @media (max-width:576px) {
+            padding: 0 0 40px 0;
+        }
+
+        h2 {
+            @include heading2;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 880px;
+            margin: 0 auto 20px auto;
+            text-align: center;
+
+            @media (max-width:576px) {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            @include font16medium;
+            color: var(--border-color);
+            text-align: center;
+        }
+    }
+
+    .mobileplanHeader {
+        border: 1px solid var(--border300);
+        border-radius: 15px;
+        padding: 24px;
+        display: none;
+
+        @media (max-width:576px) {
+            display: block;
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+            margin: 0 0 5px 0;
+        }
+
+        h3 {
+            @include heading24-bold;
+            color: var(--border-color);
+            margin: 0 0 12px 0;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            @include heading28;
+            color: var(--text-white);
+        }
+    }
+
+    .planBody {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-radius: 15px;
+        border: 1px solid var(--border300);
+        background: var(--bg-light-white400);
+        gap: 0;
+
+        @media (max-width:576px) {
+            grid-template-columns: 1fr;
+            gap: 12px;
+            background-color: transparent;
+            border: none;
+        }
+
+        .items:last-child {
+            border-right: none;
+        }
+
+        .items {
+            border-right: 1px solid var(--border300);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                  &::after {
+                    animation: shimmer .8s ease-in-out forwards;
+                    left: 0;
+                }
+            }
+            @keyframes shimmer {
+                0% {
+                    transform: translateX(-100%);
+                }
+
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+             &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg,
+                        transparent,
+                        rgba(7, 192, 47, 0.1),
+                        transparent);
+                pointer-events: none;
+            }
+
+
+            @media (max-width:576px) {
+                border: 1px solid var(--border300);
+                border-radius: 15px;
+                margin: 0 0 20px 0;
+            }
+
+            .buttonAlignment {
+                padding: 0 20px 20px 20px;
+
+                @media (max-width:576px) {
+                    padding: 0 15px 20px 15px;
+                }
+
+                button {
+                    width: 100%;
+                    @include font18bold;
+                    padding: 11px 20px;
+                    border-radius: 8px;
+
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+            }
+
+            .alignment {
+                padding: 48px;
+
+                @media (max-width:1024px) {
+                    padding: 20px;
+                }
+
+                @media (max-width:576px) {
+                    padding: 24px;
+                }
+
+                ul:last-child {
+                    padding-bottom: 0;
+                }
+            }
+
+            p {
+                @include font18bold;
+                margin: 0 0 10px 0;
+                color: var(--text-light);
+
+                @media (max-width:1024px) {
+                    @include font16medium;
+                    font-weight: 600;
+                }
+
+                @media (max-width:576px) {
+                    @include font18bold;
+                    color: var(--text-light);
+                }
+            }
+
+            ul {
+                margin: 0;
+                padding: 0 0 48px 20px;
+
+                @media (max-width:1024px) {
+                    padding: 0 0 24px 20px;
+                }
+
+                @media (max-width:576px) {
+                    padding: 0 0 28px 20px;
+                }
+
+                li {
+                    @include font18;
+                    color: var(--black600);
+
+                    @media (max-width:1024px) {
+                        @include font16medium;
+                        font-weight: 400;
+                    }
+
+                    @media (max-width:576px) {
+                        @include font18;
+                    }
+                }
+            }
+        }
+    }
+
+    .planHeader {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-radius: 15px;
+        border: 1px solid var(--border300);
+        background: var(--bg-light-white400);
+        gap: 0;
+        margin: 0 0 32px 0;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+
+        .items:last-child {
+            border-right: none;
+        }
+
+        .items {
+            padding: 39px 48px;
+            border-right: 1px solid var(--border300);
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                &::after {
+                    animation: shimmer .8s ease-in-out forwards;
+                    left: 0;
+                }
+            }
+
+            @keyframes shimmer {
+                0% {
+                    transform: translateX(-100%);
+                }
+
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg,
+                        transparent,
+                        rgba(7, 192, 47, 0.1),
+                        transparent);
+                pointer-events: none;
+            }
+
+            @media (max-width:1024px) {
+                padding: 20px;
+            }
+
+            svg {
+                @media (max-width:1024px) {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            h3 {
+                margin: 12px 0;
+                @include heading24-bold;
+                color: var(--border-color);
+                text-transform: uppercase;
+
+                @media (max-width:1024px) {
+                    font-size: 18px;
+                }
+            }
+
+            h4 {
+                @include heading28;
+                color: var(--text-white);
+                text-transform: uppercase;
+
+                @media (max-width:1024px) {
+                    font-size: 20px;
+                }
+            }
+
+        }
+    }
+}

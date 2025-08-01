@@ -1,0 +1,172 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.brandColors {
+    padding: 144px 0;
+    position: relative;
+
+    @media (max-width:576px) {
+        padding: 80px 0;
+    }
+
+    &::before {
+        border-radius: 394px;
+        background: #00FF7F;
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        filter: blur(400px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: -1;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        border-radius: 394px;
+        background: #7B19D8;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        z-index: -1;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .box {
+        background-image: url('/assets/images/brand-colors.png');
+        width: 100%;
+        background-size: cover;
+        padding: 72px 140px;
+
+        @media (max-width:1024px) {
+            background-image: none;
+            padding: 0;
+        }
+
+        h2 {
+            @include heading2;
+            color: var(--text-white);
+            max-width: 632px;
+            margin: 0 auto 60px auto;
+            text-align: center;
+            @media (max-width:576px) {
+                margin: 0 auto 40px auto;
+            }
+            
+        }
+
+        .fourCol {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 23px;
+            padding: 0 0 24px 0;
+            @media (max-width:576px) {
+                grid-template-columns: repeat(2 , 1fr);
+                padding: 0 0 23px 0;
+            }
+
+            .colItems:first-child {
+                color: var(--black);
+                background-color: var(--primary);
+            }
+
+            .colItems:nth-child(2) {
+                background: #6A00FF;
+                color: var(--text-white);
+            }
+
+            .colItems:nth-child(3) {
+                background: var(--page-background);
+                color: var(--text-white);
+            }
+
+            .colItems:last-child {
+                background-color: var(--text-white);
+                color: var(--black);
+            }
+
+            .colItems {
+                height: 232px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include heading7;
+                font-weight: 600;
+                @media (max-width:576px) {
+                    height: 130px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .colorGrid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+
+            @media (max-width:1024px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media (max-width:576px) {
+                grid-template-columns: repeat(2 , 1fr);
+                gap: 23px;
+            }
+
+            .items:first-child {
+                background: #0FC38D;
+            }
+
+            .items:nth-child(2) {
+                background: #BCFFEB;
+            }
+
+            .items:nth-child(3) {
+                background: #D33D3E;
+                color: var(--text-white);
+            }
+
+            .items:nth-child(4) {
+                background: #FFBABA;
+            }
+
+            .items:nth-child(5) {
+                background: #F9F9F9;
+            }
+
+            .items:last-child {
+                background: #CCC;
+            }
+
+            .items {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 189px;
+                font-family: var(--font-unbounded);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                color: var(--black);
+                line-height: normal;
+                text-transform: uppercase;
+                  @media (max-width:576px) {
+                    height: 130px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,198 @@
+@use "../../../scss/main.scss" as *;
+@use "../../../scss/typography/typography.scss" as *;
+
+.videoImage {
+  video {
+    width: 100%;
+    height: 729px;
+    object-fit: cover;
+    object-position: top;
+
+    @media (max-width:576px) {
+      height: 700px;
+    }
+  }
+}
+
+.herobanner {
+  // background-image: url("/assets/images/banner-home.png");
+  width: 100%;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  // padding: 210px 0 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+
+  @media (max-width:576px) {
+    // background-color: url("/assets/images/mobile-herobanner.png");
+    padding: 230px 0 0 0;
+  }
+
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.90) 100%);
+  }
+
+  .contentAlignment {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 220px 0 0 0;
+
+    @media (max-width:576px) {
+      padding: 120px 0 0 0;
+    }
+
+  }
+
+  .grid {
+    display: grid;
+    padding: 0 0 84px 0;
+    grid-template-columns: 1fr 400px;
+    gap: 80px;
+    position: relative;
+
+    @media (max-width:1024px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width:576px) {
+      padding: 0;
+      gap: 40px;
+    }
+
+    .griditems:last-child {
+      @media (max-width:1024px) {
+        max-width: 400px;
+      }
+    }
+
+    .twoIconAlignment {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @media (max-width:576px) {
+        justify-content: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        @include font16bold;
+        color: var(--black100);
+        background-color: var(--text-white);
+        border: 1px solid var(--text-white);
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+
+        svg {
+          path {
+            fill: #000;
+          }
+        }
+
+        &:hover {
+          background-color: var(--primary);
+          border: 1px solid var(--primary);
+          color: var(--black100);
+
+          svg {
+            path {
+              fill: var(--black100);
+            }
+          }
+        }
+
+        @media (max-width:576px) {
+          font-size: 13px;
+          padding: 9px 20px;
+        }
+
+      }
+
+
+    }
+
+    .text {
+      padding: 0 0 30px 0;
+
+      p {
+        @include font14-inter;
+        color: var(--text-light);
+        max-width: 712px;
+
+        @media (max-width:576px) {
+          @include font16-inter;
+          max-width: 363px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+      }
+
+
+
+      h1 {
+        color: var(--text-light);
+        font-family: var(--font-unbounded);
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 86px;
+        text-transform: uppercase;
+        margin: 0 0 10px 0;
+        text-shadow: 0 4px 4px rgba(255, 255, 255, 0.25);
+
+        @media (max-width:576px) {
+          @include heading2;
+          margin: 0 0 30px 0;
+          text-align: center;
+        }
+
+        .gradientText {
+          background: linear-gradient(90deg,
+              #00ff7f 16.26%,
+              #5f4dc4 70.88%,
+              #7b19d8 86.73%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          text-shadow: 0 4px 15px rgba(0, 255, 127, 0.25);
+          background-size: 200%;
+          display: block;
+          -webkit-text-fill-color: transparent;
+          animation: gradientShift 4s ease-in-out infinite;
+
+        }
+
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+
+          50% {
+            background-position: 100% 50%;
+          }
+
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      }
+    }
+  }
+
+}

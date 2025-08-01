@@ -1,0 +1,33 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.stleguidebanner {
+    background-image: url('/assets/images/style-guide.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 330px 0 217px 0;
+
+    @media (max-width:576px) {
+        background-image: url('/assets/images/style-guide-mobile.png');
+        padding: 250px 0 100px 0;
+    }
+
+    h1 {
+        @include heading1;
+        color: var(--text-white);
+        text-align: center;
+        margin: 0 0 24px 0;
+        @media (max-width:576px) {
+            font-size: 32px;
+        }
+    }
+
+    p {
+        @include font16medium;
+        color: var(--light-text-65);
+        max-width: 1078px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

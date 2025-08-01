@@ -1,0 +1,130 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.brandIdentity {
+    padding: 0 0 50px 0;
+    position: relative;
+    @media (max-width:576px) {
+        padding: 0 0 48px 0;
+    }
+
+    :global(.container-xs2) {
+        @media (max-width:576px) {
+            padding: 0;
+        }
+    }
+
+    &::before {
+        border-radius: 394px;
+        background: #00FF7F;
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        filter: blur(400px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        z-index: -1;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        border-radius: 394px;
+        background: #7B19D8;
+        filter: blur(400px);
+        width: 394px;
+        height: 394px;
+        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: -1;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+    }
+
+    .twoButtonAlignment {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        justify-content: center;
+
+        button {
+            background-color: var(--text-white);
+            padding: 7px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            @include font16bold;
+            color: var(--black100);
+            border-radius: 4px;
+            border: 1px solid var(--text-white);
+            transition: .3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .title {
+        padding: 0 0 120px 0;
+
+        @media (max-width:576px) {
+            padding: 0 0 40px 0;
+        }
+
+        h2 {
+            max-width: 632px;
+            margin: 0 auto;
+            text-align: center;
+            @include heading2;
+            color: var(--text-white);
+
+            @media (max-width:576px) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .image {
+        padding: 0 0 50px 0;
+
+        @media (max-width:576px) {
+            display: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .brandLogoMobile {
+        display: none;
+        padding: 0 0 48px 0;
+
+        @media (max-width:576px) {
+            display: block;
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+
+}

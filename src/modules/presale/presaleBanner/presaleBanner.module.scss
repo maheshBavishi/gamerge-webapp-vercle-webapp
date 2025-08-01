@@ -1,0 +1,45 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.presaleBanner {
+    background-image: url('/assets/images/presale-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 312px 0 182px 0;
+
+    @media (max-width:576px) {
+        padding: 250px 0 100px 0;
+    }
+
+    .headingText {
+        h1 {
+            @include heading1;
+            text-shadow: 0px 10px 50px #000;
+            max-width: 1192px;
+            text-align: center;
+            margin: 0 auto 40px auto;
+            color: var(--lihgt-300);
+             @media (max-width:576px) {
+                @include heading2;
+                margin: 0 auto 28px auto;
+             }
+
+            span {
+                color: var(--primary);
+            }
+        }
+
+        p {
+            @include font16medium;
+            color: var(--light-text-65);
+            text-align: center;
+            max-width: 834px;
+            margin: 0 auto;
+            text-align: center;
+             @media (max-width:576px) {
+                font-weight: 400;
+             }
+        }
+    }
+}

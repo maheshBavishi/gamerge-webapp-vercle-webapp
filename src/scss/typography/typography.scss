@@ -1,0 +1,259 @@
+@mixin font12bold {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font12 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font20 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font28bold {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font12medium {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font14bold {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font18bold {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font18 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font18semibold {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font18medium {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font14medium {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: var(--font-poppins);
+}
+
+@mixin font14 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: var(--font-poppins);
+}
+
+@mixin font15 {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: var(--font-poppins);
+}
+
+@mixin font16bold {
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin font18bold {
+  font-family: var(--font-poppins);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin font16medium {
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@mixin font24 {
+  font-family: var(--font-poppins);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin font24semibold {
+  font-family: var(--font-poppins);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin font24bold {
+  font-family: var(--font-poppins);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin font20medium {
+  font-family: var(--font-poppins);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin font20bold {
+  font-family: var(--font-poppins);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28.837px;
+}
+
+@mixin font26 {
+  font-family: var(--font-poppins); 
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+
+@mixin font14-inter {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin font16-inter {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin heading2 {
+  font-family: var(--font-unbounded);
+  font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-transform: uppercase;
+}
+
+@mixin heading1 {
+  font-family: var(--font-unbounded);
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-transform: uppercase;
+}
+
+@mixin heading7 {
+  font-family: var(--font-unbounded);
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+@mixin heading7-medium {
+  font-family: var(--font-unbounded);
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+@mixin heading8 {
+  font-family: var(--font-unbounded);
+font-size: 19.5px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+@mixin heading28 {
+  font-family: var(--font-unbounded);
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+@mixin heading24-bold {
+  font-family: var(--font-unbounded);
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+@mixin heading32-bold {
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  font-family: var(--font-poppins);
+}
