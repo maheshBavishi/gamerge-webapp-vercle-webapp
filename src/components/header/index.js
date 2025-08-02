@@ -102,7 +102,6 @@ export default function Header() {
             <a aria-label='airdrop'>airdrop</a>
             <a aria-label='Games'>Games</a>
             <Link href="/blog-details">blog</Link>
-            <a href='https://whitepaper.gamerge.ai/' target='_blank' aria-label='Whitepaper'>Whitepaper</a>
           </div>
         </div>
         <div className={styles.mobileFooter}>

@@ -63,7 +63,7 @@ export default function BuyGmgToken() {
       <div className={styles.buttonAlignment}>
         <Button text="Buy Now" />
         <Link aria-label="presale" href="/presale">
-        <button className={styles.whiteBtn}>Learn More</button>
+          <button className={styles.whiteBtn}>Learn More</button>
         </Link>
       </div>
       <div className={styles.walletText}>
