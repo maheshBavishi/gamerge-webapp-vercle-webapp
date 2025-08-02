@@ -230,10 +230,12 @@ export default function GamergeTokenomics() {
 
                 {/* Button */}
                 <div className={styles.buttonCenter}>
+                    <a aria-label='Smart Contract' href="https://bscscan.com/token/0xa3cba8c94b758d56315def513dec5e75ce05041a" target='_blank'>
                     <button>
                         Smart Contract
                         <UpArrow />
                     </button>
+                    </a>
                 </div>
                 <div className={styles.toyImage}>
                     <img src={ToyImage} alt="ToyImage" />

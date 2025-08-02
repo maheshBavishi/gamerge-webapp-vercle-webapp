@@ -76,7 +76,7 @@ export default function CryptoContent() {
               }}
             >
               <span>Gamerge </span> bridges the gap between fun and finance. Our platform offers
-              <span>skill-based crypto games</span>, token utilities, and a thriving community. Build, earn, and 
+              <span> skill-based crypto games</span>, token utilities, and a thriving community. Build, earn, and 
               grow with us.
             </motion.p>
             
@@ -90,7 +90,7 @@ export default function CryptoContent() {
                 }}
               >
                 <span>Gamerge </span> bridges the gap between fun and finance. Our platform offers
-                <span>skill-based crypto games</span>, token utilities, and a thriving community. Build, earn, and 
+                <span> skill-based crypto games</span>, token utilities, and a thriving community. Build, earn, and 
                 grow with us.
               </motion.p>
             )}

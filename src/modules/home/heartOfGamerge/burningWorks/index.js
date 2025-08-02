@@ -4,7 +4,7 @@ export default function BurningWorks() {
     return (
         <div className={styles.burningWorksAlignment}>
             <div className={styles.title}>
-                <h3>How GMG Burning Works</h3>
+                <h3>How GMG Burning Works?</h3>
             </div>
             <div className={styles.card}>
                 <div className={styles.cardItems}>

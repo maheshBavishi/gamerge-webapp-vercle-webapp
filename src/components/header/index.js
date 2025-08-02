@@ -62,7 +62,7 @@ export default function Header() {
                   <a href='https://sweepwidget.com/c/86895-oiy9dkpt' target='_blank' aria-label='airdrop'>airdrop</a>
                   <a aria-label='Games'>Games</a>
                   <Link href="/blog">blog</Link>
-                  <a href='https://whitepaper.gamerge.ai/' target='_blank' aria-label='Whitepaper'>Whitepaper</a>
+                  <a aria-label='Staking'>Staking</a>
                 </div>
                 <div className={styles.button}>
                   <div className={styles.headerBtn}>

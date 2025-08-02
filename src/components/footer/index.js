@@ -39,10 +39,6 @@ export default function Footer() {
                                     <span>Blog</span>
                                 </div>
                             </Link>
-                            <div className={styles.dotText}>
-                                <div className={styles.dot}></div>
-                                <span>Medium</span>
-                            </div>
                             <a aria-label='gamergeaicommunity' href="https://t.me/gamergeaicommunity" target='_blank'>
                                 <div className={styles.dotText}>
                                     <div className={styles.dot}></div>
@@ -78,6 +74,12 @@ export default function Footer() {
                                     <span>List Your Token</span>
                                 </div>
                             </Link>
+                            <a href="https://whitepaper.gamerge.ai/" aria-label='whitepaper'>
+                                <div className={styles.dotText}>
+                                    <div className={styles.dot}></div>
+                                    <span>Whitepaper</span>
+                                </div>
+                            </a>
                         </div>
                         <div className={styles.griditems}>
                              <div className={styles.line}></div>

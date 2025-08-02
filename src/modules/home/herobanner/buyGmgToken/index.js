@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./buyGmgToken.module.scss";
 import Button from "@/components/button";
+import Link from "next/link";
 
 export default function BuyGmgToken() {
   // Set countdown target (7 days from now)
@@ -61,10 +62,12 @@ export default function BuyGmgToken() {
       </div>
       <div className={styles.buttonAlignment}>
         <Button text="Buy Now" />
+        <Link aria-label="presale" href="/presale">
         <button className={styles.whiteBtn}>Learn More</button>
+        </Link>
       </div>
       <div className={styles.walletText}>
-        <p>Don’t have a wallet?</p>
+        <a href="https://t.me/jamesgamerge" target='_blank' aria-label="wallet">Don’t have a wallet?</a>
       </div>
     </motion.div>
   );
