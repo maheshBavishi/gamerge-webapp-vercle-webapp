@@ -1,0 +1,20 @@
+const isDev = false;
+
+export const TOKEN_DECIMALS = 18;
+export const USD_TOKEN_ADDRESS = isDev
+  ? "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238" // dev
+  : "0x55d398326f99059fF775485246999027B3197955"; // prod
+export const USD_DECIMALS = isDev ? 6 : 18;
+export const PRESALE_FACTORY = isDev
+  ? "0xCFbA143c75f3dB7F67a79c0974F0a4C8324E20Cf" // dev
+  : "0xB063EAb5364d2405831acdf83f15C752B5DbC49e"; // prod
+export const NULL_ADDRESS = "0x0000000000000000000000000000000000000000";
+export const GMG_TOKEN_ADDRESS = isDev
+  ? "0xd3499fda8799b39db8f3a1bd7481a34cad872024" // dev
+  : "0xA3CBa8c94b758D56315Def513DEC5E75Ce05041a"; // prod
+
+export const PRICE_FEED_CONTRACTS = {
+  "bnb-usd": isDev
+    ? "0x694AA1769357215DE4FAC081bf1f309aDC325306" // dev
+    : "0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE", // prod
+};
