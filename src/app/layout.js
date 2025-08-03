@@ -5,10 +5,12 @@ import Header from "@/components/header";
 import "../scss/main.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "@rainbow-me/rainbowkit/styles.css";
 import Footer from "@/components/footer";
 import client from "@/graphql/graphQLClient";
 import { ApolloProvider } from "@apollo/client";
-import ApolloClientProvider from "@/components/ApolloClientProvider";
+
+import Providers from "./providers";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -40,11 +42,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${unbounded.variable} ${plus_jakarta.variable}`}>
-        <ApolloClientProvider>
+
+        <Providers>
           <Header />
           {children}
           <Footer />
-        </ApolloClientProvider>
+        </Providers>
+
       </body>
     </html>
   );
