@@ -46,7 +46,7 @@
 
     .grid {
         display: grid;
-        grid-template-columns: 1fr 418px;
+        grid-template-columns: 1fr 618px;
         gap: 10px;
         align-items: center;
          @media (max-width:1024px) {
@@ -58,9 +58,14 @@
           }
 
         .image {
+            height: 600px;
              @media (max-width:1024px) {
                 display: flex;
                 justify-content: center;
+             }
+             @media (max-width:576px) {
+                height: 350px;
+                
              }
             img {
                 display: block;

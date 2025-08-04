@@ -6,6 +6,7 @@ const StakeImage = '/assets/images/stake-img.png';
 // Add Framer Motion imports
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Spline from '@splinetool/react-spline';
 
 export default function StakeStrengthen() {
   const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -51,7 +52,8 @@ export default function StakeStrengthen() {
               animate={imgControls}
             >
                 <div className={styles.image}>
-                    <img src={StakeImage} alt='StakeImage'/>
+                    {/* <img src={StakeImage} alt='StakeImage'/> */}
+                    <Spline scene="https://prod.spline.design/JVYv056vuGJtzt7V/scene.splinecode" />
                 </div>
             </motion.div>
         </div>
