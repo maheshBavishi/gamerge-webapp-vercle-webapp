@@ -13,7 +13,7 @@ export default function PresalePage() {
       <PresaleDetails />
       <EarnUsdt />
       <PresalePhases/>
-      <Faq />
+      <Faq shadowShow/>
      <div className={styles.downloadAppTopAlignment}>
        <DownloadApp />
      </div>

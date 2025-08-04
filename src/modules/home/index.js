@@ -10,6 +10,8 @@ import OurFuture from './ourFuture'
 import Faq from './faq'
 import MediaPresence from './mediaPresence'
 import DownloadApp from '@/components/downloadApp'
+import ListToken from './listToken'
+import FeaturedIn from './featuredIn'
 
 export default function HomePage() {
   return (
@@ -22,7 +24,9 @@ export default function HomePage() {
       <HeartOfGamerge />
       <GamergeTokenomics />
       <OurFuture />
-      <Faq/>
+      <FeaturedIn/>
+      <ListToken/>
+      <Faq shadowShow={false}/>
       <MediaPresence/>
       <DownloadApp/>
     </>

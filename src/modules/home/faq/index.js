@@ -49,7 +49,7 @@ const faqDataSec = [
         answer: '  Go to Gamerge app Loot Vault Section click “Claim Airdro,” complete tasks, and receive free tokens.',
     },
 ]
-export default function Faq() {
+export default function Faq({shadowShow = true}) {
     const [activeIndex, setActiveIndex] = useState(null)
     const [activeIndexSec, setActiveIndexSec] = useState(null)
 
@@ -60,7 +60,7 @@ export default function Faq() {
         setActiveIndexSec(activeIndexSec === index ? null : index)
     }
     return (
-        <div className={styles.faqSectionAlignment}>
+        <div className={ classNames(styles.faqSectionAlignment , shadowShow ? styles.faqRelativeSection : "") }>
             <div className='container-md'>
                 <motion.div
                     className={styles.titleIconAlignment}

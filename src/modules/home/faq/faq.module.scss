@@ -5,51 +5,55 @@
     padding: 70px 0 0 0;
     position: relative;
 
-    &::before {
-        width: 394px;
-        height: 394px;
-        flex-shrink: 0;
-        border-radius: 394px;
-        background: #00FF7F;
-        filter: blur(400px);
-        position: absolute;
-        right: 0;
-        content: '';
-        z-index: -1;
-        bottom: 0;
+    &.faqRelativeSection {
+        position: relative;
 
-        @media (max-width:576px) {
-            width: 100%;
-            top: 0;
-            bottom: inherit;
-        }
-
-        @media (max-width:576px) {
-            display: none;
-        }
-    }
-
-    &::after {
-        width: 394px;
-        height: 394px;
-        flex-shrink: 0;
-        border-radius: 394px;
-        content: '';
-        z-index: -1;
-        background: #7B19D8;
-        filter: blur(400px);
-        position: absolute;
-        left: 0;
-        top: 0;
-
-        @media (max-width:576px) {
-            width: 100%;
-            top: inherit;
+        &::before {
+            width: 394px;
+            height: 394px;
+            flex-shrink: 0;
+            border-radius: 394px;
+            background: #00FF7F;
+            filter: blur(400px);
+            position: absolute;
+            right: 0;
+            content: '';
+            z-index: -1;
             bottom: 0;
-        }
 
-        @media (max-width:576px) {
-            display: none;
+            @media (max-width:576px) {
+                width: 100%;
+                top: 0;
+                bottom: inherit;
+            }
+
+            @media (max-width:576px) {
+                display: none;
+            }
+        }
+        
+        &::after {
+            width: 394px;
+            height: 394px;
+            flex-shrink: 0;
+            border-radius: 394px;
+            content: '';
+            z-index: -1;
+            background: #7B19D8;
+            filter: blur(400px);
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            @media (max-width:576px) {
+                width: 100%;
+                top: inherit;
+                bottom: 0;
+            }
+
+            @media (max-width:576px) {
+                display: none;
+            }
         }
     }
 
@@ -142,7 +146,7 @@
             }
 
             &.bgActive {
-            background: #111215;
+                background: #111215;
             }
 
             .faqBody {
