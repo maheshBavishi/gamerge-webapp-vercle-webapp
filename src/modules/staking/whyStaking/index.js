@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import styles from './whyStaking.module.scss';
 import DownIcon from '@/components/icons/downIcon';
@@ -30,7 +30,44 @@ const fadeIn = {
   visible: { opacity: 1, transition: { duration: 0.7, ease: 'easeOut' } },
 };
 
+  const stakingOptions = [
+  {
+    duration: "3 Months",
+    apy: "3%",
+    monthlyReturn: "0.25%/month",
+    capitalSecurity: "100% on maturity",
+    lockPeriod: "3 Months",
+    relock: "3 Months",
+  },
+  {
+    duration: "6 Months",
+    apy: "4%",
+    monthlyReturn: "0.33%/month",
+    capitalSecurity: "100% on maturity",
+    lockPeriod: "6 Months",
+    relock: "6 Months",
+  },
+  {
+    duration: "9 Months",
+    apy: "5%",
+    monthlyReturn: "0.41%/month",
+    capitalSecurity: "100% on maturity",
+    lockPeriod: "9 Months",
+    relock: "9 Months",
+  },
+  {
+    duration: "12 Months",
+    apy: "6%",
+    monthlyReturn: "0.50%/month",
+    capitalSecurity: "100% on maturity",
+    lockPeriod: "12 Months",
+    relock: "12 Months",
+  },
+];
+
 export default function WhyStaking() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const selectedOption = stakingOptions[selectedIndex];
   return (
     <motion.div
       className={styles.whyStaking}
@@ -69,17 +106,18 @@ export default function WhyStaking() {
                             Staking period
                         </label>
                         <div className={styles.buttonAlignment}>
-                            {["3 Months", "6 Months", "9 Months", "12 Months"].map((label, idx) => (
-                              <motion.button
-                                key={label}
-                                className={idx === 0 ? styles.active : ''}
-                                whileHover={{ scale: 1.08 }}
-                                whileTap={{ scale: 0.96 }}
-                                transition={{ type: 'spring', stiffness: 300 }}
-                              >
-                                {label}
-                              </motion.button>
-                            ))}
+                        {stakingOptions.map((option, idx) => (
+                            <motion.button
+                            key={option.duration}
+                            className={classNames({ [styles.active]: selectedIndex === idx })}
+                            onClick={() => setSelectedIndex(idx)}
+                            whileHover={{ scale: 1.08 }}
+                            whileTap={{ scale: 0.96 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            >
+                            {option.duration}
+                            </motion.button>
+                         ))}
                         </div>
                     </div>
                     <div className={styles.noteText}>
@@ -93,18 +131,14 @@ export default function WhyStaking() {
             <motion.div className={styles.griditems} variants={itemVariants}>
                 <div className={styles.rightContent}>
                     <div className={styles.content}>
-                        <h3>3%</h3>
+                        <div className={styles.content}>
+                        <h3>{selectedOption.apy}</h3>
                         <span>APY Rate</span>
-                        <p>
-                            Lock in: 3 Months
-                        </p>
-                        <p>
-                            Re-locks on Registration: 3 Months
-                        </p>
-                        <p>
-                            Monthly rate: .25% per month
-                        </p>
-                        <p>Payout: 100% on maturity</p>
+                        <p>Lock in: {selectedOption.lockPeriod}</p>
+                        <p>Re-locks on Registration: {selectedOption.relock}</p>
+                        <p>Monthly rate: {selectedOption.monthlyReturn}</p>
+                        <p>Payout: {selectedOption.capitalSecurity}</p>
+                    </div>
                     </div>
                     <div className={styles.allinputalignment}>
                         <div className={styles.inputDesign}>
