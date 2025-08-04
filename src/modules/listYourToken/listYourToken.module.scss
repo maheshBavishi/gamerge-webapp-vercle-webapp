@@ -185,6 +185,12 @@
                 @include font16medium;
                 color: var(--black600);
             }
+            .errorText {
+              color: red;
+              font-size: 14px;
+              margin-top: 4px;
+              display: block;
+            }
         }
     }
 }

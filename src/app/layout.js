@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import client from "@/graphql/graphQLClient";
 import { ApolloProvider } from "@apollo/client";
 import ApolloClientProvider from "@/components/ApolloClientProvider";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${unbounded.variable} ${plus_jakarta.variable}`}>
+         <Toaster position="top-right" />
         <ApolloClientProvider>
           <Header />
           {children}
