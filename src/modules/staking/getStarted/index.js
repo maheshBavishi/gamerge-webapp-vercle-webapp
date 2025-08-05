@@ -7,23 +7,23 @@ const TreeImage = '/assets/images/tree.png';
 
 // Animation variants
 const sectionVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, when: 'beforeChildren', staggerChildren: 0.15 } }
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, when: 'beforeChildren', staggerChildren: 0.15 } }
 };
 
 const cardVariant = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
 const titleVariant = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } }
+    hidden: { opacity: 0, x: -30 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.7 } }
 };
 
 const headingVariant = {
-  hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
 export default function GetStarted() {
@@ -44,7 +44,7 @@ export default function GetStarted() {
                         </motion.h2>
                     </div>
                     <div className={styles.treeImage}>
-                        <img src={TreeImage} alt='TreeImage'/>
+                        <img src={TreeImage} alt='TreeImage' />
                     </div>
                     <div className={styles.grid}>
                         {[{
@@ -68,6 +68,10 @@ export default function GetStarted() {
                                 className={styles.griditems}
                                 key={item.num}
                                 variants={cardVariant}
+                                whileHover={{
+                                    boxShadow: '0px 12px 25px rgba(0, 0, 0, 0.80)',
+                                    transition: { duration: 0.3, ease: 'easeInOut' },
+                                }}
                             >
                                 <motion.h4 variants={headingVariant}>{item.num}</motion.h4>
                                 <span>{item.num}</span>

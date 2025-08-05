@@ -4,6 +4,7 @@
 .businessBenefits {
     position: relative;
     padding: 48px 0 76px 0;
+
     @media (max-width:576px) {
         padding: 0 0 80px 0;
     }
@@ -48,6 +49,7 @@
         display: flex;
         justify-content: center;
         padding: 0 0 10px 0;
+
         @media (max-width:576px) {
             svg {
                 width: 18px;
@@ -63,6 +65,7 @@
             @include heading2;
             color: var(--text-white);
             text-align: center;
+
             @media (max-width:576px) {
                 font-size: 32px;
             }
@@ -76,6 +79,7 @@
         border-radius: 15px;
         background: rgba(255, 255, 255, 0.04);
         border: 1px solid var(--border300);
+
         @media (max-width:576px) {
             grid-template-columns: 1fr;
             gap: 0;
@@ -92,6 +96,13 @@
 
         }
 
+        .griditems:nth-child(3) {
+            @media (max-width:576px) {
+                border-bottom: 1px solid var(--border300);
+
+            }
+        }
+
         .griditems:nth-child(2) {
             border-right: none;
         }
@@ -101,6 +112,7 @@
             padding: 50px 16px;
             position: relative;
             overflow: hidden;
+
             @media (max-width:576px) {
                 border-right: none;
                 padding: 40px 16px;

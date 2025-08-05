@@ -62,7 +62,7 @@ export default function Footer() {
                                 <div className={styles.dot}></div>
                                 <span>Presale</span>
                             </div>
-                            <a href="/https://sweepwidget.com/c/86895-oiy9dkpt" aria-label='Become a Ambassador'>
+                            <a href="https://sweepwidget.com/c/86895-oiy9dkpt" aria-label='Claim Airdrop'>
                                 <div className={styles.dotText}>
                                     <div className={styles.dot}></div>
                                     <span>Claim Airdrop</span>
