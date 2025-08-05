@@ -6,12 +6,14 @@ import { USD_TOKEN_ADDRESS, NULL_ADDRESS } from '@/lib/constants';
 import { PRESALE_ABI } from '@/lib/abi/presale'
 import { useSearchParams } from "next/navigation";
 import { formatUSD, formatToken } from '@/utils';
+
 import { usePriceFeedData } from '@/lib/hooks/use-price-feed-data';
 import { useAccount, useReadContract, useClient } from 'wagmi';
 import { writeContract } from "wagmi/actions"
 import { toast } from 'sonner';
 import { erc20Abi, isAddress, parseEther } from "viem"
 import { wagmiConfig } from "@/lib/config/wagmi"
+import CustomConnectButton from '@/components/connectButton';
 
 const cryptoOptions = [
   { id: 'bnb', name: 'BNB', icon: '/assets/icons/bnb.svg', value: 'bnb-usd' },
@@ -54,6 +56,8 @@ export default function BuyGmg({ address, presaleData }) {
 
 
 
+
+
   useEffect(() => {
     // Only check allowance if user is connected and wants to pay with USDT
     if (!isConnected || selectedCrypto.id !== "usdt") {
@@ -69,7 +73,7 @@ export default function BuyGmg({ address, presaleData }) {
 
     async function checkAllowance() {
       try {
-        console.log({ tokenDecimals, allowance })
+
         if (tokenDecimals && allowance) {
           const needed = BigInt(Math.floor(amountFloat * 10 ** tokenDecimals));
           setHasAllowance(allowance >= needed);
@@ -136,7 +140,7 @@ export default function BuyGmg({ address, presaleData }) {
   const handleBuyUsdt = async () => {
     try {
       setIsLoading(true);
-      console.log("HIIIII")
+
 
       const totalUsd = Number.parseFloat(payAmount ?? "0");
 
@@ -324,10 +328,10 @@ export default function BuyGmg({ address, presaleData }) {
         </div>
       </div>
       <div className={styles.buttonAlignment}>
-        <Button
+        {isConnected ? <Button
           text={buttonText}
           onClick={handleButtonClick}
-        />
+        /> : <CustomConnectButton />}
       </div>
     </div>
   );

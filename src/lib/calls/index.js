@@ -1,102 +1,60 @@
-import { readContract, readContracts } from "wagmi/actions";
+import { getTransactionReceipt, readContract, readContracts } from "wagmi/actions";
 import { PRESALE_FACTORY_ABI } from "@/lib/abi/presale-factory";
 import { wagmiConfig } from "@/lib/config/wagmi";
-import { NULL_ADDRESS, PRESALE_FACTORY } from "@/lib/constants";
-
+import { NULL_ADDRESS, PRESALE_FACTORY, USD_TOKEN_ADDRESS } from "@/lib/constants";
+import { Alchemy, AssetTransfersCategory, Network } from "alchemy-sdk"
 import { getLogs } from "viem/actions";
 import { getClient } from "wagmi/actions";
 import { PRESALE_ABI } from "@/lib/abi/presale";
+import { parseEventLogs } from "viem";
 
 export const fetchTransactions = async (
   presaleAddress,
   userAddress
 ) => {
-  const client = getClient(wagmiConfig);
-
-  const bnbEvents = await getLogs(client, {
-    address: presaleAddress,
-    fromBlock: 45385095n,
-    event: {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: true,
-          internalType: "address",
-          name: "buyer",
-          type: "address",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "amountInBnb",
-          type: "uint256",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "gmgTokens",
-          type: "uint256",
-        },
-      ],
-      name: "BoughtWithBnb",
-      type: "event",
-    },
-    args: {
-      buyer: userAddress,
-    },
-    strict: true,
+  const alchemy = new Alchemy({
+    apiKey: "iPoEl5vvoWCzSKQM7s3YsTXl-j0Sp223",
+    network: Network.BNB_MAINNET
   });
 
-  const usdtEvents = await getLogs(client, {
-    address: presaleAddress,
-    fromBlock: 45385095n,
-    event: {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: true,
-          internalType: "address",
-          name: "buyer",
-          type: "address",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "amountInUsdt",
-          type: "uint256",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "gmgTokens",
-          type: "uint256",
-        },
-      ],
-      name: "BoughtWithUsdt",
-      type: "event",
-    },
-    args: {
-      buyer: userAddress,
-    },
-    strict: true,
-  });
-  const bnbTransactions = bnbEvents.map((event) => ({
-    amount: event.args?.amountInBnb ?? BigInt(0),
-    token: "BNB",
-    gmgBought: event.args?.gmgTokens ?? BigInt(0),
-    transactionHash: event.transactionHash,
-    buyer: event.args?.buyer ?? NULL_ADDRESS,
-  }));
 
-  const usdtTransactions = usdtEvents.map((event) => ({
-    amount: event.args?.amountInUsdt ?? BigInt(0),
-    token: "USDT",
-    gmgBought: event.args?.gmgTokens ?? BigInt(0),
-    transactionHash: event.transactionHash,
-    buyer: event.args?.buyer ?? NULL_ADDRESS,
-  }));
+  const allTransactions = await alchemy.core.getAssetTransfers({
+    category: [AssetTransfersCategory.ERC20, AssetTransfersCategory.EXTERNAL],
+    contractAddresses: [USD_TOKEN_ADDRESS],
+    toAddress: presaleAddress,
+    fromAddress: userAddress
+  }).catch(console.error)
 
-  return [...bnbTransactions, ...usdtTransactions];
+
+  if (allTransactions) {
+
+    const mappedTx = await Promise.all(allTransactions.transfers.map(async (transfer) => {
+
+
+      const txReceipt = await getTransactionReceipt(wagmiConfig, {
+        hash: transfer.hash,
+      }).catch(console.error)
+
+      const txLogs = txReceipt.logs;
+      console.log({ txLogs });
+      const boughtWithLogs = parseEventLogs({
+        abi: PRESALE_ABI,
+        logs: txLogs,
+        eventName: ["BoughtWithBnb", "BoughtWithUsdt"],
+
+      })
+      return {
+        token: transfer.asset ?? "USDT",
+        amount: transfer.rawContract.value,
+        gmgBought: boughtWithLogs[0].args.gmgTokens,
+        transactionHash: transfer.hash,
+        buyer: transfer.from,
+      }
+    }));
+    console.log({ mappedTx });
+    return mappedTx;
+  }
+  return [];
 };
 
 export const readPresaleCalls = (
@@ -307,84 +265,47 @@ export const getAllPresalesData = async (userAddress) => {
 export const fetchTransactionsForPresale = async (
   presaleAddress
 ) => {
-  const client = getClient(wagmiConfig);
-  console.log("fetching transactions for presale", presaleAddress);
-  const bnbEvents = await getLogs(client, {
-    address: presaleAddress,
-    fromBlock: 45385095n,
-    event: {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: true,
-          internalType: "address",
-          name: "buyer",
-          type: "address",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "amountInBnb",
-          type: "uint256",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "gmgTokens",
-          type: "uint256",
-        },
-      ],
-      name: "BoughtWithBnb",
-      type: "event",
-    },
+
+  const alchemy = new Alchemy({
+    apiKey: "iPoEl5vvoWCzSKQM7s3YsTXl-j0Sp223",
+    network: Network.BNB_MAINNET
   });
 
-  const usdtEvents = await getLogs(client, {
-    address: presaleAddress,
-    fromBlock: 45385095n,
 
-    event: {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: true,
-          internalType: "address",
-          name: "buyer",
-          type: "address",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "amountInUsdt",
-          type: "uint256",
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "gmgTokens",
-          type: "uint256",
-        },
-      ],
-      name: "BoughtWithUsdt",
-      type: "event",
-    },
-  });
+  const allTransactions = await alchemy.core.getAssetTransfers({
+    category: [AssetTransfersCategory.ERC20, AssetTransfersCategory.EXTERNAL],
+    contractAddresses: [USD_TOKEN_ADDRESS],
+    toAddress: presaleAddress,
+  }).catch(console.error)
 
-  const bnbTransactions = bnbEvents.map((event) => ({
-    amount: event.args?.amountInBnb ?? BigInt(0),
-    token: "BNB",
-    gmgBought: event.args?.gmgTokens ?? BigInt(0),
-    transactionHash: event.transactionHash,
-    buyer: event.args?.buyer ?? NULL_ADDRESS,
-  }));
 
-  const usdtTransactions = usdtEvents.map((event) => ({
-    amount: event.args?.amountInUsdt ?? BigInt(0),
-    token: "USDT",
-    gmgBought: event.args?.gmgTokens ?? BigInt(0),
-    transactionHash: event.transactionHash,
-    buyer: event.args?.buyer ?? NULL_ADDRESS,
-  }));
+  if (allTransactions) {
 
-  return [...bnbTransactions, ...usdtTransactions];
+    const mappedTx = await Promise.all(allTransactions.transfers.map(async (transfer) => {
+      // console.log({ client })
+
+      const txReceipt = await getTransactionReceipt(wagmiConfig, {
+        hash: transfer.hash,
+      }).catch(console.error)
+
+      const txLogs = txReceipt.logs;
+
+      const boughtWithLogs = parseEventLogs({
+        abi: PRESALE_ABI,
+        logs: txLogs,
+        eventName: ["BoughtWithBnb", "BoughtWithUsdt"],
+
+      })
+      return {
+        token: transfer.asset ?? "USDT",
+        amount: transfer.rawContract.value,
+        gmgBought: boughtWithLogs[0].args.gmgTokens,
+        transactionHash: transfer.hash,
+        buyer: transfer.from,
+      }
+    }));
+
+    return mappedTx.reverse();
+  }
+  return [];
 };

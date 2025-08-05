@@ -1,5 +1,5 @@
 'use client';
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import styles from './presaleDetails.module.scss';
 import BuyGmg from './buyGmg';
@@ -7,10 +7,13 @@ import CustomConnectButton from '@/components/connectButton';
 import SharePrimaryIcon from '@/components/icons/sharePrimaryIcon';
 import { useReadPresale } from '@/lib/hooks/use-read-presale';
 const WalletIcon = '/assets/icons/wallet.svg';
+import { useTransactionsOfPresale } from "@/lib/hooks/use-transactions-of-presale"
+import { useTransactionsOfUser } from "@/lib/hooks/use-transactions-of-user"
 const PriceIcon = '/assets/icons/price.svg';
 const CoinsIcon = '/assets/icons/coins.svg';
-import { formatToken, formatNumber } from "@/utils"
+import { formatToken, formatNumber, shortenHash } from "@/utils"
 import { useAccount } from 'wagmi';
+
 const TransferIcon = '/assets/icons/transfer.svg';
 export default function PresaleDetails({ address }) {
   const { data: presaleData } = useReadPresale(address);
@@ -18,6 +21,20 @@ export default function PresaleDetails({ address }) {
     ? (Number(presaleData.gmgBought) / Number(presaleData.presaleInfo.allocation)) * 100
     : 0;
   const { address: userAddress } = useAccount()
+  const { data: transactions } = useTransactionsOfPresale(address);
+  const { data: yourTransactions } = useTransactionsOfUser(address, userAddress);
+  const [activeTab, setActiveTab] = useState('all');
+
+  // Select transactions based on active tab
+  const displayTransactions = activeTab === 'all' ? transactions : yourTransactions;
+
+  console.log({
+    activeTab,
+    transactions: transactions?.length || 0,
+    yourTransactions: yourTransactions?.length || 0,
+    displayTransactions: displayTransactions?.length || 0,
+    userAddress
+  });
   const cardContainerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -149,30 +166,58 @@ export default function PresaleDetails({ address }) {
           </div>
           <div className={styles.griditems}>
             <div className={styles.tabDesign}>
-              <button className={styles.active}>All Transactions</button>
-              <button>Your Transactions</button>
+              <button
+                className={activeTab === 'all' ? styles.active : ''}
+                onClick={() => setActiveTab('all')}
+              >
+                All Transactions
+              </button>
+              <button
+                className={activeTab === 'your' ? styles.active : ''}
+                onClick={() => setActiveTab('your')}
+              >
+                Your Transactions
+              </button>
             </div>
-            <motion.div className={styles.allCardDesign} variants={listContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.div key={activeTab} className={styles.allCardDesign} variants={listContainerVariants} initial="hidden" animate="visible">
               {
-                [...Array(4)].map((_, index) => {
-                  return (
-                    <motion.div className={styles.mainCard} key={index} variants={listItemVariants}>
-                      <div className={styles.icons}>
-                        <img src={TransferIcon} alt='TransferIcon' />
-                      </div>
-                      <div>
-                        <div className={styles.linkIcon}>
-                          <p>0x3A....2194</p>
-                          <SharePrimaryIcon />
+                displayTransactions?.length > 0 ? (
+                  displayTransactions.map((transaction, index) => {
+                    return (
+                      <motion.div className={styles.mainCard} key={transaction.transactionHash} variants={listItemVariants}>
+                        <div className={styles.icons}>
+                          <img src={TransferIcon} alt='TransferIcon' />
                         </div>
-                        <div className={styles.twoContent}>
-                          <p>GMG Bought: 1 GMG</p>
-                          <p>Bought With: 1 BNB</p>
+                        <div>
+                          <div className={styles.linkIcon}>
+                            <p>{shortenHash(transaction.buyer)}</p>
+                            <a
+                              href={`https://bscscan.com/tx/${transaction.transactionHash}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ cursor: 'pointer' }}
+                            >
+                              <SharePrimaryIcon />
+                            </a>
+                          </div>
+                          <div className={styles.twoContent}>
+                            <p>GMG Bought: {formatNumber(formatToken(transaction.gmgBought))} GMG</p>
+                            <p>Bought With: {formatNumber(Number(transaction.amount) / 1e18)} {transaction.token}</p>
+                          </div>
                         </div>
-                      </div>
-                    </motion.div>
-                  )
-                })
+                      </motion.div>
+                    )
+                  })
+                ) : (
+                  <div style={{ textAlign: 'center', padding: '20px', color: '#888' }}>
+                    {activeTab === 'your' && !userAddress
+                      ? 'Connect wallet to view your transactions'
+                      : displayTransactions === null || displayTransactions === undefined
+                        ? 'Loading transactions...'
+                        : `No ${activeTab === 'your' ? 'personal' : ''} transactions found`
+                    }
+                  </div>
+                )
               }
             </motion.div>
           </div>

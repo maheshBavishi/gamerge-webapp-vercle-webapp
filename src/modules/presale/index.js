@@ -9,12 +9,12 @@ import styles from './presale.module.scss';
 import { useReadPresale } from "@/lib/hooks/use-read-presale";
 export default function PresalePage({ address }) {
   const { data, isPending: isPendingPresale } = useReadPresale(address);
-  d
+
 
   return (
     <div>
       <PresaleBanner />
-      <PresaleDetails />
+      <PresaleDetails address={address} />
       <EarnUsdt />
       <PresalePhases />
       <Faq />

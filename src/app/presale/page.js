@@ -1,5 +1,5 @@
 'use client'
-import PresaleDetails from '@/modules/presale/presaleDetails'
+import PresalePage from '@/modules/presale/index'
 import React, { useEffect, Suspense } from 'react'
 import { useReadAllPresales } from "@/lib/hooks/use-read-all-presales";
 
@@ -22,7 +22,7 @@ export default function page() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <PresaleDetails address={activeAddresses[0]} />
+      <PresalePage address={activeAddresses[0]} />
     </Suspense>
   )
 }

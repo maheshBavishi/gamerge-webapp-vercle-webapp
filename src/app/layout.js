@@ -9,6 +9,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 import Footer from "@/components/footer";
 import client from "@/graphql/graphQLClient";
 import { ApolloProvider } from "@apollo/client";
+import Providers from "./providers"
 import ApolloClientProvider from "@/components/ApolloClientProvider";
 import { Toaster } from "react-hot-toast";
 
@@ -45,11 +46,11 @@ export default function RootLayout({ children }) {
 
         <Providers>
           <Toaster position="top-right" />
-          <ApolloClientProvider>
-            <Header />
-            {children}
-            <Footer />
-          </ApolloClientProvider>
+
+          <Header />
+          {children}
+          <Footer />
+
         </Providers>
 
       </body >
