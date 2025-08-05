@@ -5,9 +5,11 @@ import Header from "@/components/header";
 import "../scss/main.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "@rainbow-me/rainbowkit/styles.css";
 import Footer from "@/components/footer";
 import client from "@/graphql/graphQLClient";
 import { ApolloProvider } from "@apollo/client";
+import Providers from "./providers"
 import ApolloClientProvider from "@/components/ApolloClientProvider";
 import { Toaster } from "react-hot-toast";
 
@@ -41,13 +43,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${unbounded.variable} ${plus_jakarta.variable}`}>
-         <Toaster position="top-right" />
-        <ApolloClientProvider>
+
+        <Providers>
+          <Toaster position="top-right" />
+
           <Header />
           {children}
           <Footer />
-        </ApolloClientProvider>
-      </body>
-    </html>
+
+        </Providers>
+
+      </body >
+    </html >
   );
 }
