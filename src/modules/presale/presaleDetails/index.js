@@ -145,7 +145,7 @@ export default function PresaleDetails({ address }) {
         </motion.div>
         <div className={styles.grid}>
           <div className={styles.griditems}>
-            <BuyGmg />
+            <BuyGmg address={address} presaleData={presaleData} />
           </div>
           <div className={styles.griditems}>
             <div className={styles.tabDesign}>
