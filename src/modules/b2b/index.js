@@ -19,7 +19,7 @@ export default function B2b() {
       <BusinessBenefits />
       <ExploreGamerges/>
       <JoinGamerges/>
-      <Faq />
+      <Faq shadowShow />
       <div className={styles.downloadAppTopAlignment}>
       <DownloadApp />
       </div>

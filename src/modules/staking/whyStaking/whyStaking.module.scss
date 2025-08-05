@@ -108,20 +108,46 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -40px;
-             @media (max-width:576px) {
+            bottom: -80px;
+
+            @media (max-width:576px) {
                 transform: none;
                 left: 0;
-             }
+            }
 
             img {
                 display: block;
                 max-width: 100px;
                 transform: rotate(280deg);
-                 @media (max-width:576px) {
+                animation: floatSway 4s ease-in-out infinite;
+
+
+                @media (max-width:576px) {
                     max-width: 60px;
-                transform: rotate(280deg) !important;
-                 }
+                    transform: rotate(280deg) !important;
+                }
+            }
+
+            @keyframes floatSway {
+                0% {
+                    transform: translateY(0px) translateX(0px);
+                }
+
+                25% {
+                    transform: translateY(-8px) translateX(5px);
+                }
+
+                50% {
+                    transform: translateY(-12px) translateX(0px);
+                }
+
+                75% {
+                    transform: translateY(-8px) translateX(-5px);
+                }
+
+                100% {
+                    transform: translateY(0px) translateX(0px);
+                }
             }
         }
 
@@ -137,6 +163,29 @@
             img {
                 display: block;
                 max-width: 120px;
+                animation: floatSwayPop 4s ease-in-out infinite;
+            }
+
+            @keyframes floatSwayPop {
+                0% {
+                    transform: translateY(0px) translateX(0px) scale(1);
+                }
+
+                25% {
+                    transform: translateY(-6px) translateX(4px) scale(1.03);
+                }
+
+                50% {
+                    transform: translateY(-10px) translateX(0px) scale(1.05);
+                }
+
+                75% {
+                    transform: translateY(-6px) translateX(-4px) scale(1.03);
+                }
+
+                100% {
+                    transform: translateY(0px) translateX(0px) scale(1);
+                }
             }
         }
 
@@ -184,9 +233,10 @@
 
                 .stakingPeriod {
                     padding: 0 0 48px 0;
-                     @media (max-width:576px) {
+
+                    @media (max-width:576px) {
                         padding: 0 0 28px 0;
-                     }
+                    }
 
                     label {
                         display: block;
@@ -244,9 +294,10 @@
                     @include font18;
                     margin: 0 0 48px 0;
                     color: var(--light-600);
-                      @media (max-width:576px) {
+
+                    @media (max-width:576px) {
                         margin: 0 0 28px 0;
-                     }
+                    }
                 }
             }
 
@@ -287,9 +338,11 @@
                                     color: var(--gray);
                                     border-radius: 8px;
                                     background-color: transparent;
-                                     @media (max-width:576px) {
+
+                                    @media (max-width:576px) {
                                         font-size: 12px;
-                                     }
+                                    }
+
                                     &.fillwhite {
                                         background-color: var(--text-white);
                                         color: var(--black100);
@@ -338,9 +391,9 @@
                         font-weight: 500;
                         line-height: normal;
 
-                         @media (max-width:576px) {
+                        @media (max-width:576px) {
                             font-size: 48px;
-                         }
+                        }
                     }
 
                     p {

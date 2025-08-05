@@ -45,9 +45,15 @@ export default function Footer() {
                                     <span>Ask Community</span>
                                 </div>
                             </a>
+                            <Link href="/style-guide">
+                                <div className={styles.dotText}>
+                                    <div className={styles.dot}></div>
+                                    <span>Brand Guideline</span>
+                                </div>
+                            </Link>
                         </div>
                         <div className={styles.griditems}>
-                             <div className={styles.line}></div>
+                            <div className={styles.line}></div>
                             <div className={styles.iconText}>
                                 <PowerOnIcon />
                                 <h3>PARTICIPATE</h3>
@@ -56,7 +62,7 @@ export default function Footer() {
                                 <div className={styles.dot}></div>
                                 <span>Presale</span>
                             </div>
-                            <a href="/https://sweepwidget.com/c/86895-oiy9dkpt" aria-label='Become a Ambassador'>
+                            <a href="https://sweepwidget.com/c/86895-oiy9dkpt" aria-label='Claim Airdrop'>
                                 <div className={styles.dotText}>
                                     <div className={styles.dot}></div>
                                     <span>Claim Airdrop</span>
@@ -80,9 +86,15 @@ export default function Footer() {
                                     <span>Whitepaper</span>
                                 </div>
                             </a>
+                            <Link href="/staking" aria-label='staking'>
+                                <div className={styles.dotText}>
+                                    <div className={styles.dot}></div>
+                                    <span>Staking</span>
+                                </div>
+                            </Link>
                         </div>
                         <div className={styles.griditems}>
-                             <div className={styles.line}></div>
+                            <div className={styles.line}></div>
                             <div className={styles.iconText}>
                                 <LinkIcon />
                                 <h3>LINKS</h3>
@@ -117,7 +129,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className={styles.griditems}>
-                             <div className={styles.line}></div>
+                            <div className={styles.line}></div>
                             <div className={styles.iconText}>
                                 <ShareIcon />
                                 <h3>SOCIALS</h3>
@@ -133,7 +145,7 @@ export default function Footer() {
                                 <div className={styles.dotText}>
                                     <TwitterIcon />
                                     <div className={styles.dot}></div>
-                                    <span>(Formerly Twitter)</span>
+                                    <span>X (Formerly Twitter)</span>
                                 </div>
                             </a>
                             <a aria-label='linktr' href="https://linktr.ee/gamergeai" target='_blank'>

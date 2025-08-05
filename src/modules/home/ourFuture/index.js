@@ -200,7 +200,7 @@ export default function OurFuture() {
 
             </Marquee>
             <div className={styles.spacer}></div>
-            <div className={styles.borderbottom}></div>
+          
         </>
     )
 }

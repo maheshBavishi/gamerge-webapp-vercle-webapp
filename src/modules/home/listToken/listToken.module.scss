@@ -1,0 +1,99 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/typography/typography.scss' as *;
+
+.listTokenSection {
+    position: relative;
+
+    .lineAlignment {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        top: 0;
+        @media (max-width:576px) {
+            display: none;
+        }
+
+        &.leftPos {
+            left: 0;
+        }
+
+        &.rightPos {
+            right: 0;
+        }
+    }
+
+    .listTookenBackground {
+        width: 100%;
+        padding: 120px 0;
+        position: relative;
+        background: url('/assets/images/squre-line.png');
+        @media (max-width:576px) {
+            background: none;
+        }
+
+        //     .squreBoxDesign {
+        //             background-image: linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+        // background-size: 60px 60px;
+        // opacity: 0.2;
+        // width: 562px;
+        // height: 122px;
+        // position: absolute;
+        // top: 0;
+        // transform: translateX(-50%);
+        // left: 50%;
+        //     }
+        @media (max-width:576px) {
+            padding: 0;
+        }
+
+
+        p {
+            color: var(--gray800);
+            max-width: 550px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+            @include font20;
+            @media (max-width:576px) {
+                @include font16medium;
+            }
+        }
+
+        .buttonCenterAlignment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .iconTextAlignment {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            padding: 0 0 20px 0;
+
+            @media (max-width:576px) {
+                display: block;
+            }
+
+            svg {
+                @media (max-width:576px) {
+                    display: block;
+                    margin: 0 auto;
+                    width: 18px;
+                }
+            }
+
+            h2 {
+                @include heading2;
+                color: var(--text-white);
+
+                @media (max-width:576px) {
+                    font-size: 32px;
+                    margin: 5px 0 0 0;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+}

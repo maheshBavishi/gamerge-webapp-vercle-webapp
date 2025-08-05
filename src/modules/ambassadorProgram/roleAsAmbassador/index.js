@@ -16,8 +16,8 @@ const gridData = [
     number: '02.',
     title: 'Content Creation',
     description:
-      
-        "Produce and share content that highlights Gamerge's offerings and developments.",
+
+      "Produce and share content that highlights Gamerge's offerings and developments.",
   },
   {
     number: '03.',
@@ -53,6 +53,10 @@ function AnimatedGridItem({ number, title, description, index }) {
       className={styles.griditems}
       initial={{ opacity: 0, y: 40 }}
       animate={controls}
+      whileHover={{
+        boxShadow: '0px 12px 25px rgba(0, 0, 0, 0.80)',
+        transition: { duration: 0.3, ease: 'easeInOut' },
+      }}
     >
       <h4>{number}</h4>
       <span>{number}</span>

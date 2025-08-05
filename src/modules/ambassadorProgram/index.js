@@ -13,7 +13,7 @@ export default function AmbassadorProgram() {
         <WhyBecom/>
         <RoleAsAmbassador/> 
         <FillOutApplication/>
-        <Faq/>
+        <Faq shadowShow />
         <div className={styles.downloadAppTopAlignment}>
         <DownloadApp/>
         </div>

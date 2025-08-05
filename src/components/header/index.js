@@ -59,11 +59,11 @@ export default function Header() {
               <div className={styles.rightalignment}>
                 <div className={styles.menu}>
                   <Link href="/presale">Presale</Link>
+                  <Link href="/staking">Staking</Link>
                   <Link href="/b2b">B2b Solutions</Link>
                   <a href='https://sweepwidget.com/c/86895-oiy9dkpt' target='_blank' aria-label='airdrop'>airdrop</a>
                   <a aria-label='Games'>Games</a>
                   <Link href="/blog">blog</Link>
-                  <a aria-label='Staking'>Staking</a>
                 </div>
                 <div className={styles.button}>
                   <div className={styles.headerBtn}>
@@ -98,11 +98,12 @@ export default function Header() {
             <img src={HeaderVec} alt='HeaderVec' />
           </div>
           <div className={styles.menu}>
-            <Link href="/presale">Presale</Link>
-            <Link href="/b2b">B2b Solutions</Link>
-            <a aria-label='airdrop'>airdrop</a>
-            <a aria-label='Games'>Games</a>
-            <Link href="/blog-details">blog</Link>
+            <Link onClick={() => setHeader(false)} href="/presale">Presale</Link>
+            <Link onClick={() => setHeader(false)} href="/staking">Staking</Link>
+            <Link onClick={() => setHeader(false)} href="/b2b">B2b Solutions</Link>
+            <a onClick={() => setHeader(false)} href='https://sweepwidget.com/c/86895-oiy9dkpt' target='_blank' aria-label='airdrop'>airdrop</a>
+            <a onClick={() => setHeader(false)} aria-label='Games'>Games</a>
+            <Link onClick={() => setHeader(false)} href="/blog">blog</Link>
           </div>
         </div>
         <div className={styles.mobileFooter}>

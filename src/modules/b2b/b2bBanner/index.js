@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './b2bBanner.module.scss';
 import Button from '@/components/button';
 import { motion } from 'framer-motion';
-
 const containerVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -52,6 +51,7 @@ export default function B2bBanner() {
           </motion.div>
         </div>
       </motion.div>
+
     </>
   );
 }

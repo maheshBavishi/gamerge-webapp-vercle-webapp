@@ -7,9 +7,11 @@
     background-size: cover;
     padding: 290px 0 160px 0;
     background-repeat: no-repeat;
+
     @media (max-width:576px) {
         background-image: url('/assets/images/ambassadorProgram-mobile.png');
         padding: 250px 0 100px 0;
+        background-position: center;
     }
 
     .title {
@@ -18,9 +20,11 @@
             color: var(--text-light);
             text-align: center;
             margin: 0 0 28px 0;
+
             @media (max-width:576px) {
                 font-size: 32px;
             }
+
             span {
                 color: var(--primary);
             }

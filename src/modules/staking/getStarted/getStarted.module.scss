@@ -8,28 +8,57 @@
         background: var(--bg-light-white400);
         padding: 48px 24px 24px 24px;
         position: relative;
-         @media (max-width:576px) {
-            padding:40px 24px;
-         }
+
+        @media (max-width:576px) {
+            padding: 40px 24px;
+        }
 
         .treeImage {
             position: absolute;
             top: -40px;
             left: 40px;
-             @media (max-width:1024px) {
+
+            @media (max-width:1024px) {
                 top: -70px;
                 left: 20px;
-             }
-              @media (max-width:576px) {
+            }
+
+            @media (max-width:576px) {
                 left: auto;
                 right: 0;
                 top: -40px;
-              }
-             img {
-                 @media (max-width:576px) {
+            }
+
+            img {
+                animation: floatSwayPop 4s ease-in-out infinite;
+
+                @media (max-width:576px) {
                     max-width: 70px;
-                 }
-             }
+                }
+            }
+
+            @keyframes floatSwayPop {
+                0% {
+                    transform: translateY(0px) translateX(0px) scale(1);
+                }
+
+                25% {
+                    transform: translateY(-6px) translateX(4px) scale(1.03);
+                }
+
+                50% {
+                    transform: translateY(-10px) translateX(0px) scale(1.05);
+                }
+
+                75% {
+                    transform: translateY(-6px) translateX(-4px) scale(1.03);
+                }
+
+                100% {
+                    transform: translateY(0px) translateX(0px) scale(1);
+                }
+            }
+
         }
 
         .titleAlignment {
@@ -38,28 +67,30 @@
             justify-content: center;
             gap: 10px;
             padding: 0 0 48px 0;
-             @media (max-width:576px) {
+
+            @media (max-width:576px) {
                 display: block;
                 padding: 0 0 40px 0;
-             }
+            }
 
             svg {
-                 @media (max-width:576px) {
+                @media (max-width:576px) {
                     width: 18px;
                     height: 18px;
                     margin: 0 auto;
                     display: flex;
-                 }
+                }
             }
 
             h2 {
                 @include heading2;
                 color: var(--text-white);
-                 @media (max-width:576px) {
+
+                @media (max-width:576px) {
                     font-size: 32px;
-                    margin: 10px 0 0 0 ;
+                    margin: 10px 0 0 0;
                     text-align: center;
-                 }
+                }
             }
         }
     }
@@ -71,12 +102,13 @@
         border-radius: 15px;
         background: rgba(255, 255, 255, 0.04);
 
-         @media (max-width:1024px) {
-            grid-template-columns: repeat(2 , 1fr);
-         }
-          @media (max-width:576px) {
+        @media (max-width:1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:576px) {
             grid-template-columns: 1fr;
-          }
+        }
 
         .griditems:last-child {
             border-right: none;
@@ -87,10 +119,11 @@
             padding: 50px 16px;
             position: relative;
             overflow: hidden;
-             @media (max-width:576px) {
+
+            @media (max-width:576px) {
                 border-right: none;
                 border-bottom: 1px solid var(--border300);
-             }
+            }
 
             h4 {
                 color: rgba(255, 255, 255, 0.04);
