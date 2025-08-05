@@ -6,17 +6,21 @@ import DownloadApp from '@/components/downloadApp'
 import Faq from '../home/faq'
 import PresalePhases from './presalePhases'
 import styles from './presale.module.scss';
-export default function PresalePage() {
+import { useReadPresale } from "@/lib/hooks/use-read-presale";
+export default function PresalePage({ address }) {
+  const { data, isPending: isPendingPresale } = useReadPresale(address);
+  d
+
   return (
     <div>
       <PresaleBanner />
       <PresaleDetails />
       <EarnUsdt />
-      <PresalePhases/>
+      <PresalePhases />
       <Faq />
-     <div className={styles.downloadAppTopAlignment}>
-       <DownloadApp />
-     </div>
+      <div className={styles.downloadAppTopAlignment}>
+        <DownloadApp />
+      </div>
     </div>
   )
 }

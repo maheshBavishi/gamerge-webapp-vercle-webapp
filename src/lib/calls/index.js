@@ -1,5 +1,5 @@
 import { readContract, readContracts } from "wagmi/actions";
-import { PRESALE_FACTORY_ABI } from "@/lib/abi/presaleFactory";
+import { PRESALE_FACTORY_ABI } from "@/lib/abi/presale-factory";
 import { wagmiConfig } from "@/lib/config/wagmi";
 import { NULL_ADDRESS, PRESALE_FACTORY } from "@/lib/constants";
 
