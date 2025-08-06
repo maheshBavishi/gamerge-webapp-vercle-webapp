@@ -9,7 +9,7 @@
         padding: 6px 0;
     }
 
-    a {
+    p {
         @include font14bold;
         color: var(--text-white);
         margin: 0;
@@ -18,6 +18,11 @@
 
         @media (max-width:1024px) {
             @include font12bold;
+        }
+
+        a {
+            color: var(--text-white);
+            text-decoration: underline;
         }
     }
 }
