@@ -36,7 +36,7 @@ const plus_jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "GAMERGE",
+  title: "gamerge.ai",
   description: "GAMERGE",
 };
 

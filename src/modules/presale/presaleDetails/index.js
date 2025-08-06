@@ -113,14 +113,8 @@ export default function PresaleDetails({ address }) {
                 </span>
               ) : (
                 <div style={{ marginTop: '8px' }}>
-                  {/* Show connect wallet button if not connected */}
                   <span>
                     <p style={{ marginBottom: '4px' }}>Connect wallet to show balance</p>
-                    {/* Import and use CustomConnectButton */}
-                    <div style={{ display: 'inline-block' }}>
-                      {/* Use CustomConnectButton with fillwhite for style consistency */}
-
-                    </div>
                   </span>
                 </div>
               )}

@@ -2,8 +2,13 @@
 import React from 'react'
 import styles from './presaleBanner.module.scss';
 import { motion } from 'framer-motion';
+const PresaleVideo = '/assets/video/pesale-hero.mp4';
 export default function PresaleBanner() {
   return (
+    <>
+    <div className={styles.presaleVideoContainer}>
+      <div className={styles.blur}></div>
+      <video src={PresaleVideo} alt="PresaleVideo" loop muted autoPlay playsInline ></video>
     <div className={styles.presaleBanner}>
       <div className='container-md'>
         <div className={styles.headingText}>
@@ -27,5 +32,7 @@ export default function PresaleBanner() {
         </div>
       </div>
     </div>
+    </div>
+    </>
   )
 }
