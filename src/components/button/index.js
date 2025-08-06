@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import styles from './button.module.scss';
 import classNames from 'classnames';
 
-export default function Button({ text, fillwhite = false }) {
+export default function Button({ text, fillwhite = false, onClick }) {
   const buttonRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [entryPoint, setEntryPoint] = useState({ x: 0.5, y: 0.5 });
@@ -32,6 +32,7 @@ export default function Button({ text, fillwhite = false }) {
         className={styles.animatedButton}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={onClick}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
         style={{ color: isHovered ? '#000' : '#1A1A1A' }}
@@ -41,7 +42,6 @@ export default function Button({ text, fillwhite = false }) {
         <span
           className={styles.backgroundLayer}
           style={{ backgroundColor: fillwhite ? '#fff' : '#00FF7F' }}
-          
         />
 
         {/* Animated fill */}
@@ -62,7 +62,6 @@ export default function Button({ text, fillwhite = false }) {
           className={styles.buttonText}
           animate={{ color: isHovered ? '#000' : '#1A1A1A' }}
           transition={transition}
-          
         >
           {text}
         </motion.span>

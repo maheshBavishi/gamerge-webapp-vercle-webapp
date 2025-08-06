@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss';
 import Image from 'next/image';
 import Button from '../button';
+import CustomConnectButton from '../connectButton';
 import Link from 'next/link';
 import Topbar from '../topbar';
 import classNames from 'classnames';
@@ -66,7 +67,7 @@ export default function Header() {
                 </div>
                 <div className={styles.button}>
                   <div className={styles.headerBtn}>
-                    <Button text="Connect Wallet" />
+                    <CustomConnectButton />
                   </div>
                   <div className={styles.headerBtn}>
                     <Button text="Play Now" fillwhite />
@@ -106,7 +107,7 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.mobileFooter}>
-          <Button text="Connect Wallet" />
+          <CustomConnectButton />
           <Button text="Play Now" fillwhite />
         </div>
       </div>

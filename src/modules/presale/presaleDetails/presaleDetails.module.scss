@@ -79,7 +79,7 @@
             grid-template-columns: 85px 1fr 140px;
             padding: 0 0 40px 0;
         }
-        
+
 
         .line {
             border-radius: 37.5px;
@@ -232,6 +232,42 @@
             }
 
             .allCardDesign {
+                max-height: 400px;
+                overflow-y: auto;
+                padding-right: 8px;
+
+                /* Custom scrollbar styling */
+                &::-webkit-scrollbar {
+                    width: 6px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 3px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: var(--primary);
+                    border-radius: 3px;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    background: rgba(100, 25, 240, 0.8);
+                }
+
+                /* Firefox scrollbar */
+                scrollbar-width: thin;
+                scrollbar-color: var(--primary) rgba(255, 255, 255, 0.1);
+
+                @media (max-width:576px) {
+                    max-height: 300px;
+                    padding-right: 4px;
+
+                    &::-webkit-scrollbar {
+                        width: 4px;
+                    }
+                }
+
                 .mainCard:last-child {
                     margin: 0;
                 }
