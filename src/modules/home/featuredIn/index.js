@@ -22,8 +22,12 @@ export default function FeaturedIn() {
         <div className={styles.grid}>
             <div className={styles.griditems}>
                 <div className={styles.twoIconAlignment}>
+                    <a href='https://x.com/Gamergeai' aria-label='twitter' target='_blank'>
                     <img src={TwitterIcon}  alt='TwitterIcon'/>
+                    </a>
+                    <a href='https://t.me/gamergejames' aria-label='telegram' target='_blank'>
                     <img src={TelegramIcon}  alt='TelegramIcon'/>
+                    </a>
                 </div>
                 <h3>
                     Live X and Telegram Feed
