@@ -1,9 +1,12 @@
+
 'use client'
-import React from "react";
+import dynamic from 'next/dynamic';
 import { motion } from "framer-motion";
 import styles from "./herobanner.module.scss";
 import BuyGmgToken from "./buyGmgToken";
-import ListedOfContent from "../listedOfContent";
+const ListedOfContent = dynamic(() => import('../listedOfContent'), {
+  ssr: false,
+});
 const Video = '/assets/video/video.mp4';
 const titleVariants = {
   hidden: { opacity: 0 },
