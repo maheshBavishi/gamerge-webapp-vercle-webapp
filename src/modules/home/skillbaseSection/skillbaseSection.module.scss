@@ -39,6 +39,11 @@
         @include font16medium;
         text-align: center;
       }
+
+      span {
+        font-weight: 600;
+        color: var(--text-white);
+      }
     }
 
     h2 {

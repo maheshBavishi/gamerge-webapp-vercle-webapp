@@ -115,8 +115,10 @@ export default function StakingBanner() {
                             <span> Future of GameFi</span>
                         </h1>
                         <p>
-                            Put your GMG tokens to work with our flexible and rewarding staking plans and earn upto 6% APY—designed for gamers, investors, and believers in the
-                            future of GameFi.
+                            Put your GMG tokens to work with our flexible and rewarding 
+                            <span> staking plans </span>
+                             and earn upto 6% APY—designed for gamers, investors, and believers in the
+                            future of <span> GameFi. </span>
                         </p>
                     </div>
                 </div>

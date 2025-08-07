@@ -45,6 +45,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="preload" as="image" href="/assets/images/presale.png" fetchPriority="high" />
+        <link rel="canonical" href="https://gamerge.ai/" />
       </head>
       <body className={`${poppins.variable} ${unbounded.variable} ${plus_jakarta.variable}`}>
 

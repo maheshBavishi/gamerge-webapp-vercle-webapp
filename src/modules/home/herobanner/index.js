@@ -81,7 +81,8 @@ export default function Herobanner() {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1, duration: 0.7 }}
                 >
-                  Gamerge– a next-generation hi-tech skill-based fun-to-play-to-earn crypto gaming platform
+                  Gamerge– a next-generation hi-tech skill-based fun-to-play-to-earn 
+                  <span> crypto gaming platform </span>
                   built on Unity engine!
                 </motion.p>
               </div>

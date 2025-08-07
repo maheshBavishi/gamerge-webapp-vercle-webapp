@@ -54,6 +54,10 @@
             max-width: 644px;
             margin: 0 auto;
             text-align: center;
+            span {
+                color: var(--text-white);
+                font-weight: 700;
+            }
         }
     }
 }

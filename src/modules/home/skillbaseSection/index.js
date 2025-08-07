@@ -123,9 +123,11 @@ export default function SkillbaseSection() {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut", delay: 0.1 } },
               }}
             >
-              With Gamerge, seamlessly integrate your token into high-tech Web3
-              games, access an engaged community, and boost your project's
-              credibility. Enter the GameFi space in just 1 day.
+              With Gamerge, seamlessly integrate your token into high-tech 
+              <span> Web3
+              games, </span>
+               access an engaged community, and boost your project's
+              credibility. Enter the <span >GameFi </span> space in just 1 day.
             </motion.p>
             <motion.div
               className={styles.btnCenterAlignment}

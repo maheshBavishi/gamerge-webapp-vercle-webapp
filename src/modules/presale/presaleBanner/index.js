@@ -26,8 +26,7 @@ export default function PresaleBanner() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Join Gamerge’s GMG presale — a high-potential GameFi token poised for 10X growth before listing, powering the 
-            next-gen gaming revolution.
+        Join Gamerge’s GMG presale - A high potential <span> GameFi Crypto Token Presale </span> for 10x growth before listing, powering the next - gen gaming revolution. 
           </motion.p>
         </div>
       </div>

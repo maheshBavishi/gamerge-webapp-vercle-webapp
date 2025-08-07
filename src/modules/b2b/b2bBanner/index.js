@@ -55,7 +55,7 @@ export default function B2bBanner() {
                 <span>Gaming Utility </span> To your crypto project on gamerge
               </motion.h1>
               <motion.p variants={itemVariants} tabIndex={0}>
-                Unlock Instant GameFi Utility for Your Crypto Token — Go Live in 24 Hours with Gamerge’s Powerful Multichain
+                Unlock Instant <span> GameFi Utility </span> for Your <span> Crypto Token </span> — Go Live in 24 Hours with Gamerge’s Powerful Multichain
                 B2B Integration
               </motion.p>
               <motion.div className={styles.twoButtonAlignment} variants={itemVariants}>
