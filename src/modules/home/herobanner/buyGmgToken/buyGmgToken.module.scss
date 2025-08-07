@@ -8,6 +8,7 @@
   width: 100%;
   border-radius: 20px;
   padding: 18px 29px;
+  contain-intrinsic-size: 600px;
 
   @media (max-width:576px) {
     padding: 16px 28px;
@@ -184,4 +185,19 @@
       @include font12bold;
     }
   }
+}
+.timerUnit {
+  text-align: center;
+}
+
+.timerDigits {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.timerDigit {
+  display: inline-block;
+  width: 1ch;
+  text-align: center;
 }
