@@ -139,7 +139,7 @@ export default function GamergeTokenomics() {
             <div className={styles.gamergeTokenomics}>
                 <div className={styles.pinkblur}></div>
                 <div className={styles.vectwo}>
-                    <img src={VecTwoImage} alt="VecTwoImage" />
+                    <img src={VecTwoImage} alt="Mobile Crypto Games" />
                 </div>
                 <div className={styles.borderBottom}></div>
                 <div className={styles.line}></div>
@@ -166,10 +166,10 @@ export default function GamergeTokenomics() {
                     viewport={{ once: true }}
                 >
                     <div className={styles.chartLine}>
-                        <img src={ChartLine} alt='ChartLine' />
+                        <img src={ChartLine} alt='Web3 Games' />
                     </div>
                     <div className={styles.mobileChartline}>
-                        <img src={MobileChart} alt='MobileChart'/>
+                        <img src={MobileChart} alt='Token Utility Platform'/>
                     </div>
                     <div
                         className={styles.chartSvg}>
@@ -221,7 +221,7 @@ export default function GamergeTokenomics() {
                             <img
                                 className={styles.centerImage}
                                 src={chartCenterImage}
-                                alt="bnb"
+                                alt="Crypto Presale"
 
                             />
                         </div>
@@ -238,7 +238,7 @@ export default function GamergeTokenomics() {
                     </a>
                 </div>
                 <div className={styles.toyImage}>
-                    <img src={ToyImage} alt="ToyImage" />
+                    <img src={ToyImage} alt="Cryptocurrency Games" />
                 </div>
                 {/* Footer Background Elements */}
                 <div className={styles.linebottom}></div>

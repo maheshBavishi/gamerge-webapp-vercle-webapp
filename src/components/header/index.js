@@ -95,7 +95,7 @@ export default function Header() {
         </div>
         <div className={styles.mobileBody}>
           <div className={styles.vec}>
-            <img src={HeaderVec} alt='HeaderVec' />
+            <img src={HeaderVec} alt='Crypto Gaming Platform' />
           </div>
           <div className={styles.menu}>
             <Link onClick={() => setHeader(false)} href="/presale">Presale</Link>

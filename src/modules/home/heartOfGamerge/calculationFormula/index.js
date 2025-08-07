@@ -9,9 +9,9 @@ export default function CalculationFormula({gameplays, TOKENS_PER_GAME, tokensBu
       <h3>Calculation Formula:</h3>
       <div className={styles.buttonIconAlignment}>
         <button>{formatNumber(gameplays)} games</button>
-        <img src={CloseIcon} alt="CloseIcon" />
+        <img src={CloseIcon} alt="Buy GMG Tokens" />
         <button>{TOKENS_PER_GAME} tokens per game</button>
-        <img src={CloseIcon} alt="CloseIcon" />
+        <img src={CloseIcon} alt="Refer And Earn" />
         <button>5% burn rate</button>
         <RightIcon />
       </div>

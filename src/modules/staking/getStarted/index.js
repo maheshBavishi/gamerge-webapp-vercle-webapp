@@ -44,7 +44,7 @@ export default function GetStarted() {
                         </motion.h2>
                     </div>
                     <div className={styles.treeImage}>
-                        <img src={TreeImage} alt='TreeImage' />
+                        <img src={TreeImage} alt='Crypto Gaming' />
                     </div>
                     <div className={styles.grid}>
                         {[{

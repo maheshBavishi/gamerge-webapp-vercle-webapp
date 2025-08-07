@@ -8,7 +8,7 @@ export default function PresaleBanner() {
     <>
     <div className={styles.presaleVideoContainer}>
       <div className={styles.blur}></div>
-      <video src={PresaleVideo} alt="PresaleVideo" loop muted autoPlay playsInline ></video>
+      <video src={PresaleVideo} alt="Play To Earn Crypto Games" loop muted autoPlay playsInline ></video>
     <div className={styles.presaleBanner}>
       <div className='container-md'>
         <div className={styles.headingText}>

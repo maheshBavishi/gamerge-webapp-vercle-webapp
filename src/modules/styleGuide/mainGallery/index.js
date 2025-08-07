@@ -6,11 +6,11 @@ export default function MainGallery() {
   return (
     <div>
       <div className={styles.maingalleryGrid}>
-        <img src={MockupImage} alt='MockupImage'/>
-        <img src={MockupImage} alt='MockupImage'/>
+        <img src={MockupImage} alt='Web3 Gaming'/>
+        <img src={MockupImage} alt='Crypto Game Tournaments'/>
       </div>
       <div className={styles.maingalleryImage}>
-        <img src={MainGalleryImage} alt='MainGalleryImage'/>
+        <img src={MainGalleryImage} alt='Gaming Aggregator Platform'/>
       </div>
     </div>
   )

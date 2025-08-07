@@ -64,7 +64,7 @@ export default function OurFuture() {
                             Our Path to the Future
                         </motion.h2>
                         <div className={styles.foxMobile}>
-                            <img src={FoxMobileImage} alt='FoxMobileImage' />
+                            <img src={FoxMobileImage} alt='Play To Earn Crypto Games' />
                         </div>
                     </motion.div>
                     <motion.div
@@ -126,7 +126,7 @@ export default function OurFuture() {
                                         <CircleIcon />
                                     </div>
                                     <div className={styles.foxImage}>
-                                        <img src={FoxImage} alt='FoxImage' />
+                                        <img src={FoxImage} alt='Token Utility Platform' />
                                     </div>
                                     <div className={styles.card}>
                                         <h3>Q2 2025</h3>
@@ -186,16 +186,16 @@ export default function OurFuture() {
             </div>
             <Marquee>
             <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='TimelineImage' />
+                <img src={TimelineImage} alt='Crypto Gaming Platform' />
             </div>
             <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='TimelineImage' />
+                <img src={TimelineImage} alt='Blockchain Games' />
             </div>
             <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='TimelineImage' />
+                <img src={TimelineImage} alt='GameFi Ecosystem' />
             </div>
             <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='TimelineImage' />
+                <img src={TimelineImage} alt='Web3 Gaming' />
             </div>
 
             </Marquee>

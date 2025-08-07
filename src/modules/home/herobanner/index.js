@@ -48,7 +48,7 @@ export default function Herobanner() {
         transition={{ duration: 0.5 }}
       >
         <div className={styles.videoImage}>
-          <video src={Video} autoPlay loop muted playsInline alt="Video"/>
+          <video src={Video} autoPlay loop muted playsInline alt="Play To Earn Games"/>
         </div>
         <div className={styles.layer}></div>
         <div className={styles.contentAlignment}>

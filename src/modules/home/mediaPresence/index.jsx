@@ -24,42 +24,42 @@ export default function MediaPresence() {
             <Marquee>
                 <div className={styles.logoBox}>
                     <a aria-label='quillaudits' href="https://www.quillaudits.com/leaderboard/gamerge" target='_blank'>
-                    <img src={QuillAuditImage} alt='QuillAuditImage'/>
+                    <img src={QuillAuditImage} alt='Play to Earn'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label="icoholder" href='https://icoholder.com/en/gamerge-1090860' target='_blank'>
-                    <img src={IcoholderImage} alt='IcoholderImage'/>
+                    <img src={IcoholderImage} alt='Crypto Gaming Utility'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='cointrust' href="https://coinstats.app/news/88af8a8a946a4eda69e9405f4cf14ef3750f39127587b70df1b091a0778c10fe_Terminus-Taps-Gamerge-to-Boost-Web3-Gaming-and-PayFi-Innovation/" target='_blank'>
-                    <img src={CoinstatsImage} alt='CoinstatsImage'/>
+                    <img src={CoinstatsImage} alt='P2E Crypto Games'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a href="https://skynet.certik.com/projects/gamerge" aria-label='skynet' target='_blank'>
-                    <img src={SkynetImage} alt='SkynetImage'/>
+                    <img src={SkynetImage} alt='CEX Games'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='wiki' href="https://iq.wiki/wiki/gamerge" target='_blank'>
-                    <img src={IqwikiImage} alt='IqwikiImage'/>
+                    <img src={IqwikiImage} alt='GameFi Ecosystem'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='CoingabbarImage' href="https://www.coingabbar.com/en/crypto-ico-details/gamerge-latest-ico-token-gamefi-project?srsltid=AfmBOoq1zFHXQSOLiBUT01jCU1MGnTuHBNoIKSvlBT_EbXrtZwW_gF9M" target='_blank'>
-                    <img src={CoingabbarImage} alt='CoingabbarImage'/>
+                    <img src={CoingabbarImage} alt='Blockchain Games'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='band' href='https://www.band.us/band/98694156/post/1' target='_blank'>
-                    <img src={BandImage} alt='BandImage'/>
+                    <img src={BandImage} alt='Free Crypto Airdrop'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='quillaudits' href="https://www.quillaudits.com/leaderboard/gamerge" target='_blank'>
-                    <img src={QuillAuditImage} alt='QuillAuditImage'/>
+                    <img src={QuillAuditImage} alt='Decentralized Gaming Platform'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
@@ -69,17 +69,17 @@ export default function MediaPresence() {
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='cointrust' href="https://coinstats.app/news/88af8a8a946a4eda69e9405f4cf14ef3750f39127587b70df1b091a0778c10fe_Terminus-Taps-Gamerge-to-Boost-Web3-Gaming-and-PayFi-Innovation/" target='_blank'>
-                    <img src={CoinstatsImage} alt='CoinstatsImage'/>
+                    <img src={CoinstatsImage} alt='Crypto Gaming Ecosystem'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a href="https://skynet.certik.com/projects/gamerge" aria-label='skynet' target='_blank'>
-                    <img src={SkynetImage} alt='SkynetImage'/>
+                    <img src={SkynetImage} alt='Cryptocurrency Games'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='wiki' href="https://iq.wiki/wiki/gamerge" target='_blank'>
-                    <img src={IqwikiImage} alt='IqwikiImage'/>
+                    <img src={IqwikiImage} alt='Crypto Rewards'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
@@ -89,22 +89,22 @@ export default function MediaPresence() {
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='band' href='https://www.band.us/band/98694156/post/1' target='_blank'>
-                    <img src={BandImage} alt='BandImage'/>
+                    <img src={BandImage} alt='Play To Earn Games'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='quillaudits' href="https://www.quillaudits.com/leaderboard/gamerge" target='_blank'>
-                    <img src={QuillAuditImage} alt='QuillAuditImage'/>
+                    <img src={QuillAuditImage} alt='Crypto Payments'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label="icoholder" href='https://icoholder.com/en/gamerge-1090860' target='_blank'>
-                    <img src={IcoholderImage} alt='IcoholderImage'/>
+                    <img src={IcoholderImage} alt='Gaming Aggregator Platform'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='cointrust' href="https://coinstats.app/news/88af8a8a946a4eda69e9405f4cf14ef3750f39127587b70df1b091a0778c10fe_Terminus-Taps-Gamerge-to-Boost-Web3-Gaming-and-PayFi-Innovation/" target='_blank'>
-                    <img src={CoinstatsImage} alt='CoinstatsImage'/>
+                    <img src={CoinstatsImage} alt='Play to Earn'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
@@ -114,17 +114,17 @@ export default function MediaPresence() {
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='wiki' href="https://iq.wiki/wiki/gamerge" target='_blank'>
-                    <img src={IqwikiImage} alt='IqwikiImage'/>
+                    <img src={IqwikiImage} alt='Crypto Gaming Utility'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='CoingabbarImage' href="https://www.coingabbar.com/en/crypto-ico-details/gamerge-latest-ico-token-gamefi-project?srsltid=AfmBOoq1zFHXQSOLiBUT01jCU1MGnTuHBNoIKSvlBT_EbXrtZwW_gF9M" target='_blank'>
-                    <img src={CoingabbarImage} alt='CoingabbarImage'/>
+                    <img src={CoingabbarImage} alt='P2E Crypto Games'/>
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='band' href='https://www.band.us/band/98694156/post/1' target='_blank'>
-                    <img src={BandImage} alt='BandImage'/>
+                    <img src={BandImage} alt='CEX Games'/>
                     </a>
                 </div>
              

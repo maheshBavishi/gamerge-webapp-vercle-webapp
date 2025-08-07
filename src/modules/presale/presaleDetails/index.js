@@ -101,7 +101,7 @@ export default function PresaleDetails({ address }) {
         <motion.div className={styles.cardGrid} variants={cardContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <motion.div className={styles.cardGriditems} variants={cardVariants}>
             <div className={styles.icon}>
-              <img src={WalletIcon} alt='WalletIcon' />
+              <img src={WalletIcon} alt='GameFi Ecosystem' />
             </div>
             <div>
               <p>Your Total GMG Balance</p>
@@ -122,7 +122,7 @@ export default function PresaleDetails({ address }) {
           </motion.div>
           <motion.div className={styles.cardGriditems} variants={cardVariants}>
             <div className={styles.icon}>
-              <img src={PriceIcon} alt='PriceIcon' />
+              <img src={PriceIcon} alt='Web3 Gaming' />
             </div>
             <div>
               <p>GMG Pre-Sale Price</p>
@@ -131,7 +131,7 @@ export default function PresaleDetails({ address }) {
           </motion.div>
           <motion.div className={styles.cardGriditems} variants={cardVariants}>
             <div className={styles.icon}>
-              <img src={CoinsIcon} alt='CoinsIcon' />
+              <img src={CoinsIcon} alt='Decentralized Gaming Platform' />
             </div>
             <div>
               <p>Number of vested coins</p>

@@ -4,7 +4,7 @@ const GamergeImage = '/assets/images/gamergebanner.png';
 export default function Gamergebanner() {
   return (
     <div className={styles.gamergebanner}>
-        <img src={GamergeImage} alt='GamergeImage'/>
+        <img src={GamergeImage} alt='Decentralized Gaming Platform'/>
     </div>
   )
 }

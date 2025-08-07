@@ -100,7 +100,7 @@ export default function EarnUsdt() {
             variants={imageVariants}
           >
             <div className={styles.image}>
-              <img src={InstantlyImage} alt='InstantlyImage' />
+              <img src={InstantlyImage} alt='Buy GMG Tokens' />
             </div>
             <motion.div
               className={styles.starOne}
@@ -109,7 +109,7 @@ export default function EarnUsdt() {
               initial="initial"
               animate="animate"
             >
-              <img src={StarOne} alt="StarOne" />
+              <img src={StarOne} alt="Refer And Earn" />
             </motion.div>
 
             <motion.div
@@ -119,7 +119,7 @@ export default function EarnUsdt() {
               initial="initial"
               animate="animate"
             >
-              <img src={StarTwo} alt="StarTwo" />
+              <img src={StarTwo} alt="Web3 Gaming Platform" />
             </motion.div>
 
             <motion.div
@@ -129,7 +129,7 @@ export default function EarnUsdt() {
               initial="initial"
               animate="animate"
             >
-              <img src={StarThree} alt="StarThree" />
+              <img src={StarThree} alt="GameFi Aggregator Platform" />
             </motion.div>
           </motion.div>
         </div>

@@ -44,7 +44,7 @@ export default function CryptoContent() {
         <motion.img
           className={styles.zoomIn}
           src={LayerImage}
-          alt='LayerImage'
+          alt='Token Utility Platform'
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -106,7 +106,7 @@ export default function CryptoContent() {
               <motion.img
                 className={styles.zoomIn}
                 src={CryptoImage}
-                alt='CryptoImage'
+                alt='Crypto Game Tournaments'
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
