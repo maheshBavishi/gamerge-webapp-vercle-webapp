@@ -6,10 +6,6 @@ import { useReadAllPresales } from "@/lib/hooks/use-read-all-presales";
 export default function page() {
 
   const { allPresaleActiveAddressesQuery } = useReadAllPresales();
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
-
   const activeAddresses = allPresaleActiveAddressesQuery.data;
   if (activeAddresses.length === 0 || !activeAddresses || !activeAddresses[0]) {
     return (
