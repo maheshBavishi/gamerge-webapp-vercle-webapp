@@ -20,7 +20,6 @@ export default function PresalePage() {
     );
   }
   const address = activeAddresses[0]
-  const { data, isPending: isPendingPresale } = useReadPresale(address);
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

@@ -139,7 +139,7 @@ export default function GamergeTokenomics() {
             <div className={styles.gamergeTokenomics}>
                 <div className={styles.pinkblur}></div>
                 <div className={styles.vectwo}>
-                    <img src={VecTwoImage} alt="Mobile Crypto Games" />
+                    <img src={VecTwoImage} alt="Free Crypto Airdrop" />
                 </div>
                 <div className={styles.borderBottom}></div>
                 <div className={styles.line}></div>
