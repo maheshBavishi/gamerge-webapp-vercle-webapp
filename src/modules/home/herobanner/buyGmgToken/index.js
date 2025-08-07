@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import styles from "./buyGmgToken.module.scss";
 import Button from "@/components/button";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import styles from "./buyGmgToken.module.scss";
 
 export default function BuyGmgToken() {
   // Set countdown target (7 days from now)
@@ -88,18 +88,18 @@ function TimerUnit({ label, value }) {
         {currentValueStr.split("").map((digit, index) => {
           const hasChanged = digit !== previousValueStr[index];
           return (
-            <AnimatePresence key={index} mode="wait" initial={false}>
-              <motion.p
-                key={digit}
-                initial={hasChanged ? { y: 10, opacity: 0 } : false}
-                animate={{ y: 0, opacity: 1 }}
-                exit={hasChanged ? { y: -10, opacity: 0 } : false}
-                transition={{ duration: 0.3 }}
-                style={{ display: "inline-block", width: "1ch", textAlign: "center" }}
-              >
-                {digit}
-              </motion.p>
-            </AnimatePresence>
+
+            <motion.p
+              key={digit + index}
+              initial={hasChanged ? { y: 10, opacity: 0 } : false}
+              animate={{ y: 0, opacity: 1 }}
+              exit={hasChanged ? { y: -10, opacity: 0 } : false}
+              transition={{ duration: 0.3 }}
+              style={{ display: "inline-block", width: "1ch", textAlign: "center" }}
+            >
+              {digit}
+            </motion.p>
+
           );
         })}
       </div>
