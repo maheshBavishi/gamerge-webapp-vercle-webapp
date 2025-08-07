@@ -20,6 +20,7 @@ export default function PresaleDetails({ address }) {
   const progressPercentage = presaleData?.gmgBought && presaleData?.presaleInfo?.allocation
     ? (Number(presaleData.gmgBought) / Number(presaleData.presaleInfo.allocation)) * 100
     : 0;
+
   const { address: userAddress } = useAccount()
   const { data: transactions } = useTransactionsOfPresale(address);
   const { data: yourTransactions } = useTransactionsOfUser(address, userAddress);
@@ -27,6 +28,7 @@ export default function PresaleDetails({ address }) {
 
   // Select transactions based on active tab
   const displayTransactions = activeTab === 'all' ? transactions : yourTransactions;
+  console.log([presaleData, userAddress])
 
   console.log({
     activeTab,
@@ -92,7 +94,7 @@ export default function PresaleDetails({ address }) {
           </motion.h2>
         </div>
         <div className={styles.textGrid}>
-          <p>Phase 1</p>
+          <p>Phase 2</p>
           <div className={styles.line}>
             <div className={styles.active} style={{ width: `${progressPercentage}%` }}></div>
           </div>
@@ -126,7 +128,7 @@ export default function PresaleDetails({ address }) {
             </div>
             <div>
               <p>GMG Pre-Sale Price</p>
-              <span>0.01 USD</span>
+              <span>0.02 USD</span>
             </div>
           </motion.div>
           <motion.div className={styles.cardGriditems} variants={cardVariants}>

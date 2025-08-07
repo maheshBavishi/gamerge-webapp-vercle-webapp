@@ -19,7 +19,8 @@ export default function PresalePage() {
       </div>
     );
   }
-  const address = activeAddresses[0]
+  console.log({ activeAddresses })
+  const address = "0x5765f859321817e1cF58508EC482016eb8C78F9A"
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

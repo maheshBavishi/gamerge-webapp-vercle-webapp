@@ -56,10 +56,10 @@ export default function BuyGmgToken() {
       </div>
 
       <div className={styles.liveContent}>
-        <h4>Phase 1 is LIVE</h4>
+        <h4>Phase 2 is LIVE</h4>
         <div className={styles.textGrid}>
           <div className={styles.line}></div>
-          <span>Price : 1 GMG = 0.01 USD</span>
+          <span>Price : 1 GMG = 0.02 USD</span>
           <div className={styles.line}></div>
         </div>
       </div>
