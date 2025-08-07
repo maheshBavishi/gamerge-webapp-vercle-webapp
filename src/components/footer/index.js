@@ -171,6 +171,13 @@ export default function Footer() {
                                     <span>IQ.wiki</span>
                                 </div>
                             </a>
+                            <a aria-label="TYLER" href="/sitemap.xml" target="_blank">
+                            <div className={styles.dotText}>
+                              <MindIcon />
+                              <div className={styles.dot}></div>
+                              <span>Sitemap</span>
+                            </div>
+                          </a>
                         </div>
                     </div>
                     <div className={styles.textCenter}>

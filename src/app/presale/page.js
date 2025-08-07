@@ -1,24 +1,14 @@
-'use client'
-import PresalePage from '@/modules/presale/index'
-import React, { useEffect, Suspense } from 'react'
-import { useReadAllPresales } from "@/lib/hooks/use-read-all-presales";
+import PresalePage from "@/modules/presale/index";
+import React from "react";
+
+export const metadata = {
+  title: "Web3 Crypto GameFi Presale, Play to Earn, Refer & Earn",
+  description: "Gamerge: Top-tier GameFi platform offering the best crypto presale deals & thrilling play-to-earn games with real crypto rewards ",
+  alternates: {
+    canonical: "https://gamerge.ai/presale",
+  },
+};
 
 export default function page() {
-
-  const { allPresaleActiveAddressesQuery } = useReadAllPresales();
-  const activeAddresses = allPresaleActiveAddressesQuery.data;
-  if (activeAddresses.length === 0 || !activeAddresses || !activeAddresses[0]) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <Card>There are no active presales</Card>
-      </div>
-    );
-  }
-
-
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <PresalePage address={activeAddresses[0]} />
-    </Suspense>
-  )
+  return <PresalePage />;
 }
