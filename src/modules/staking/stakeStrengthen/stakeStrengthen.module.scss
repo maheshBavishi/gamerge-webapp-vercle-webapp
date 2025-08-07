@@ -46,7 +46,7 @@
 
     .grid {
         display: grid;
-        grid-template-columns: 1fr 618px;
+            grid-template-columns: 1fr 686px;
         gap: 10px;
         align-items: center;
          @media (max-width:1024px) {
@@ -58,13 +58,15 @@
           }
 
         .image {
-            height: 600px;
+             height: 696px;
              @media (max-width:1024px) {
                 display: flex;
                 justify-content: center;
              }
              @media (max-width:576px) {
                 height: 350px;
+                max-width: 350px;
+                margin: 0 auto;
                 
              }
             img {

@@ -45,12 +45,12 @@ export default function ListedOfContent() {
             <div className={styles.twoContentalignment}>
               <motion.div className={styles.listBox} variants={iconVariant}>
                 <a aria-label='link' href='https://www.coingabbar.com/en/crypto-ico-details/gamerge-latest-ico-token-gamefi-project' target='_blank'>
-                <img src={CoinGabbarIcon} alt='CoinGabbarIcon'/>
+                <img src={CoinGabbarIcon} alt='Gaming Aggregator Platform'/>
                 </a>
               </motion.div>
               <motion.div className={styles.listBox} variants={iconVariant}>
                 <a aria-label='link' href='https://icoholder.com/en/gamerge-1090860' target='_blank'>
-                <img src={IcoholderIcon} alt='IcoholderIcon'/>
+                <img src={IcoholderIcon} alt='Crypto Payments'/>
                 </a>
               </motion.div>
             </div>

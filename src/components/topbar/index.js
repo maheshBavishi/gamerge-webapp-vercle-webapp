@@ -4,9 +4,11 @@ import Link from 'next/link';
 export default function Topbar() {
   return (
     <div className={styles.topbar}>
-      <Link href="/presale">
-        Join World’s First Fun-to-play-to-earn Gamefi Presale
-      </Link>
+      <div className='container-md'>
+      <p >
+        Join World’s First Fun-to-play-to-earn Gamefi <Link href="/presale" aria-label='Presale'> Presale</Link>
+      </p>
+      </div>
     </div>
   )
 }

@@ -11,18 +11,21 @@ export const cardsData = [
     {
         image: PosterImage,
         title: 'Plug & Play Integration',
+        alt:'Crypto Gaming',
         description:
             'Go live in 24 hours—supporting multichain, multicurrency tokens with zero hassle.',
     },
     {
         image: CostImage,
         title: 'Low Cost, High Speed',
+        alt:'Buy GMG Tokens',
         description:
             'Launch your token with minimal fees and zero development delays.',
     },
     {
         image: CommunityImage,
         title: 'Built-In Community Access',
+        alt:'Refer And Earn',
         description:
             'Skip the grind. Instantly tap into Gamerge’s thriving global player base.',
     },
@@ -136,7 +139,7 @@ export default function WhychooseB2b() {
                                 <img
                                     className={styles.cardImage}
                                     src={card.image}
-                                    alt={card.title}
+                                    alt={card.alt}
                                 />
                             </div>
                             <div className={styles.details}>

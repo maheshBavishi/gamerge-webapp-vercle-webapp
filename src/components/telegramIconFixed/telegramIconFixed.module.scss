@@ -1,0 +1,13 @@
+.telegramIconFixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+
+    svg {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+}

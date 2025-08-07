@@ -53,7 +53,7 @@ export default function Header() {
             <div className={styles.headerAlignment}>
               <Link href="/">
                 <div className={styles.logo}>
-                  <Image src={Logo} alt="Logo" layout='fill' />
+                  <Image src={Logo} alt="Blockchain Gaming Platform" layout='fill' />
                 </div>
               </Link>
               <div className={styles.rightalignment}>
@@ -62,7 +62,7 @@ export default function Header() {
                   <Link href="/staking">Staking</Link>
                   <Link href="/b2b">B2b Solutions</Link>
                   <a href='https://sweepwidget.com/c/86895-oiy9dkpt' target='_blank' aria-label='airdrop'>airdrop</a>
-                  <a aria-label='Games'>Games</a>
+                  <Link href="/" aria-label='Games'>Games</Link>
                   <Link href="/blog">blog</Link>
                 </div>
                 <div className={styles.button}>
@@ -86,7 +86,7 @@ export default function Header() {
         <div className={styles.mobilesubHeader}>
           <Link href="/">
             <div className={styles.logo}>
-              <Image src={Logo} alt="Logo" layout='fill' />
+              <Image src={Logo} alt="Top Gamefi Projects in Crypto" layout='fill' />
             </div>
           </Link>
           <div onClick={() => setHeader(false)}>
@@ -95,14 +95,14 @@ export default function Header() {
         </div>
         <div className={styles.mobileBody}>
           <div className={styles.vec}>
-            <img src={HeaderVec} alt='HeaderVec' />
+            <img src={HeaderVec} alt='Crypto Gaming Platform' />
           </div>
           <div className={styles.menu}>
             <Link onClick={() => setHeader(false)} href="/presale">Presale</Link>
             <Link onClick={() => setHeader(false)} href="/staking">Staking</Link>
             <Link onClick={() => setHeader(false)} href="/b2b">B2b Solutions</Link>
             <a onClick={() => setHeader(false)} href='https://sweepwidget.com/c/86895-oiy9dkpt' target='_blank' aria-label='airdrop'>airdrop</a>
-            <a onClick={() => setHeader(false)} aria-label='Games'>Games</a>
+            <a onClick={() => setHeader(false)} href="/" aria-label='Games'>Games</a>
             <Link onClick={() => setHeader(false)} href="/blog">blog</Link>
           </div>
         </div>

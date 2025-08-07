@@ -103,7 +103,7 @@ export default function HeartOfGamerge() {
           <h2>GMG- Heart of Gamerge Ecosystem</h2>
         </motion.div>
         <motion.div className={styles.textContent} variants={itemVariants}>
-          <p>Every 1v1 match on Gamerge burns GMG tokens, reducing supply, rewarding players, and boosting long-term token value.</p>
+          <p>Every 1v1 match on Gamerge burns <span> GMG tokens, </span> reducing supply, rewarding players, and boosting long-term token value.</p>
         </motion.div>
         <motion.div variants={itemVariants}>
           <BurningCalculator

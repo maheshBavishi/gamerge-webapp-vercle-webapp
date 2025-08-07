@@ -35,8 +35,8 @@ export default function DownloadApp() {
                 </div>
             </div>
             <div className={styles.appImage}>
-                <img src={AppImage} alt='AppImage'/>
-                <img src={MobileImage} alt='MobileImage'/>
+                <img src={AppImage} alt='Play To Earn Crypto Games'/>
+                <img src={MobileImage} alt='Crypto Gaming Platform'/>
             </div>
         </div>
       </div>

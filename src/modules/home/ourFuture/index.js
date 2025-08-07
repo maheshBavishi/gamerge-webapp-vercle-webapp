@@ -64,7 +64,7 @@ export default function OurFuture() {
                             Our Path to the Future
                         </motion.h2>
                         <div className={styles.foxMobile}>
-                            <img src={FoxMobileImage} alt='FoxMobileImage' />
+                            <img src={FoxMobileImage} alt='Play To Earn Crypto Games' />
                         </div>
                     </motion.div>
                     <motion.div
@@ -92,7 +92,7 @@ export default function OurFuture() {
                                         </p>
                                         <p>- Release of the Flappy Fox Telegram mini-game</p>
                                         <p>
-                                            - Initiate international crypto community airdrops
+                                            - Initiate international <span> crypto community </span> airdrops
                                         </p>
                                     </div>
                                     <div className={styles.lineAlignment}></div>
@@ -114,7 +114,7 @@ export default function OurFuture() {
                                         </p>
                                         <p>- Release of an in-depth audit report</p>
                                         <p>
-                                            - Initiate partnerships with multiple Web3 and GameFi projects
+                                            - Initiate partnerships with multiple Web3 and <span> GameFi projects </span>
                                         </p>
                                     </div>
                                     <div className={styles.lineAlignment}></div>
@@ -126,7 +126,7 @@ export default function OurFuture() {
                                         <CircleIcon />
                                     </div>
                                     <div className={styles.foxImage}>
-                                        <img src={FoxImage} alt='FoxImage' />
+                                        <img src={FoxImage} alt='Token Utility Platform' />
                                     </div>
                                     <div className={styles.card}>
                                         <h3>Q2 2025</h3>
@@ -151,7 +151,7 @@ export default function OurFuture() {
                                             - Launch of the fourth game in the Gamerge ecosystem
                                         </p>
                                         <p>
-                                            - Launch NFT marketplace with integrated staking features
+                                            - Launch <span> NFT marketplace </span> with integrated staking features
                                         </p>
                                         <p>
                                             - Organise a first ever GMG Tokens burning event
@@ -186,16 +186,16 @@ export default function OurFuture() {
             </div>
             <Marquee>
             <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='TimelineImage' />
+                <img src={TimelineImage} alt='Crypto Gaming Platform' />
             </div>
             <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='TimelineImage' />
+                <img src={TimelineImage} alt='Blockchain Games' />
             </div>
             <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='TimelineImage' />
+                <img src={TimelineImage} alt='GameFi Ecosystem' />
             </div>
             <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='TimelineImage' />
+                <img src={TimelineImage} alt='Web3 Gaming' />
             </div>
 
             </Marquee>

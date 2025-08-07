@@ -312,6 +312,10 @@
                     @include font16medium;
                     max-width: 411px;
                     color: var(--gray);
+                    span {
+                        color: var(--text-white);
+                        font-weight: 700;
+                    }
                 }
             }
         }

@@ -9,7 +9,7 @@ export default function BurningResults({ gameplays, tokensBurnt, remainingSupply
   return (
     <div className={styles.burningResults}>
       <div className={styles.vecAlignment}>
-        <img src={VecImage} alt="VecImage" />
+        <img src={VecImage} alt="Crypto Rewards" />
       </div>
       <div className={styles.iconText}>
         <BurningIcon />

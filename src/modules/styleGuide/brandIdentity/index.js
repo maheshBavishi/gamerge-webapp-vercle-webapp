@@ -14,10 +14,10 @@ export default function BrandIdentity() {
                     </h2>
                 </div>
                 <div className={styles.image}>
-                    <img src={BrandLogo} alt='BrandLogo'/>
+                    <img src={BrandLogo} alt='Crypto Gaming'/>
                 </div>
                 <div className={styles.brandLogoMobile}>
-                    <img src={BrandLogoMobile} alt='BrandLogoMobile'/>
+                    <img src={BrandLogoMobile} alt='GameFi platform'/>
                 </div>
                 <div className={styles.twoButtonAlignment}>
                     <button>

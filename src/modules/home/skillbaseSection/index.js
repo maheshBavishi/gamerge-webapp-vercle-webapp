@@ -25,42 +25,49 @@ const cardData = [
     title: 'Hi-tech skill based games',
     description: 'Enjoy competitive, skill-driven games designed with advanced technology. Test your abilities and win rewards based on performance, not luck.',
     image: CardImage2,
-    cropIcon: <CropIcon />
+    cropIcon: <CropIcon />,
+    alt:'GameFi platform',
   },
   {
     icon: DolorIcon,
     title: 'Fun-to-play-to-earn experience',
     description: 'Play entertaining games while earning crypto rewards. It’s gaming that’s both fun and financially rewarding.',
     image: CardImage,
-    cropIcon: <CropIcon />
+    cropIcon: <CropIcon />,
+    alt:'Play To Earn Crypto Games',
+
   },
   {
     icon: UnityIcon,
     title: 'Built on Unity engine',
     description: 'Powered by the Unity engine for smooth, high-quality gameplay. Expect sharp graphics, fluid controls, and a seamless experience.',
     image: UnityImage,
-    cropIcon: <CropIcon />
+    cropIcon: <CropIcon />,
+    alt:'Crypto Gaming Platform',
   },
   {
     icon: CryptoIcon,
     title: 'Multichain Crypto Compatibility',
     description: 'Supports multiple blockchains for flexible in-game payments and rewards. Play and earn with the crypto you already use and trust.',
     image: CryptoImage,
-    cropIcon: <CropIcon />
+    cropIcon: <CropIcon />,
+    alt:'Blockchain Games',
   },
   {
     icon: GameIcon,
     title: 'Gaming utility to any crypto project',
     description: 'Easily integrate your token into our gaming ecosystem. Boost utility, community engagement, and token visibility.',
     image: GameImage,
-    cropIcon: <CropIcon />
+    cropIcon: <CropIcon />,
+    alt:'GameFi Ecosystem',
   },
   {
     icon: EarnIcon,
     title: 'Exciting refer & earn program',
     description: 'Earn extra rewards by inviting friends to join and play. A simple way to grow your crypto while building a gaming community.',
     image: EarnImage,
-    cropIcon: <CropIcon />
+    cropIcon: <CropIcon />,
+    alt:'Web3 Gaming',
   },
 
 
@@ -123,9 +130,11 @@ export default function SkillbaseSection() {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut", delay: 0.1 } },
               }}
             >
-              With Gamerge, seamlessly integrate your token into high-tech Web3
-              games, access an engaged community, and boost your project's
-              credibility. Enter the GameFi space in just 1 day.
+              With Gamerge, seamlessly integrate your token into high-tech 
+              <span> Web3
+              games, </span>
+               access an engaged community, and boost your project's
+              credibility. Enter the <span >GameFi </span> space in just 1 day.
             </motion.p>
             <motion.div
               className={styles.btnCenterAlignment}
@@ -170,7 +179,7 @@ export default function SkillbaseSection() {
                 <p>{card.description}</p>
               </div>
               <div className={styles.image}>
-                <img src={card.image} alt={`card-${index}`} />
+                <img src={card.image} alt={card.alt} />
                 <div className={styles.cropStyle}>
                   {card.cropIcon}
                 </div>

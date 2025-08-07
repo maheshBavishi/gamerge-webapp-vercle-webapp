@@ -110,7 +110,7 @@ export default function MoreFromGamerge() {
                             <div>
                                 <div className={styles.blogCard}>
                                     <div className={styles.image}>
-                                        <img src={BlogOne} alt='BlogOne' />
+                                        <img src={BlogOne} alt='Blockchain Gaming Platform' />
                                     </div>
                                     <div className={styles.details}>
                                         <h3>
@@ -122,7 +122,7 @@ export default function MoreFromGamerge() {
                             <div>
                                 <div className={styles.blogCard}>
                                     <div className={styles.image}>
-                                        <img src={BlogImage} alt='BlogImage' />
+                                        <img src={BlogImage} alt='Web3 Gaming Platform' />
                                     </div>
                                     <div className={styles.details}>
                                         <h3>
@@ -134,7 +134,7 @@ export default function MoreFromGamerge() {
                             <div>
                                 <div className={styles.blogCard}>
                                     <div className={styles.image}>
-                                        <img src={BlogThree} alt='BlogThree' />
+                                        <img src={BlogThree} alt='GameFi Aggregator Platform' />
                                     </div>
                                     <div className={styles.details}>
                                         <h3>

@@ -1,38 +1,11 @@
+
 'use client'
-import React from "react";
 import { motion } from "framer-motion";
 import styles from "./herobanner.module.scss";
 import BuyGmgToken from "./buyGmgToken";
-import ListedOfContent from "../listedOfContent";
+import ListedOfContent from '../listedOfContent';
 const Video = '/assets/video/video.mp4';
-const titleVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const wordVariants = {
-  hidden: { y: 40, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  },
-};
-
-
-
 export default function Herobanner() {
-  const titleText = "Emergence of New Era in Gamefi!";
-  const words = titleText.split(" ");
-
   return (
     <>
       <motion.div
@@ -42,7 +15,7 @@ export default function Herobanner() {
         transition={{ duration: 0.5 }}
       >
         <div className={styles.videoImage}>
-          <video src={Video} autoPlay loop muted playsInline alt="Video"/>
+          <video src={Video} autoPlay loop muted playsInline alt="Play To Earn Games"/>
         </div>
         <div className={styles.layer}></div>
         <div className={styles.contentAlignment}>
@@ -55,27 +28,16 @@ export default function Herobanner() {
               transition={{ duration: 0.8 }}
             >
               <div className={styles.text}>
-                <motion.h1
-                  variants={titleVariants}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  {words.map((word, index) => (
-                    <motion.span
-                      key={index}
-                      variants={wordVariants}
-                      style={{ display: "inline-block", marginRight: "0.5rem" }}
-                    >
-                      {word === "Emergence" ? <span className={styles.gradientText}>{word}</span> : word}
-                    </motion.span>
-                  ))}
-                </motion.h1>
+                <h1>
+                  <span className={styles.gradientText}> Emergence </span> of New Era in Gamefi! 
+                </h1>
                 <motion.p
                   initial={{ y: 40, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1, duration: 0.7 }}
                 >
-                  Gamerge– a next-generation hi-tech skill-based fun-to-play-to-earn crypto gaming platform
+                  Gamerge– a next-generation hi-tech skill-based fun-to-play-to-earn 
+                  <span> crypto gaming platform </span>
                   built on Unity engine!
                 </motion.p>
               </div>
@@ -101,14 +63,14 @@ export default function Herobanner() {
                 </button>
               </motion.div>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className={styles.griditems}
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-            >
+            > */}
               <BuyGmgToken />
-            </motion.div>
+            {/* </motion.div> */}
           </div>
         </div>
         </div>

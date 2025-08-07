@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://gamerge.ai/sitemap.xml

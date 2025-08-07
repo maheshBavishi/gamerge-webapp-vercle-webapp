@@ -78,34 +78,34 @@ export default function StakingBanner() {
                     }}
                 >
                     <div className={styles.lineview}>
-                        <img src={LineViewImage} alt='LineViewImage' />
+                        <img src={LineViewImage} alt='Buy GMG Tokens' />
                     </div>
 
 
                     <div className={styles.blueCoin}>
-                        <img src={BlueCoin} alt='BlueCoin' />
+                        <img src={BlueCoin} alt='Refer And Earn' />
                     </div>
                     <div className={styles.pinkCoin}>
-                        <img src={PinkCoin} alt='PinkCoin' />
+                        <img src={PinkCoin} alt='Blockchain Gaming Platform' />
                     </div>
                     <div className={styles.blueCoinGroup}>
-                        <img src={BlueCoinGroup} alt='BlueCoinGroup' />
+                        <img src={BlueCoinGroup} alt='Web3 Gaming Platform' />
                     </div>
                     <div className={styles.pinkCoinGroup}>
-                        <img src={PinkCoinGroup} alt='PinkCoinGroup' />
+                        <img src={PinkCoinGroup} alt='GameFi Aggregator Platform' />
                     </div>
                     <div className={styles.leftIcon}>
-                        <img src={BitCoinImage} alt='BitCoinImage' />
+                        <img src={BitCoinImage} alt='Token Utility Platform' />
                     </div>
                     <div className={styles.foxImage}>
-                        <img src={FoxImage} alt='FoxImage' />
+                        <img src={FoxImage} alt='Crypto Game Tournaments' />
                     </div>
                 </motion.div>
                 <div className={styles.posterLeft}>
-                    <img src={PosterImage} alt='PosterImage' />
+                    <img src={PosterImage} alt='Mobile Crypto Games' />
                 </div>
                 <div className={styles.posterRight}>
-                    <img src={PosterTwoImage} alt='PosterTwoImage' />
+                    <img src={PosterTwoImage} alt='Web3 Games' />
                 </div>
                 <div className='container-md'>
                     <div className={styles.text}>
@@ -115,8 +115,10 @@ export default function StakingBanner() {
                             <span> Future of GameFi</span>
                         </h1>
                         <p>
-                            Put your GMG tokens to work with our flexible and rewarding staking plans and earn upto 6% APY—designed for gamers, investors, and believers in the
-                            future of GameFi.
+                            Put your GMG tokens to work with our flexible and rewarding 
+                            <span> staking plans </span>
+                             and earn upto 6% APY—designed for gamers, investors, and believers in the
+                            future of <span> GameFi. </span>
                         </p>
                     </div>
                 </div>

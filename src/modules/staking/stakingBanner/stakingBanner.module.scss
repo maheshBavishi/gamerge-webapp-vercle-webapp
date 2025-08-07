@@ -23,7 +23,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 0;
+        left: -20px;
 
         @media (max-width:576px) {
             transform: none;
@@ -39,7 +39,7 @@
 
     .pinkCoin {
         position: absolute;
-        right: 0;
+        right: -30px;
         top: 30%;
 
         @media (max-width:1024px) {
@@ -226,6 +226,10 @@
             margin: 0 auto;
             text-align: center;
             text-align: center;
+            span {
+                color: var(--text-white);
+                font-weight: 700;
+            }
         }
 
         h1 {

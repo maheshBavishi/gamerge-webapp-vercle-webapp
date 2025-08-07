@@ -1,14 +1,15 @@
-'use client'
-import Staking from '@/modules/staking'
-import React, { useEffect } from 'react'
-
+import Staking from "@/modules/staking";
+export const metadata = {
+  title: "Suggestion - Crypto Staking Platform | Staking Rewards",
+  description: "Gamerge Staking on a crypto gaming platform. Play to earn mobile crypto games in a powerful gamefi ecosystem.",
+  alternates: {
+    canonical: "https://gamerge.ai/staking",
+  },
+};
 export default function page() {
-  useEffect(() => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}, []);
   return (
     <div>
-      <Staking shadowShow/>
+      <Staking shadowShow />
     </div>
-  )
+  );
 }

@@ -12,6 +12,7 @@ import { ApolloProvider } from "@apollo/client";
 import Providers from "./providers"
 import ApolloClientProvider from "@/components/ApolloClientProvider";
 import { Toaster } from "react-hot-toast";
+import TelegramIconFixed from "@/components/telegramIconFixed";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -35,22 +36,24 @@ const plus_jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "GAMERGE",
+  title: "gamerge.ai",
   description: "GAMERGE",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/assets/images/presale.png" fetchPriority="high" />
+      </head>
       <body className={`${poppins.variable} ${unbounded.variable} ${plus_jakarta.variable}`}>
 
         <Providers>
           <Toaster position="top-right" />
-
           <Header />
+          <TelegramIconFixed/>
           {children}
           <Footer />
-
         </Providers>
 
       </body >

@@ -62,7 +62,7 @@ export default function WhyBecom() {
                 >
                   <motion.div className={styles.griditems} variants={cardVariant}>
                     <div className={styles.image}>
-                        <img src={PosterImage} alt='PosterImage'/>
+                        <img src={PosterImage} alt='Decentralized Gaming Platform'/>
                     </div>
                     <div className={styles.details}>
                         <h3>Earn While You Refer</h3>
@@ -73,7 +73,7 @@ export default function WhyBecom() {
                   </motion.div>
                   <motion.div className={styles.griditems} variants={cardVariant}>
                     <div className={styles.image}>
-                        <img src={CostImage} alt='CostImage'/>
+                        <img src={CostImage} alt='Mobile Crypto Gaming'/>
                     </div>
                     <div className={styles.details}>
                         <h3>Community Building</h3>
@@ -84,7 +84,7 @@ export default function WhyBecom() {
                   </motion.div>
                   <motion.div className={styles.griditems} variants={cardVariant}>
                     <div className={styles.image}>
-                        <img src={CommunityImage} alt='CommunityImage'/>
+                        <img src={CommunityImage} alt='Crypto Gaming Ecosystem'/>
                     </div>
                     <div className={styles.details}>
                         <h3>Recognition</h3>

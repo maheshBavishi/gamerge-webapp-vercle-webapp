@@ -9,13 +9,13 @@ export default function GallerySection() {
       <div className='container-md'>
         <div className={styles.grid}>
             <div className={styles.griditems}>
-                <img src={StyleOne} alt='StyleOne'/>
+                <img src={StyleOne} alt='Crypto Gaming'/>
             </div>
             <div className={styles.griditems}>
-                <img src={StyleTwo} alt='StyleTwo'/>
+                <img src={StyleTwo} alt='Mobile Crypto Gaming'/>
             </div>
             <div className={styles.griditems}>
-                <img src={StyleThree} alt='StyleThree'/>
+                <img src={StyleThree} alt='Crypto Gaming Ecosystem'/>
             </div>
         </div>
       </div>

@@ -9,6 +9,8 @@ import TwitterIcon from '../icons/twitterIcon';
 import LinkTreeIcon from '../icons/linkTreeIcon';
 import InstagramIcon from '../icons/instagramIcon';
 import Link from 'next/link';
+import MindIcon from '../icons/mindIcon';
+const IqLogo = '/assets/icons/iq-logo.png';
 export default function Footer() {
     return (
         <div className={styles.footerSpacing}>
@@ -127,6 +129,12 @@ export default function Footer() {
                                 <div className={styles.dot}></div>
                                 <span>Anti Money Laundering</span>
                             </div>
+                             <a aria-label="sitemap.xml" href="/sitemap.xml" target="_blank">
+                             <div className={styles.dotText}>
+                                <div className={styles.dot}></div>
+                                <span>Sitemap</span>
+                            </div>
+                          </a>
                         </div>
                         <div className={styles.griditems}>
                             <div className={styles.line}></div>
@@ -162,6 +170,14 @@ export default function Footer() {
                                     <span>Instagram</span>
                                 </div>
                             </a>
+                            <a aria-label='TYLER' href="https://iq.wiki/wiki/gamerge" target='_blank'>
+                                <div className={styles.dotText}>
+                                    <MindIcon/>
+                                    <div className={styles.dot}></div>
+                                    <span>IQ.wiki</span>
+                                </div>
+                            </a>
+                           
                         </div>
                     </div>
                     <div className={styles.textCenter}>

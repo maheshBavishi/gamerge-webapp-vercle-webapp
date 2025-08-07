@@ -89,10 +89,10 @@ export default function WhyStaking() {
         </motion.div>
         <motion.div className={styles.grid} variants={containerVariants}>
             <motion.div className={styles.bottomCenter} variants={itemVariants}>
-                <motion.img src={GraphsImage} alt='GraphsImage' initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.7, ease: 'easeOut' }} />
+                <motion.img src={GraphsImage} alt='Token Utility Platform' initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.7, ease: 'easeOut' }} />
             </motion.div>
             <motion.div className={styles.topIconalignment} variants={itemVariants}>
-                <motion.img src={MangoImage} alt='MangoImage' initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, ease: 'easeOut' }} />
+                <motion.img src={MangoImage} alt='Crypto Presale' initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, ease: 'easeOut' }} />
             </motion.div>
             <motion.div className={ classNames(styles.border , styles.griditems) } variants={itemVariants}>
                 <div className={styles.leftContent}>
