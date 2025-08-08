@@ -11,6 +11,7 @@ import CloseIcon from '../icons/closeIcon';
 const HeaderVec = '/assets/images/header-vec.png';
 const Logo = '/assets/logo/logo.svg';
 import dynamic from 'next/dynamic'
+import LazyImage from '@/lazyImage';
 
 const Topbar = dynamic(() => import('../topbar'))
 
@@ -98,7 +99,11 @@ export default function Header() {
         </div>
         <div className={styles.mobileBody}>
           <div className={styles.vec}>
-            <img src={HeaderVec} alt='Crypto Gaming Platform' />
+            <LazyImage
+              image={{
+                src: HeaderVec,
+                alt: `Crypto Gaming Platform`,
+              }} />
           </div>
           <div className={styles.menu}>
             <Link onClick={() => setHeader(false)} href="/presale">Presale</Link>

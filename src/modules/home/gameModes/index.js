@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import styles from './gameModes.module.scss';
 import DownIcon from '@/components/icons/downIcon';
+import LazyImage from '@/lazyImage';
 const CardImage = '/assets/images/card-img.png';
 const CardImage2 = '/assets/images/games2.png';
 const CardImage3 = '/assets/images/games3.png';
@@ -10,8 +11,8 @@ const MangoIcon = '/assets/icons/mango.png';
 const cardData = [
     {
         title: "Free Practice Mode",
-        image: CardImage, 
-        alt:'Free Crypto Airdrop',
+        image: CardImage,
+        alt: 'Free Crypto Airdrop',
         points: [
             "Practice and sharpen skills.",
             "Win in-game points & stack them in the Loot Vault.",
@@ -21,7 +22,7 @@ const cardData = [
     {
         title: "1v1 Competitive Mode",
         image: CardImage2,
-        alt:'Free Airdrops',
+        alt: 'Free Airdrops',
         points: [
             "Stake cryptos & compete.",
             "Winner takes 90% of the pool.",
@@ -31,7 +32,7 @@ const cardData = [
     {
         title: "Tournament Mode",
         image: CardImage3,
-        alt:'Top Gamefi Projects in Crypto',
+        alt: 'Top Gamefi Projects in Crypto',
         points: [
             "Compete in large-scale tournaments.",
             "Winner can earn up to 25x rewards.",
@@ -81,7 +82,11 @@ export default function GameModes() {
                 </motion.div>
                 <div className={styles.relativeDiv}>
                     <div className={styles.iconsAlignment}>
-                        <img src={MangoIcon} alt='Decentralized Gaming Platform' />
+                        <LazyImage
+                            image={{
+                                src: MangoIcon,
+                                alt: 'Decentralized Gaming Platform',
+                            }} />
                     </div>
                     <motion.div
                         className={styles.grid}
@@ -133,7 +138,12 @@ export default function GameModes() {
                             >
                                 <div className={styles.card}>
                                     <div className={styles.cardImage}>
-                                        <img src={card.image} alt={card.alt} />
+
+                                        <LazyImage
+                                            image={{
+                                                src: card.image,
+                                                alt: card.alt,
+                                            }} />
                                     </div>
                                     <div className={styles.greenBox}>
                                         <h3>{card.title}</h3>

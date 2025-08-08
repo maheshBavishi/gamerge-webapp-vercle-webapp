@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './listedOfContent.module.scss';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import LazyImage from '@/lazyImage';
 
 const CoinGabbarIcon = '/assets/images/coin-gabbar.png';
 const IcoholderIcon = '/assets/images/icoholder.svg';
@@ -45,12 +46,20 @@ export default function ListedOfContent() {
             <div className={styles.twoContentalignment}>
               <motion.div className={styles.listBox} variants={iconVariant}>
                 <a aria-label='link' href='https://www.coingabbar.com/en/crypto-ico-details/gamerge-latest-ico-token-gamefi-project' target='_blank'>
-                <img src={CoinGabbarIcon} alt='Gaming Aggregator Platform'/>
+                  <LazyImage
+                    image={{
+                      src: CoinGabbarIcon,
+                      alt: `Gaming Aggregator Platform`,
+                    }} />
                 </a>
               </motion.div>
               <motion.div className={styles.listBox} variants={iconVariant}>
                 <a aria-label='link' href='https://icoholder.com/en/gamerge-1090860' target='_blank'>
-                <img src={IcoholderIcon} alt='Crypto Payments'/>
+                  <LazyImage
+                    image={{
+                      src: IcoholderIcon,
+                      alt: `Crypto Payments`,
+                    }} />
                 </a>
               </motion.div>
             </div>
@@ -66,10 +75,22 @@ export default function ListedOfContent() {
             </motion.h3>
             <div className={styles.twoContentalignment}>
               <motion.div className={styles.listBox} variants={iconVariant}>
-               <a href='https://www.quillaudits.com/leaderboard/gamerge' target='_blank' aria-label='QuillAudits'> <img src={QuillAuditsIcon} alt='QuillAuditsIcon'/></a>
+                <a href='https://www.quillaudits.com/leaderboard/gamerge' target='_blank' aria-label='QuillAudits'>
+                  <LazyImage
+                    image={{
+                      src: QuillAuditsIcon,
+                      alt: `QuillAuditsIcon`,
+                    }} />
+                </a>
               </motion.div>
               <motion.div className={styles.listBox} variants={iconVariant}>
-               <a href='https://skynet.certik.com/projects/gamerge' target='_blank' aria-label='certik'> <img src={CertikIcon} alt='CertikIcon'/></a>
+                <a href='https://skynet.certik.com/projects/gamerge' target='_blank' aria-label='certik'>
+                  <LazyImage
+                    image={{
+                      src: CertikIcon,
+                      alt: `CertikIcon`,
+                    }} />
+                </a>
               </motion.div>
             </div>
           </motion.div>

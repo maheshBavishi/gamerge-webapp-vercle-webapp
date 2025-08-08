@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./burningResults.module.scss";
 import BurningIcon from "@/components/icons/burningIcon";
 import { formatNumber } from "@/utils";
+import LazyImage from "@/lazyImage";
 const VecImage = "/assets/images/graphs.png";
 export default function BurningResults({ gameplays, tokensBurnt, remainingSupply, TOTAL_SUPPLY, burnPercentage }) {
   // const percentage = Math.min(100, (value / maxValue) * 100);
@@ -9,7 +10,11 @@ export default function BurningResults({ gameplays, tokensBurnt, remainingSupply
   return (
     <div className={styles.burningResults}>
       <div className={styles.vecAlignment}>
-        <img src={VecImage} alt="Crypto Rewards" />
+        <LazyImage
+          image={{
+            src: VecImage,
+            alt: 'Crypto Rewards',
+          }} />
       </div>
       <div className={styles.iconText}>
         <BurningIcon />

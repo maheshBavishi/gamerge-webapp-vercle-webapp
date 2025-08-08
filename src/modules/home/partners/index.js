@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import styles from "./partners.module.scss";
 import Marquee from "react-fast-marquee";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import LazyImage from "@/lazyImage";
 const SwipeIcon = "/assets/icons/swipe.svg";
 const DreamCraftIcon = "/assets/icons/DreamCraft.svg";
 const OrblerIcon = "/assets/icons/Orbler.svg";
@@ -105,12 +106,12 @@ const marqueeItemsSec = [
     alt: "Swipe1Icon",
     label: "Swipe Quest",
   },
-    {
+  {
     icon: DreamCraftIcon,
     label: "DreamCraft",
     alt: "DreamCraftIcon",
   },
-   {
+  {
     icon: OrblerIcon,
     label: "Orbler",
     alt: "OrblerIcon",
@@ -145,12 +146,12 @@ const marqueeItemsSec = [
     alt: "Swipe1Icon",
     label: "Swipe Quest",
   },
-    {
+  {
     icon: DreamCraftIcon,
     label: "DreamCraft",
     alt: "DreamCraftIcon",
   },
-   {
+  {
     icon: OrblerIcon,
     label: "Orbler",
     alt: "OrblerIcon",
@@ -170,7 +171,7 @@ const marqueeItemsSec = [
     label: "AnyAlt",
     alt: "AnyAltIcon",
   },
- 
+
 ];
 export default function Partners() {
   // Animation variants for the heading
@@ -182,10 +183,10 @@ export default function Partners() {
 
   return (
     <div className={styles.partners}>
-        <div className={styles.bitcoinIcon}>
-            <img src={BitcoinIcon} alt="Buy GMG Tokens"/>
-        </div>
-        <div className={styles.layerbox}></div>
+      <div className={styles.bitcoinIcon}>
+        <img src={BitcoinIcon} alt="Buy GMG Tokens" />
+      </div>
+      <div className={styles.layerbox}></div>
       <div className="container-md">
         <motion.h2
           variants={headingVariants}
@@ -198,16 +199,28 @@ export default function Partners() {
       <Marquee>
         {marqueeItems.map((item, index) => (
           <div key={index} className={styles.card}>
-            <img src={item.icon} alt={item.alt} />
+            <div className={styles.image}>
+              <LazyImage
+                image={{
+                  src: item.icon,
+                  alt: item.alt,
+                }} />
+            </div>
             <span>{item.label}</span>
           </div>
         ))}
       </Marquee>
       <div className={styles.topContentAlignment}>
         <Marquee direction="right">
-          {marqueeItemsSec.map((item, index) => (
+          {[...marqueeItemsSec, ...marqueeItemsSec].map((item, index) => (
             <div key={index} className={styles.card}>
-              <img src={item.icon} alt={item.alt} />
+              <div className={styles.image}>
+                <LazyImage
+                  image={{
+                    src: item.icon,
+                    alt: item.alt,
+                  }} />
+              </div>
               <span>{item.label}</span>
             </div>
           ))}

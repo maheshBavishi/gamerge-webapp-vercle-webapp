@@ -18,6 +18,7 @@ const UnityIcon = "/assets/icons/unity-icons.svg";
 import Slider from "react-slick";
 import CropIcon from "@/components/icons/cropIcon";
 import { motion } from "framer-motion";
+import LazyImage from "@/lazyImage";
 
 const cardData = [
   {
@@ -26,7 +27,7 @@ const cardData = [
     description: 'Enjoy competitive, skill-driven games designed with advanced technology. Test your abilities and win rewards based on performance, not luck.',
     image: CardImage2,
     cropIcon: <CropIcon />,
-    alt:'GameFi platform',
+    alt: 'GameFi platform',
   },
   {
     icon: DolorIcon,
@@ -34,7 +35,7 @@ const cardData = [
     description: 'Play entertaining games while earning crypto rewards. It’s gaming that’s both fun and financially rewarding.',
     image: CardImage,
     cropIcon: <CropIcon />,
-    alt:'Play To Earn Crypto Games',
+    alt: 'Play To Earn Crypto Games',
 
   },
   {
@@ -43,7 +44,7 @@ const cardData = [
     description: 'Powered by the Unity engine for smooth, high-quality gameplay. Expect sharp graphics, fluid controls, and a seamless experience.',
     image: UnityImage,
     cropIcon: <CropIcon />,
-    alt:'Crypto Gaming Platform',
+    alt: 'Crypto Gaming Platform',
   },
   {
     icon: CryptoIcon,
@@ -51,7 +52,7 @@ const cardData = [
     description: 'Supports multiple blockchains for flexible in-game payments and rewards. Play and earn with the crypto you already use and trust.',
     image: CryptoImage,
     cropIcon: <CropIcon />,
-    alt:'Blockchain Games',
+    alt: 'Blockchain Games',
   },
   {
     icon: GameIcon,
@@ -59,7 +60,7 @@ const cardData = [
     description: 'Easily integrate your token into our gaming ecosystem. Boost utility, community engagement, and token visibility.',
     image: GameImage,
     cropIcon: <CropIcon />,
-    alt:'GameFi Ecosystem',
+    alt: 'GameFi Ecosystem',
   },
   {
     icon: EarnIcon,
@@ -67,7 +68,7 @@ const cardData = [
     description: 'Earn extra rewards by inviting friends to join and play. A simple way to grow your crypto while building a gaming community.',
     image: EarnImage,
     cropIcon: <CropIcon />,
-    alt:'Web3 Gaming',
+    alt: 'Web3 Gaming',
   },
 
 
@@ -130,10 +131,10 @@ export default function SkillbaseSection() {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut", delay: 0.1 } },
               }}
             >
-              With Gamerge, seamlessly integrate your token into high-tech 
+              With Gamerge, seamlessly integrate your token into high-tech
               <span> Web3
-              games, </span>
-               access an engaged community, and boost your project's
+                games, </span>
+              access an engaged community, and boost your project's
               credibility. Enter the <span >GameFi </span> space in just 1 day.
             </motion.p>
             <motion.div
@@ -174,12 +175,20 @@ export default function SkillbaseSection() {
               }}
             >
               <div className={styles.content}>
-                <img src={card.icon} alt={`icon-${index}`} />
+                <LazyImage
+                  image={{
+                    src: card.icon,
+                    alt: `icon-${index}`,
+                  }} />
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
               </div>
               <div className={styles.image}>
-                <img src={card.image} alt={card.alt} />
+                <LazyImage
+                  image={{
+                    src: card.image,
+                    alt: card.alt,
+                  }} />
                 <div className={styles.cropStyle}>
                   {card.cropIcon}
                 </div>

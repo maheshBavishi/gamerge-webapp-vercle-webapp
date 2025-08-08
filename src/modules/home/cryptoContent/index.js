@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react'
 import styles from './cryptoContent.module.scss';
 import { motion } from 'framer-motion';
+import LazyImage from '@/lazyImage';
 const CryptoImage = '/assets/images/crypto.png';
 const LayerImage = '/assets/images/layer1.png';
 
@@ -41,15 +42,12 @@ export default function CryptoContent() {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <motion.img
-          className={styles.zoomIn}
-          src={LayerImage}
-          alt='Token Utility Platform'
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        />
+        <LazyImage
+          image={{
+            src: LayerImage,
+            alt: `Token Utility Platform`,
+          }} />
+
       </motion.div>
       <div className='container-md'>
         <div className={styles.grid}>
@@ -76,13 +74,13 @@ export default function CryptoContent() {
               }}
             >
               <span>Gamerge </span> bridges the gap between fun and finance. Our platform offers
-              <span> skill-based crypto games</span>, token utilities, and a thriving community. Build, earn, and 
+              <span> skill-based crypto games</span>, token utilities, and a thriving community. Build, earn, and
               grow with us.
             </motion.p>
-            
+
             {showLens && (
               <motion.p
-              className={`${styles.fadeInUp} ${styles.magnifiedText}`}
+                className={`${styles.fadeInUp} ${styles.magnifiedText}`}
                 style={{
                   fontSize: '40px',
                   clipPath: `circle(100px at ${lensPosition.x}px ${lensPosition.y}px)`,
@@ -90,7 +88,7 @@ export default function CryptoContent() {
                 }}
               >
                 <span>Gamerge </span> bridges the gap between fun and finance. Our platform offers
-                <span> skill-based crypto games</span>, token utilities, and a thriving community. Build, earn, and 
+                <span> skill-based crypto games</span>, token utilities, and a thriving community. Build, earn, and
                 grow with us.
               </motion.p>
             )}
@@ -103,15 +101,11 @@ export default function CryptoContent() {
             viewport={{ once: true }}
           >
             <div className={styles.image}>
-              <motion.img
-                className={styles.zoomIn}
-                src={CryptoImage}
-                alt='Crypto Game Tournaments'
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.7 }}
-                viewport={{ once: true }}
-              />
+              <LazyImage
+                image={{
+                  src: CryptoImage,
+                  alt: `Crypto Game Tournaments`,
+                }} />
             </div>
           </motion.div>
         </div>

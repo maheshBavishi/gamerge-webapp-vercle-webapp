@@ -6,6 +6,7 @@ import DownIcon from '@/components/icons/downIcon';
 import CircleIcon from '@/components/icons/circleIcon';
 import classNames from 'classnames';
 import Marquee from 'react-fast-marquee';
+import LazyImage from '@/lazyImage';
 const FoxImage = '/assets/images/fox-img.png';
 const TimelineImage = '/assets/images/timeline.png';
 const FoxMobileImage = '/assets/images/fox-mobile.svg';
@@ -64,11 +65,15 @@ export default function OurFuture() {
                             Our Path to the Future
                         </motion.h2>
                         <div className={styles.foxMobile}>
-                            <img src={FoxMobileImage} alt='Play To Earn Crypto Games' />
+                            <LazyImage
+                                image={{
+                                    src: FoxMobileImage,
+                                    alt: 'Play To Earn Crypto Games',
+                                }} />
                         </div>
                     </motion.div>
                     <motion.div
-                     
+
                         className={styles.grid}
                         variants={timelineContainer}
                         initial="hidden"
@@ -126,7 +131,11 @@ export default function OurFuture() {
                                         <CircleIcon />
                                     </div>
                                     <div className={styles.foxImage}>
-                                        <img src={FoxImage} alt='Token Utility Platform' />
+                                        <LazyImage
+                                            image={{
+                                                src: FoxImage,
+                                                alt: 'Token Utility Platform',
+                                            }} />
                                     </div>
                                     <div className={styles.card}>
                                         <h3>Q2 2025</h3>
@@ -185,22 +194,38 @@ export default function OurFuture() {
                 </div>
             </div>
             <Marquee>
-            <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='Crypto Gaming Platform' />
-            </div>
-            <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='Blockchain Games' />
-            </div>
-            <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='GameFi Ecosystem' />
-            </div>
-            <div className={styles.timelineImage}>
-                <img src={TimelineImage} alt='Web3 Gaming' />
-            </div>
+                <div className={styles.timelineImage}>
+                    <LazyImage
+                        image={{
+                            src: TimelineImage,
+                            alt: 'Crypto Gaming Platform',
+                        }} />
+                </div>
+                <div className={styles.timelineImage}>
+                    <LazyImage
+                        image={{
+                            src: TimelineImage,
+                            alt: 'Blockchain Games',
+                        }} />
+                </div>
+                <div className={styles.timelineImage}>
+                    <LazyImage
+                        image={{
+                            src: TimelineImage,
+                            alt: 'GameFi Ecosystem',
+                        }} />
+                </div>
+                <div className={styles.timelineImage}>
+                    <LazyImage
+                        image={{
+                            src: TimelineImage,
+                            alt: 'Web3 Gaming',
+                        }} />
+                </div>
 
             </Marquee>
             <div className={styles.spacer}></div>
-          
+
         </>
     )
 }

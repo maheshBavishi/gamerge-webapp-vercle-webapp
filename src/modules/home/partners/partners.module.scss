@@ -115,8 +115,18 @@
         font-size: 12px;
       }
     }
-
+    .image {
+      width: 60px;
+      height: 60px;
+      @media (max-width:576px) {
+        width: 46px;
+        height: 46px;
+      }
+    }
     img {
+      width: 60px;
+      height: 60px;
+      display: block;
       @media (max-width:576px) {
         width: 46px;
         height: 46px;

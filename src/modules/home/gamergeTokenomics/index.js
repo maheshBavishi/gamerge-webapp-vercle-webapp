@@ -11,6 +11,7 @@ import {
     ResponsiveContainer,
     Tooltip,
 } from 'recharts';
+import LazyImage from '@/lazyImage';
 
 const VecTwoImage = '/assets/images/vec-two.png';
 const chartCenterImage = '/assets/images/chart-center-image.png';
@@ -135,118 +136,136 @@ export default function GamergeTokenomics() {
 
     return (
         <div className={styles.mobilepaddingRemove}>
-        <div className="container-md">
-            <div className={styles.gamergeTokenomics}>
-                <div className={styles.pinkblur}></div>
-                <div className={styles.vectwo}>
-                    <img src={VecTwoImage} alt="Free Crypto Airdrop" />
-                </div>
-                <div className={styles.borderBottom}></div>
-                <div className={styles.line}></div>
-                <div className={styles.leftSide}></div>
-                <div className={styles.rightSide}></div>
-
-                <motion.div
-                    className={styles.titleIconAlignment}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    viewport={{ once: true }}
-                >
-                    <DownIcon />
-                    <h2>Gamerge Tokenomics</h2>
-                </motion.div>
-
-                {/* Chart Section */}
-                <motion.div
-                    className={styles.imageCenter}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-                    viewport={{ once: true }}
-                >
-                    <div className={styles.chartLine}>
-                        <img src={ChartLine} alt='Web3 Games' />
+            <div className="container-md">
+                <div className={styles.gamergeTokenomics}>
+                    <div className={styles.pinkblur}></div>
+                    <div className={styles.vectwo}>
+                        <LazyImage
+                            image={{
+                                src: VecTwoImage,
+                                alt: 'Free Crypto Airdrop',
+                            }} />
                     </div>
-                    <div className={styles.mobileChartline}>
-                        <img src={MobileChart} alt='Token Utility Platform'/>
-                    </div>
-                    <div
-                        className={styles.chartSvg}>
+                    <div className={styles.borderBottom}></div>
+                    <div className={styles.line}></div>
+                    <div className={styles.leftSide}></div>
+                    <div className={styles.rightSide}></div>
 
-                        <ResponsiveContainer tabIndex={-1}>
-                            <PieChart>
-                                <Tooltip wrapperStyle={{ zIndex: 9999 }} content={<CustomTooltip />} />
-                                <Pie
-                                    data={chartData}
-                                    dataKey="value"
-                                    nameKey="name"
-                                    innerRadius="54%"
-                                    outerRadius="100%"
-                                    cornerRadius={10}
-                                    paddingAngle={2}
-                                    labelLine={false}
-                                    label={renderCustomizedLabel}
-                                    isAnimationActive={false}
-                                    activeShape={false}
-                                    startAngle={-205}
-                                    endAngle={180}
-                                >
-                                    {chartData.map((entry, index) => (
-                                        <Cell key={`cell-${index}`} stroke={entry.color}
-                                            strokeWidth={1.5} fill={entry.color} />
-                                    ))}
-                                </Pie>
-                            </PieChart>
-                        </ResponsiveContainer>
-                        <div
-                        className={styles.svgroundtexrt}
-                            style={{
-                                position: 'absolute',
-                                top: '50%',
-                                left: '50%',
-                                transform: 'translate(-50%, -50%)',
-                                textAlign: 'center',
-                                color: '#FAFAFA',
-                            }}
-                        >
-                            <p>
-                                Built on
-                            </p>
+                    <motion.div
+                        className={styles.titleIconAlignment}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                        viewport={{ once: true }}
+                    >
+                        <DownIcon />
+                        <h2>Gamerge Tokenomics</h2>
+                    </motion.div>
 
-                            <h4
-                            >
-                                BINANCE <br/> SMART CHAIN
-                            </h4>
-                            <img
-                                className={styles.centerImage}
-                                src={chartCenterImage}
-                                alt="Crypto Presale"
-
-                            />
+                    {/* Chart Section */}
+                    <motion.div
+                        className={styles.imageCenter}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+                        viewport={{ once: true }}
+                    >
+                        <div className={styles.chartLine}>
+                            <LazyImage
+                                image={{
+                                    src: ChartLine,
+                                    alt: 'Web3 Games',
+                                }} />
                         </div>
+                        <div className={styles.mobileChartline}>
+                            <LazyImage
+                                image={{
+                                    src: MobileChart,
+                                    alt: 'Token Utility Platform',
+                                }} />
+                        </div>
+                        <div
+                            className={styles.chartSvg}>
+
+                            <ResponsiveContainer tabIndex={-1}>
+                                <PieChart>
+                                    <Tooltip wrapperStyle={{ zIndex: 9999 }} content={<CustomTooltip />} />
+                                    <Pie
+                                        data={chartData}
+                                        dataKey="value"
+                                        nameKey="name"
+                                        innerRadius="54%"
+                                        outerRadius="100%"
+                                        cornerRadius={10}
+                                        paddingAngle={2}
+                                        labelLine={false}
+                                        label={renderCustomizedLabel}
+                                        isAnimationActive={false}
+                                        activeShape={false}
+                                        startAngle={-205}
+                                        endAngle={180}
+                                    >
+                                        {chartData.map((entry, index) => (
+                                            <Cell key={`cell-${index}`} stroke={entry.color}
+                                                strokeWidth={1.5} fill={entry.color} />
+                                        ))}
+                                    </Pie>
+                                </PieChart>
+                            </ResponsiveContainer>
+                            <div
+                                className={styles.svgroundtexrt}
+                                style={{
+                                    position: 'absolute',
+                                    top: '50%',
+                                    left: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    textAlign: 'center',
+                                    color: '#FAFAFA',
+                                }}
+                            >
+                                <p>
+                                    Built on
+                                </p>
+
+                                <h4
+                                >
+                                    BINANCE <br /> SMART CHAIN
+                                </h4>
+                                <div className={styles.centerImage}>
+                                    <LazyImage
+                                        image={{
+                                            src: chartCenterImage,
+                                            alt: 'Crypto Presale',
+                                        }} />
+                                </div>
+
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Button */}
+                    <div className={styles.buttonCenter}>
+                        <a aria-label='Smart Contract' href="https://bscscan.com/token/0xa3cba8c94b758d56315def513dec5e75ce05041a" target='_blank'>
+                            <button>
+                                Smart Contract
+                                <UpArrow />
+                            </button>
+                        </a>
                     </div>
-                </motion.div>
+                    <div className={styles.toyImage}>
+                        <LazyImage
+                            image={{
+                                src: ToyImage,
+                                alt: 'Cryptocurrency Games',
+                            }} />
+                    </div>
+                    {/* Footer Background Elements */}
+                    <div className={styles.linebottom}></div>
+                    <div className={styles.leftSidebottom}></div>
+                    <div className={styles.rightSidebottom}></div>
 
-                {/* Button */}
-                <div className={styles.buttonCenter}>
-                    <a aria-label='Smart Contract' href="https://bscscan.com/token/0xa3cba8c94b758d56315def513dec5e75ce05041a" target='_blank'>
-                    <button>
-                        Smart Contract
-                        <UpArrow />
-                    </button>
-                    </a>
                 </div>
-                <div className={styles.toyImage}>
-                    <img src={ToyImage} alt="Cryptocurrency Games" />
-                </div>
-                {/* Footer Background Elements */}
-                <div className={styles.linebottom}></div>
-                <div className={styles.leftSidebottom}></div>
-                <div className={styles.rightSidebottom}></div>
-
             </div>
-        </div>
         </div>
     );
 }

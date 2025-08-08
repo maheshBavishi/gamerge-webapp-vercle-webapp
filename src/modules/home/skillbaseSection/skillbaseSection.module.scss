@@ -93,6 +93,7 @@
 
   :global(.slick-slide) {
     padding: 0 16px;
+
     @media (max-width:576px) {
       padding: 0;
     }
@@ -100,7 +101,8 @@
 
   :global(.slick-list) {
     margin: 0 -16px;
-       @media (max-width:576px) {
+
+    @media (max-width:576px) {
       margin: 0;
     }
   }
@@ -130,7 +132,8 @@
       transform-style: preserve-3d;
       transform: perspective(1000px) rotateX(0) rotateY(0);
       z-index: 2;
-      overflow: visible; /* Allow content to overflow for 3D effect */
+      overflow: visible;
+      /* Allow content to overflow for 3D effect */
 
       @media (max-width:576px) {
         width: 100%;
@@ -197,7 +200,7 @@
       .content {
         z-index: 3;
         position: relative;
-        
+
         @media (max-width:576px) {
           order: 2;
         }
@@ -236,17 +239,25 @@
 
       .image {
         position: relative;
-        overflow: visible; /* Allow image to scale beyond bounds */
+        overflow: visible;
+        /* Allow image to scale beyond bounds */
         border-radius: 15px;
         z-index: 2;
         transition: transform 0.3s ease;
+        height: 204px;
+
+        @media (max-width:576px) {
+          height: 267px;
+        }
+
 
         .cropStyle {
           position: absolute;
           top: -1px;
           border-radius: 15px;
           right: 0;
-          z-index: 4; /* Ensure crop style is above image */
+          z-index: 4;
+          /* Ensure crop style is above image */
 
           svg {
             border-radius: 0 15px 0 0;

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './mediaPresence.module.scss';
 import DownIcon from '@/components/icons/downIcon';
 import Marquee from "react-fast-marquee";
+import LazyImage from '@/lazyImage';
 const QuillAuditImage = '/assets/images/QuillAudit.svg';
 const IcoholderImage = '/assets/images/icoholder.svg';
 const CoinstatsImage = '/assets/images/coinstats.svg';
@@ -24,107 +25,191 @@ export default function MediaPresence() {
             <Marquee>
                 <div className={styles.logoBox}>
                     <a aria-label='quillaudits' href="https://www.quillaudits.com/leaderboard/gamerge" target='_blank'>
-                    <img src={QuillAuditImage} alt='Play to Earn'/>
+                     <LazyImage
+                        image={{
+                            src: QuillAuditImage,
+                            alt: 'Play to Earn',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label="icoholder" href='https://icoholder.com/en/gamerge-1090860' target='_blank'>
-                    <img src={IcoholderImage} alt='Crypto Gaming Utility'/>
+                      <LazyImage
+                        image={{
+                            src: IcoholderImage,
+                            alt: 'Crypto Gaming Utility',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='cointrust' href="https://coinstats.app/news/88af8a8a946a4eda69e9405f4cf14ef3750f39127587b70df1b091a0778c10fe_Terminus-Taps-Gamerge-to-Boost-Web3-Gaming-and-PayFi-Innovation/" target='_blank'>
-                    <img src={CoinstatsImage} alt='P2E Crypto Games'/>
+                      <LazyImage
+                        image={{
+                            src: CoinstatsImage,
+                            alt: 'P2E Crypto Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a href="https://skynet.certik.com/projects/gamerge" aria-label='skynet' target='_blank'>
-                    <img src={SkynetImage} alt='CEX Games'/>
+                     <LazyImage
+                        image={{
+                            src: SkynetImage,
+                            alt: 'CEX Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='wiki' href="https://iq.wiki/wiki/gamerge" target='_blank'>
-                    <img src={IqwikiImage} alt='GameFi Ecosystem'/>
+                       <LazyImage
+                        image={{
+                            src: IqwikiImage,
+                            alt: 'GameFi Ecosystem',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='CoingabbarImage' href="https://www.coingabbar.com/en/crypto-ico-details/gamerge-latest-ico-token-gamefi-project?srsltid=AfmBOoq1zFHXQSOLiBUT01jCU1MGnTuHBNoIKSvlBT_EbXrtZwW_gF9M" target='_blank'>
-                    <img src={CoingabbarImage} alt='Blockchain Games'/>
+                        <LazyImage
+                        image={{
+                            src: CoingabbarImage,
+                            alt: 'Blockchain Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='band' href='https://www.band.us/band/98694156/post/1' target='_blank'>
-                    <img src={BandImage} alt='Free Crypto Airdrop'/>
+                      <LazyImage
+                        image={{
+                            src: BandImage,
+                            alt: 'Free Crypto Airdrop',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='quillaudits' href="https://www.quillaudits.com/leaderboard/gamerge" target='_blank'>
-                    <img src={QuillAuditImage} alt='Decentralized Gaming Platform'/>
+                     <LazyImage
+                        image={{
+                            src: QuillAuditImage,
+                            alt: 'Play to Earn',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label="icoholder" href='https://icoholder.com/en/gamerge-1090860' target='_blank'>
-                    <img src={IcoholderImage} alt='IcoholderImage'/>
+                      <LazyImage
+                        image={{
+                            src: IcoholderImage,
+                            alt: 'Crypto Gaming Utility',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='cointrust' href="https://coinstats.app/news/88af8a8a946a4eda69e9405f4cf14ef3750f39127587b70df1b091a0778c10fe_Terminus-Taps-Gamerge-to-Boost-Web3-Gaming-and-PayFi-Innovation/" target='_blank'>
-                    <img src={CoinstatsImage} alt='Crypto Gaming Ecosystem'/>
+                      <LazyImage
+                        image={{
+                            src: CoinstatsImage,
+                            alt: 'P2E Crypto Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a href="https://skynet.certik.com/projects/gamerge" aria-label='skynet' target='_blank'>
-                    <img src={SkynetImage} alt='Cryptocurrency Games'/>
+                     <LazyImage
+                        image={{
+                            src: SkynetImage,
+                            alt: 'CEX Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='wiki' href="https://iq.wiki/wiki/gamerge" target='_blank'>
-                    <img src={IqwikiImage} alt='Crypto Rewards'/>
+                       <LazyImage
+                        image={{
+                            src: IqwikiImage,
+                            alt: 'GameFi Ecosystem',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='CoingabbarImage' href="https://www.coingabbar.com/en/crypto-ico-details/gamerge-latest-ico-token-gamefi-project?srsltid=AfmBOoq1zFHXQSOLiBUT01jCU1MGnTuHBNoIKSvlBT_EbXrtZwW_gF9M" target='_blank'>
-                    <img src={CoingabbarImage} alt='CoingabbarImage'/>
+                        <LazyImage
+                        image={{
+                            src: CoingabbarImage,
+                            alt: 'Blockchain Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='band' href='https://www.band.us/band/98694156/post/1' target='_blank'>
-                    <img src={BandImage} alt='Play To Earn Games'/>
+                      <LazyImage
+                        image={{
+                            src: BandImage,
+                            alt: 'Free Crypto Airdrop',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='quillaudits' href="https://www.quillaudits.com/leaderboard/gamerge" target='_blank'>
-                    <img src={QuillAuditImage} alt='Crypto Payments'/>
+                     <LazyImage
+                        image={{
+                            src: QuillAuditImage,
+                            alt: 'Play to Earn',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label="icoholder" href='https://icoholder.com/en/gamerge-1090860' target='_blank'>
-                    <img src={IcoholderImage} alt='Gaming Aggregator Platform'/>
+                      <LazyImage
+                        image={{
+                            src: IcoholderImage,
+                            alt: 'Crypto Gaming Utility',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='cointrust' href="https://coinstats.app/news/88af8a8a946a4eda69e9405f4cf14ef3750f39127587b70df1b091a0778c10fe_Terminus-Taps-Gamerge-to-Boost-Web3-Gaming-and-PayFi-Innovation/" target='_blank'>
-                    <img src={CoinstatsImage} alt='Play to Earn'/>
+                      <LazyImage
+                        image={{
+                            src: CoinstatsImage,
+                            alt: 'P2E Crypto Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a href="https://skynet.certik.com/projects/gamerge" aria-label='skynet' target='_blank'>
-                    <img src={SkynetImage} alt='SkynetImage'/>
+                     <LazyImage
+                        image={{
+                            src: SkynetImage,
+                            alt: 'CEX Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='wiki' href="https://iq.wiki/wiki/gamerge" target='_blank'>
-                    <img src={IqwikiImage} alt='Crypto Gaming Utility'/>
+                       <LazyImage
+                        image={{
+                            src: IqwikiImage,
+                            alt: 'GameFi Ecosystem',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='CoingabbarImage' href="https://www.coingabbar.com/en/crypto-ico-details/gamerge-latest-ico-token-gamefi-project?srsltid=AfmBOoq1zFHXQSOLiBUT01jCU1MGnTuHBNoIKSvlBT_EbXrtZwW_gF9M" target='_blank'>
-                    <img src={CoingabbarImage} alt='P2E Crypto Games'/>
+                        <LazyImage
+                        image={{
+                            src: CoingabbarImage,
+                            alt: 'Blockchain Games',
+                        }} />
                     </a>
                 </div>
                 <div className={styles.logoBox}>
                     <a aria-label='band' href='https://www.band.us/band/98694156/post/1' target='_blank'>
-                    <img src={BandImage} alt='CEX Games'/>
+                      <LazyImage
+                        image={{
+                            src: BandImage,
+                            alt: 'Free Crypto Airdrop',
+                        }} />
                     </a>
                 </div>
              

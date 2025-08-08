@@ -68,13 +68,13 @@
         display: block;
       }
 
-      img:first-child {
+      .firstImage {
         @media (max-width:576px) {
           display: none;
         }
       }
 
-      img:last-child {
+      .lastImage {
         display: none;
 
         @media (max-width:576px) {
