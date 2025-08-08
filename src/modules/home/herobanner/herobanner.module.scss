@@ -188,7 +188,7 @@
           background-size: 200%;
           -webkit-text-fill-color: transparent;
           animation: gradientShift 4s ease-in-out infinite;
-
+          display: block;
         }
 
         @keyframes gradientShift {

@@ -11,7 +11,7 @@ export default function Herobanner() {
         className={styles.herobanner}
       >
         <div className={styles.videoImage}>
-          <video src={Video} autoPlay loop muted playsInline alt="Play To Earn Games" preload="auto" />
+          <video src={Video} autoPlay loop muted playsInline alt="Play To Earn Games" preload="none" />
         </div>
         <div className={styles.layer}></div>
         <div className={styles.contentAlignment}>
