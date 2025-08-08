@@ -4,6 +4,7 @@ import styles from "./buyGmgToken.module.scss";
 import Button from "@/components/button";
 import Link from "next/link";
 const BannerImage = '/assets/images/presale.png';
+import Image from 'next/image';
 
 // Utility to calculate time left
 function getTimeLeft(target) {
@@ -39,7 +40,13 @@ export default function BuyGmgToken() {
   return (
     <div className={styles.buyGmgTokenMain}>
       <div className={styles.bannerSTyle}>
-        <img src={BannerImage} alt="BannerImage" />
+        <Image
+  src={BannerImage}
+  alt="Crypto Rewards"
+  width={400}
+  height={400}
+  priority
+/>
       </div>
       <div className={styles.buyGmgToken}>
 

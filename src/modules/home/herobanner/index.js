@@ -1,6 +1,5 @@
 
 'use client'
-import { motion } from "framer-motion";
 import styles from "./herobanner.module.scss";
 import BuyGmgToken from "./buyGmgToken";
 import ListedOfContent from '../listedOfContent';
@@ -9,11 +8,8 @@ const Video = '/assets/video/video.mp4';
 export default function Herobanner() {
   return (
     <>
-      <motion.div
+      <div
         className={styles.herobanner}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.5 }}
       >
         <div className={styles.videoImage}>
           <video src={Video} autoPlay loop muted playsInline alt="Play To Earn Games"/>
@@ -22,17 +18,14 @@ export default function Herobanner() {
         <div className={styles.contentAlignment}>
         <div className="container-sm">
           <div className={styles.grid}>
-            <motion.div
+            <div
               className={styles.griditems}
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
             >
               <div className={styles.text}>
                 <h1>
                   <span className={styles.gradientText}> Emergence </span> of New Era in Gamefi! 
                 </h1>
-                <motion.p
+                <p
                   initial={{ y: 40, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1, duration: 0.7 }}
@@ -40,13 +33,10 @@ export default function Herobanner() {
                   Gamerge– a next-generation hi-tech skill-based fun-to-play-to-earn 
                   <span> crypto gaming platform </span>
                   built on Unity engine!
-                </motion.p>
+                </p>
               </div>
-              <motion.div
+              <div
                 className={styles.twoIconAlignment}
-                initial="hidden"
-                animate="visible"
-                transition={{ staggerChildren: 0.3, delayChildren: 0.6 }}
               >
                 <button>
                   <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,27 +52,21 @@ export default function Herobanner() {
 
                   Download The Application
                 </button>
-              </motion.div>
-            </motion.div>
-            {/* <motion.div
+              </div>
+            </div>
+            {/* <div
               className={styles.griditems}
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             > */}
               <BuyGmgToken />
-            {/* </motion.div> */}
+            {/* </div> */}
           </div>
         </div>
         </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.8 }}
-      >
+      </div>
         <ListedOfContent />
-      </motion.div>
     </>
   );
 }
