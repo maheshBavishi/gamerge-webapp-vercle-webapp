@@ -1,5 +1,4 @@
 
-'use client'
 import styles from "./herobanner.module.scss";
 import BuyGmgToken from "./buyGmgToken";
 import ListedOfContent from '../listedOfContent';
@@ -26,9 +25,6 @@ export default function Herobanner() {
                   <span className={styles.gradientText}> Emergence </span> of New Era in Gamefi! 
                 </h1>
                 <p
-                  initial={{ y: 40, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1, duration: 0.7 }}
                 >
                   Gamerge– a next-generation hi-tech skill-based fun-to-play-to-earn 
                   <span> crypto gaming platform </span>
@@ -54,14 +50,7 @@ export default function Herobanner() {
                 </button>
               </div>
             </div>
-            {/* <div
-              className={styles.griditems}
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            > */}
               <BuyGmgToken />
-            {/* </div> */}
           </div>
         </div>
         </div>

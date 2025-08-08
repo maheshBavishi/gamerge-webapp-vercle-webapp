@@ -2,16 +2,27 @@ import React from "react";
 import styles from "./calculationFormula.module.scss";
 import RightIcon from "@/components/icons/rightIcon";
 import { formatNumber } from "@/utils";
+import LazyImage from "@/lazyImage";
 const CloseIcon = "/assets/icons/close.svg";
-export default function CalculationFormula({gameplays, TOKENS_PER_GAME, tokensBurnt}) {
+export default function CalculationFormula({ gameplays, TOKENS_PER_GAME, tokensBurnt }) {
   return (
     <div className={styles.calculationFormula}>
       <h3>Calculation Formula:</h3>
       <div className={styles.buttonIconAlignment}>
         <button>{formatNumber(gameplays)} games</button>
-        <img src={CloseIcon} alt="Buy GMG Tokens" />
+        <LazyImage
+          image={{
+            src: CloseIcon,
+            alt: "Buy GMG Tokens",
+          }}
+        />
         <button>{TOKENS_PER_GAME} tokens per game</button>
-        <img src={CloseIcon} alt="Refer And Earn" />
+          <LazyImage
+          image={{
+            src: CloseIcon,
+            alt: "Refer And Earn",
+          }}
+        />
         <button>5% burn rate</button>
         <RightIcon />
       </div>

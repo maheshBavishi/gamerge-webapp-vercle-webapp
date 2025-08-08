@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import styles from './stakingBanner.module.scss';
 import InformationIcon from '@/components/icons/informationIcon';
+import LazyImage from '@/lazyImage';
 const BitCoinImage = '/assets/images/bitcoin-group.svg';
 const FoxImage = '/assets/images/fox.svg';
 const LineViewImage = '/assets/images/line-view.svg';
@@ -78,34 +79,70 @@ export default function StakingBanner() {
                     }}
                 >
                     <div className={styles.lineview}>
-                        <img src={LineViewImage} alt='Buy GMG Tokens' />
+                        <LazyImage
+                            image={{
+                                src: LineViewImage,
+                                alt: 'Buy GMG Tokens',
+                            }} />
                     </div>
 
 
                     <div className={styles.blueCoin}>
-                        <img src={BlueCoin} alt='Refer And Earn' />
+                        <LazyImage
+                            image={{
+                                src: BlueCoin,
+                                alt: 'Buy GMG Tokens',
+                            }} />
                     </div>
                     <div className={styles.pinkCoin}>
-                        <img src={PinkCoin} alt='Blockchain Gaming Platform' />
+                        <LazyImage
+                            image={{
+                                src: PinkCoin,
+                                alt: 'Blockchain Gaming Platform',
+                            }} />
                     </div>
                     <div className={styles.blueCoinGroup}>
-                        <img src={BlueCoinGroup} alt='Web3 Gaming Platform' />
+                        <LazyImage
+                            image={{
+                                src: BlueCoinGroup,
+                                alt: 'Web3 Gaming Platform',
+                            }} />
                     </div>
                     <div className={styles.pinkCoinGroup}>
-                        <img src={PinkCoinGroup} alt='GameFi Aggregator Platform' />
+                        <LazyImage
+                            image={{
+                                src: PinkCoinGroup,
+                                alt: 'GameFi Aggregator Platform',
+                            }} />
                     </div>
                     <div className={styles.leftIcon}>
-                        <img src={BitCoinImage} alt='Token Utility Platform' />
+                        <LazyImage
+                            image={{
+                                src: BitCoinImage,
+                                alt: 'Token Utility Platform',
+                            }} />
                     </div>
                     <div className={styles.foxImage}>
-                        <img src={FoxImage} alt='Crypto Game Tournaments' />
+                        <LazyImage
+                            image={{
+                                src: FoxImage,
+                                alt: 'Crypto Game Tournaments',
+                            }} />
                     </div>
                 </motion.div>
                 <div className={styles.posterLeft}>
-                    <img src={PosterImage} alt='Mobile Crypto Games' />
+                    <LazyImage
+                        image={{
+                            src: PosterImage,
+                            alt: 'Mobile Crypto Games',
+                        }} />
                 </div>
                 <div className={styles.posterRight}>
-                    <img src={PosterTwoImage} alt='Web3 Games' />
+                    <LazyImage
+                        image={{
+                            src: PosterTwoImage,
+                            alt: 'Web3 Games',
+                        }} />
                 </div>
                 <div className='container-md'>
                     <div className={styles.text}>
@@ -115,9 +152,9 @@ export default function StakingBanner() {
                             <span> Future of GameFi</span>
                         </h1>
                         <p>
-                            Put your GMG tokens to work with our flexible and rewarding 
+                            Put your GMG tokens to work with our flexible and rewarding
                             <span> staking plans </span>
-                             and earn upto 6% APY—designed for gamers, investors, and believers in the
+                            and earn upto 6% APY—designed for gamers, investors, and believers in the
                             future of <span> GameFi. </span>
                         </p>
                     </div>

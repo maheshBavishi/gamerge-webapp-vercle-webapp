@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { useAccount } from 'wagmi';
 import { toast } from 'react-hot-toast';
 import CustomConnectButton from '@/components/connectButton';
+import LazyImage from '@/lazyImage';
 
 const InstantlyImage = '/assets/images/Instantly.png';
 const StarOne = '/assets/images/small-star.png';
@@ -100,7 +101,11 @@ export default function EarnUsdt() {
             variants={imageVariants}
           >
             <div className={styles.image}>
-              <img src={InstantlyImage} alt='Buy GMG Tokens' />
+              <LazyImage
+                image={{
+                  src: InstantlyImage,
+                  alt: 'Buy GMG Tokens',
+                }} />
             </div>
             <motion.div
               className={styles.starOne}
@@ -109,7 +114,11 @@ export default function EarnUsdt() {
               initial="initial"
               animate="animate"
             >
-              <img src={StarOne} alt="Refer And Earn" />
+              <LazyImage
+                image={{
+                  src: StarOne,
+                  alt: 'Refer And Earn',
+                }} />
             </motion.div>
 
             <motion.div
@@ -119,7 +128,11 @@ export default function EarnUsdt() {
               initial="initial"
               animate="animate"
             >
-              <img src={StarTwo} alt="Web3 Gaming Platform" />
+              <LazyImage
+                image={{
+                  src: StarTwo,
+                  alt: 'Web3 Gaming Platform',
+                }} />
             </motion.div>
 
             <motion.div
@@ -129,7 +142,11 @@ export default function EarnUsdt() {
               initial="initial"
               animate="animate"
             >
-              <img src={StarThree} alt="GameFi Aggregator Platform" />
+              <LazyImage
+                image={{
+                  src: StarThree,
+                  alt: 'GameFi Aggregator Platform',
+                }} />
             </motion.div>
           </motion.div>
         </div>

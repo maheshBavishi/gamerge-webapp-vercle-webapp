@@ -13,6 +13,7 @@ const PriceIcon = '/assets/icons/price.svg';
 const CoinsIcon = '/assets/icons/coins.svg';
 import { formatToken, formatNumber, shortenHash } from "@/utils"
 import { useAccount } from 'wagmi';
+import LazyImage from '@/lazyImage';
 
 const TransferIcon = '/assets/icons/transfer.svg';
 export default function PresaleDetails({ address }) {
@@ -103,7 +104,11 @@ export default function PresaleDetails({ address }) {
         <motion.div className={styles.cardGrid} variants={cardContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <motion.div className={styles.cardGriditems} variants={cardVariants}>
             <div className={styles.icon}>
-              <img src={WalletIcon} alt='GameFi Ecosystem' />
+              <LazyImage
+                image={{
+                  src: WalletIcon,
+                  alt: 'GameFi Ecosystem',
+                }} />
             </div>
             <div>
               <p>Your Total GMG Balance</p>
@@ -124,7 +129,11 @@ export default function PresaleDetails({ address }) {
           </motion.div>
           <motion.div className={styles.cardGriditems} variants={cardVariants}>
             <div className={styles.icon}>
-              <img src={PriceIcon} alt='Web3 Gaming' />
+              <LazyImage
+                image={{
+                  src: PriceIcon,
+                  alt: 'Web3 Gaming',
+                }} />
             </div>
             <div>
               <p>GMG Pre-Sale Price</p>
@@ -133,7 +142,11 @@ export default function PresaleDetails({ address }) {
           </motion.div>
           <motion.div className={styles.cardGriditems} variants={cardVariants}>
             <div className={styles.icon}>
-              <img src={CoinsIcon} alt='Decentralized Gaming Platform' />
+              <LazyImage
+                image={{
+                  src: CoinsIcon,
+                  alt: 'Decentralized Gaming Platform',
+                }} />
             </div>
             <div>
               <p>Number of vested coins</p>
@@ -145,12 +158,7 @@ export default function PresaleDetails({ address }) {
                 </span>
               ) : (
                 <div style={{ marginTop: '8px' }}>
-                  <span>
-                    <p style={{ marginBottom: '4px' }}>Connect wallet to show vested coins</p>
-
-
-
-                  </span>
+                  <p style={{ marginBottom: '4px' }}>Connect wallet to show vested coins</p>
                 </div>
               )}
             </div>
@@ -182,7 +190,11 @@ export default function PresaleDetails({ address }) {
                     return (
                       <motion.div className={styles.mainCard} key={transaction.transactionHash} variants={listItemVariants}>
                         <div className={styles.icons}>
-                          <img src={TransferIcon} alt='TransferIcon' />
+                          <LazyImage
+                            image={{
+                              src: TransferIcon,
+                              alt: 'TransferIcon',
+                            }} />
                         </div>
                         <div>
                           <div className={styles.linkIcon}>

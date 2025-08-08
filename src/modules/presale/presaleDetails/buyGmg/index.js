@@ -14,6 +14,7 @@ import { toast } from 'sonner';
 import { erc20Abi, isAddress, parseEther } from "viem"
 import { wagmiConfig } from "@/lib/config/wagmi"
 import CustomConnectButton from '@/components/connectButton';
+import LazyImage from '@/lazyImage';
 
 const cryptoOptions = [
   { id: 'bnb', name: 'BNB', icon: '/assets/icons/bnb.svg', value: 'bnb-usd' },
@@ -294,7 +295,13 @@ export default function BuyGmg({ address, presaleData }) {
                       setIsDropdownOpen(false);
                     }}
                   >
-                    <img src={option.icon} alt={option.name} style={{ width: 24, height: 24 }} />
+                    <LazyImage
+                      image={{
+                        src: option.icon,
+                        alt: option.name,
+                      }}
+                      style={{ width: 24, height: 24 }}
+                    />
                     <span>{option.name}</span>
                   </button>
                 ))}

@@ -2,8 +2,6 @@
 import React from 'react'
 import styles from './stakeStrengthen.module.scss';
 import DownIcon from '@/components/icons/downIcon';
-const StakeImage = '/assets/images/stake-img.png';
-// Add Framer Motion imports
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Spline from '@splinetool/react-spline';

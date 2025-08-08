@@ -30,8 +30,6 @@ const cardVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-const titleText = 'Why become an ambassador?';
-const titleWords = titleText.split(' ');
 const PosterImage = '/assets/images/primary-poster.png';
 const CommunityImage = '/assets/images/Community.png';
 const CostImage = '/assets/images/Cost.png';

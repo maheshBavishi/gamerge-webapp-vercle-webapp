@@ -6,26 +6,27 @@ const CommunityImage = '/assets/images/Community.png';
 const CostImage = '/assets/images/Cost.png';
 import DownIcon from '@/components/icons/downIcon';
 import { motion, useInView, useAnimation } from 'framer-motion';
+import LazyImage from '@/lazyImage';
 
 export const cardsData = [
     {
         image: PosterImage,
         title: 'Plug & Play Integration',
-        alt:'Crypto Gaming',
+        alt: 'Crypto Gaming',
         description:
             'Go live in 24 hours—supporting multichain, multicurrency tokens with zero hassle.',
     },
     {
         image: CostImage,
         title: 'Low Cost, High Speed',
-        alt:'Buy GMG Tokens',
+        alt: 'Buy GMG Tokens',
         description:
             'Launch your token with minimal fees and zero development delays.',
     },
     {
         image: CommunityImage,
         title: 'Built-In Community Access',
-        alt:'Refer And Earn',
+        alt: 'Refer And Earn',
         description:
             'Skip the grind. Instantly tap into Gamerge’s thriving global player base.',
     },
@@ -136,11 +137,11 @@ export default function WhychooseB2b() {
                             }}
                         >
                             <div className={styles.image}>
-                                <img
-                                    className={styles.cardImage}
-                                    src={card.image}
-                                    alt={card.alt}
-                                />
+                                <LazyImage
+                                    image={{
+                                        src: card.image,
+                                        alt: card.alt,
+                                    }} />
                             </div>
                             <div className={styles.details}>
                                 <h3>{card.title}</h3>

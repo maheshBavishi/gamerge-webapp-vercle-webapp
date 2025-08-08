@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import styles from './getStarted.module.scss';
 import DownIcon from '@/components/icons/downIcon';
+import LazyImage from '@/lazyImage';
 const TreeImage = '/assets/images/tree.png';
 
 // Animation variants
@@ -44,7 +45,11 @@ export default function GetStarted() {
                         </motion.h2>
                     </div>
                     <div className={styles.treeImage}>
-                        <img src={TreeImage} alt='Crypto Gaming' />
+                        <LazyImage
+                            image={{
+                                src: TreeImage,
+                                alt: 'Crypto Gaming',
+                            }} />
                     </div>
                     <div className={styles.grid}>
                         {[{

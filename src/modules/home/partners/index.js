@@ -184,7 +184,12 @@ export default function Partners() {
   return (
     <div className={styles.partners}>
       <div className={styles.bitcoinIcon}>
-        <img src={BitcoinIcon} alt="Buy GMG Tokens" />
+        <LazyImage
+          image={{
+            src: BitcoinIcon,
+            alt: 'Buy GMG Tokens',
+          }}
+        />
       </div>
       <div className={styles.layerbox}></div>
       <div className="container-md">

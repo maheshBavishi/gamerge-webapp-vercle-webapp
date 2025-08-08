@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./buyGmgToken.module.scss";
@@ -5,6 +6,7 @@ import Button from "@/components/button";
 import Link from "next/link";
 const BannerImage = '/assets/images/presale.png';
 import Image from 'next/image';
+import LazyImage from "@/lazyImage";
 
 // Utility to calculate time left
 function getTimeLeft(target) {
@@ -40,13 +42,11 @@ export default function BuyGmgToken() {
   return (
     <div className={styles.buyGmgTokenMain}>
       <div className={styles.bannerSTyle}>
-        <Image
-  src={BannerImage}
-  alt="Crypto Rewards"
-  width={400}
-  height={400}
-  priority
-/>
+        <LazyImage
+          image={{
+            src: BannerImage,
+            alt: 'Crypto Rewards',
+          }} />
       </div>
       <div className={styles.buyGmgToken}>
 

@@ -18,6 +18,7 @@ const LazyImage = ({ image }) => {
         // placeholderSrc={CardImages}
         afterLoad={() => setIsLoaded(true)}
         threshold={500}
+        loading="lazy"
         className={isLoaded ? "image-loaded" : "image-loading"}
       />
     </>

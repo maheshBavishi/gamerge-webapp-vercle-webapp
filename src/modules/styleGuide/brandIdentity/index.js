@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './brandIdentity.module.scss';
 import DownloadIcon from '@/components/icons/downloadIcon';
+import LazyImage from '@/lazyImage';
 const BrandLogo = '/assets/images/brand-logo.png';
 const BrandLogoMobile = '/assets/images/mobile-brand-logo.png';
 export default function BrandIdentity() {
@@ -14,18 +15,28 @@ export default function BrandIdentity() {
                     </h2>
                 </div>
                 <div className={styles.image}>
-                    <img src={BrandLogo} alt='Crypto Gaming'/>
+                    <LazyImage
+                        image={{
+                            src: BrandLogo,
+                            alt: "Crypto Gaming",
+                        }}
+                    />
                 </div>
                 <div className={styles.brandLogoMobile}>
-                    <img src={BrandLogoMobile} alt='GameFi platform'/>
+                     <LazyImage
+                        image={{
+                            src: BrandLogoMobile,
+                            alt: "GameFi platform",
+                        }}
+                    />
                 </div>
                 <div className={styles.twoButtonAlignment}>
                     <button>
-                        <DownloadIcon/>
+                        <DownloadIcon />
                         PNG
                     </button>
                     <button>
-                        <DownloadIcon/>
+                        <DownloadIcon />
                         SVG
                     </button>
                 </div>
