@@ -20,6 +20,8 @@ const LazyImage = ({ image }) => {
         threshold={500}
         loading="lazy"
         className={isLoaded ? "image-loaded" : "image-loading"}
+        fetchpriority="high"
+        decoding="async"
       />
     </>
   );
