@@ -96,6 +96,13 @@
 
         img {
             display: block;
+            max-width: 145px;
+            width: 100%;
+
+            @media (max-width:576px) {
+                max-width: 120px;
+                
+            }
         }
     }
 }

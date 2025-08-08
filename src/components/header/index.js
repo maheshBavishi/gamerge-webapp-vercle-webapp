@@ -5,12 +5,15 @@ import Image from 'next/image';
 import Button from '../button';
 import CustomConnectButton from '../connectButton';
 import Link from 'next/link';
-import Topbar from '../topbar';
 import classNames from 'classnames';
 import MobileMenuIcon from '../icons/mobileMenuIcon';
 import CloseIcon from '../icons/closeIcon';
 const HeaderVec = '/assets/images/header-vec.png';
 const Logo = '/assets/logo/logo.svg';
+import dynamic from 'next/dynamic'
+
+const Topbar = dynamic(() => import('../topbar'))
+
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState("noScroll");
 
@@ -58,12 +61,12 @@ export default function Header() {
               </Link>
               <div className={styles.rightalignment}>
                 <div className={styles.menu}>
-                  <Link href="/presale">Presale</Link>
-                  <Link href="/staking">Staking</Link>
-                  <Link href="/b2b">B2b Solutions</Link>
+                  <Link href="/presale" aria-label='Presale'>Presale</Link>
+                  <Link href="/staking" aria-label='Staking'>Staking</Link>
+                  <Link href="/b2b" aria-label='B2b Solutions'>B2b Solutions</Link>
                   <a href='https://sweepwidget.com/c/86895-oiy9dkpt' target='_blank' aria-label='airdrop'>airdrop</a>
                   <Link href="/" aria-label='Games'>Games</Link>
-                  <Link href="/blog">blog</Link>
+                  <Link href="/blog" aria-label='blog'>blog</Link>
                 </div>
                 <div className={styles.button}>
                   <div className={styles.headerBtn}>

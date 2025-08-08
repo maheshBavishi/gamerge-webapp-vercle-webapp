@@ -5,6 +5,7 @@ import styles from "./herobanner.module.scss";
 import BuyGmgToken from "./buyGmgToken";
 import ListedOfContent from '../listedOfContent';
 const Video = '/assets/video/video.mp4';
+
 export default function Herobanner() {
   return (
     <>

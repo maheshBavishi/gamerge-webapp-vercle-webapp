@@ -6,7 +6,7 @@ export default function Topbar() {
     <div className={styles.topbar}>
       <div className='container-md'>
       <p >
-        Join World’s First Fun-to-play-to-earn Gamefi <Link href="/presale" aria-label='Presale'> Presale</Link>
+        Join World's First Fun-to-play-to-earn Gamefi <a href="/presale" aria-label='Presale' target='_blank'> a</a>
       </p>
       </div>
     </div>

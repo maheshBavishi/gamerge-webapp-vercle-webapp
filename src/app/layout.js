@@ -33,6 +33,7 @@ const plus_jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["800"],
   display: "swap",
+  
 });
 
 export const metadata = {

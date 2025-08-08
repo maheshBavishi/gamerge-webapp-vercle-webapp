@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./buyGmgToken.module.scss";
 import Button from "@/components/button";
 import Link from "next/link";
+const BannerImage = '/assets/images/presale.png';
 
 // Utility to calculate time left
 function getTimeLeft(target) {
@@ -36,50 +37,55 @@ export default function BuyGmgToken() {
   }, [targetDate]);
 
   return (
-    <div className={styles.buyGmgToken}>
-      {/* Only animate this heading after LCP */}
-      <motion.div
-        className={styles.boxHeader}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-      >
-        <h2>Buy GMG Tokens</h2>
-        <h3>in Presale Now</h3>
-      </motion.div>
-
-      <div className={styles.subBox}>
-        <TimerUnit label="Days" value={timeLeft.days} />
-        <TimerUnit label="Hours" value={timeLeft.hours} />
-        <TimerUnit label="Minutes" value={timeLeft.minutes} />
-        <TimerUnit label="Seconds" value={timeLeft.seconds} />
+    <div className={styles.buyGmgTokenMain}>
+      <div className={styles.bannerSTyle}>
+        <img src={BannerImage} alt="BannerImage" />
       </div>
+      <div className={styles.buyGmgToken}>
 
-      <div className={styles.liveContent}>
-        <h4>Phase 2 is LIVE</h4>
-        <div className={styles.textGrid}>
-          <div className={styles.line}></div>
-          <span>Price : 1 GMG = 0.02 USD</span>
-          <div className={styles.line}></div>
-        </div>
-      </div>
-
-      <div className={styles.buttonAlignment}>
-        <Button text="Buy Now" />
-        <Link href="/presale" aria-label="presale">
-          <button className={styles.whiteBtn}>Learn More</button>
-        </Link>
-      </div>
-
-      <div className={styles.walletText}>
-        <a
-          href="https://t.me/jamesgamerge"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="wallet"
+        <motion.div
+          className={styles.boxHeader}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
         >
-          Don’t have a wallet?
-        </a>
+          <h2>Buy GMG Tokens</h2>
+          <h3>in Presale Now</h3>
+        </motion.div>
+
+        <div className={styles.subBox}>
+          <TimerUnit label="Days" value={timeLeft.days} />
+          <TimerUnit label="Hours" value={timeLeft.hours} />
+          <TimerUnit label="Minutes" value={timeLeft.minutes} />
+          <TimerUnit label="Seconds" value={timeLeft.seconds} />
+        </div>
+
+        <div className={styles.liveContent}>
+          <h4>Phase 2 is LIVE</h4>
+          <div className={styles.textGrid}>
+            <div className={styles.line}></div>
+            <span>Price : 1 GMG = 0.02 USD</span>
+            <div className={styles.line}></div>
+          </div>
+        </div>
+
+        <div className={styles.buttonAlignment}>
+          <Button text="Buy Now" />
+          <Link href="/presale" aria-label="presale">
+            <button className={styles.whiteBtn}>Learn More</button>
+          </Link>
+        </div>
+
+        <div className={styles.walletText}>
+          <a
+            href="https://t.me/jamesgamerge"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="wallet"
+          >
+            Don’t have a wallet?
+          </a>
+        </div>
       </div>
     </div>
   );
