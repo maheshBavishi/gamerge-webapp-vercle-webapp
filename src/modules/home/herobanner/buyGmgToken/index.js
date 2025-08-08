@@ -42,15 +42,13 @@ export default function BuyGmgToken() {
   return (
     <div className={styles.buyGmgTokenMain}>
       <div className={styles.bannerSTyle}>
-        <LazyImage
-          image={{
-            src: BannerImage,
-            alt: 'Crypto Rewards',
-          }} />
+        <img fetchpriority="high"
+          decoding="async" width={'100%'} height={"100%"} src={BannerImage} alt="BannerImage" />
+
       </div>
       <div className={styles.buyGmgToken}>
 
-        <motion.div
+        <div
           className={styles.boxHeader}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,7 +56,7 @@ export default function BuyGmgToken() {
         >
           <h2>Buy GMG Tokens</h2>
           <h3>in Presale Now</h3>
-        </motion.div>
+        </div>
 
         <div className={styles.subBox}>
           <TimerUnit label="Days" value={timeLeft.days} />
