@@ -1,7 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-const Herobanner = dynamic(() => import('./herobanner'))
+// const Herobanner = dynamic(() => import('./herobanner'))
 const CryptoContent = dynamic(() => import('./cryptoContent'))
 const Partners = dynamic(() => import('./partners'))
 const SkillbaseSection = dynamic(() => import('./skillbaseSection'))
@@ -18,7 +18,7 @@ const FeaturedIn = dynamic(() => import('./featuredIn'))
 export default function HomePage() {
   return (
     <>
-      <Herobanner />
+      {/* <Herobanner /> */}
       <CryptoContent />
       <Partners />
       <SkillbaseSection />
