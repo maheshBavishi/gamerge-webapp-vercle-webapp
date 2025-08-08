@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="preload" as="image" href="/assets/images/presale.png" fetchPriority="high" />
+        <link rel="preload" as="video" href="/assets/video/video.mp4" fetchPriority="high" />
       </head>
       <body className={`${poppins.variable} ${unbounded.variable} ${plus_jakarta.variable}`}>
 

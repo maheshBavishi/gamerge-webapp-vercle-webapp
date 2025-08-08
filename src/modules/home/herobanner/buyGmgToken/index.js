@@ -35,16 +35,14 @@ export default function BuyGmgToken() {
         setTimeLeft(getTimeLeft(targetDate));
       }, 1000);
       return () => clearInterval(interval);
-    }, 100); // Small delay to allow LCP
+    }, 100); 
     return () => clearTimeout(timeout);
   }, [targetDate]);
 
   return (
     <div className={styles.buyGmgTokenMain}>
       <div className={styles.bannerSTyle}>
-        <img fetchpriority="high"
-          decoding="async" width={'100%'} height={"100%"} src={BannerImage} alt="BannerImage" />
-
+        <Image src={BannerImage} alt="BannerImage" width={400}  height={435}  priority={false} fetchPriority="low" />
       </div>
       <div className={styles.buyGmgToken}>
 
